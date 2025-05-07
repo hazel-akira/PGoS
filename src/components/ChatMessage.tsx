@@ -11,10 +11,10 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message, isUser }) => {
   return (
     <div
       className={cn(
-        "py-2 px-3 rounded-lg max-w-[80%] animate-fade-in",
+        "py-3 px-4 rounded-2xl max-w-[80%] animate-fade-in shadow-sm",
         isUser 
-          ? "bg-indigo-100 ml-auto rounded-tr-none text-gray-800" 
-          : "bg-indigo-600 mr-auto rounded-tl-none text-white"
+          ? "bg-indigo-100 ml-auto rounded-tr-none text-gray-800 border border-indigo-200" 
+          : "bg-white mr-auto rounded-tl-none text-gray-800 border border-gray-200"
       )}
     >
       <p className="text-sm md:text-base">{message}</p>

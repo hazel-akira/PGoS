@@ -59,13 +59,13 @@ const ChatContainer: React.FC = () => {
   };
 
   return (
-    <div id="chatSection" className="flex flex-col h-[500px] md:h-[600px] w-full max-w-md bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+    <div id="chatSection" className="flex flex-col h-[500px] md:h-[600px] w-full max-w-md bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200">
       <div className="bg-indigo-600 p-4">
         <h2 className="text-white font-medium">PGOS School Assistant</h2>
         <p className="text-white/80 text-sm">Ask about admissions, programs, or schedules</p>
       </div>
       
-      <div className="flex-1 p-4 overflow-y-auto">
+      <div className="flex-1 p-4 overflow-y-auto bg-gray-50">
         {messages.map((message, index) => (
           <div key={index} className="mb-4">
             <ChatMessage 
@@ -84,7 +84,7 @@ const ChatContainer: React.FC = () => {
         <div ref={messagesEndRef} />
       </div>
       
-      <div className="p-4 border-t border-gray-200 flex items-center">
+      <div className="p-4 border-t border-gray-200 flex items-center bg-white">
         <Input
           placeholder="Ask a question..."
           value={inputValue}

@@ -21,7 +21,7 @@ const Navigation = () => {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-3">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <div className="text-indigo-600 font-bold text-2xl">PGOS</div>
@@ -33,7 +33,7 @@ const Navigation = () => {
               <a 
                 key={item.name} 
                 href={item.path}
-                className="text-gray-700 hover:text-indigo-600 transition-colors"
+                className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
               >
                 {item.name}
               </a>

@@ -11,15 +11,17 @@ const AboutSection = () => {
             <div className="relative">
               <div className="bg-indigo-600 absolute top-0 left-0 w-full h-full -translate-x-4 -translate-y-4 -z-10 rounded-lg"></div>
               <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                <div className="w-full h-full bg-gray-300 flex items-center justify-center">
-                  <p className="text-gray-500">School Campus Image</p>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                  alt="School Campus" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
           <div className="md:w-1/2">
             <h6 className="text-indigo-600 font-semibold mb-2">ABOUT OUR SCHOOL</h6>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Nurturing Minds, Building Futures</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">Nurturing Minds, Building Futures</h2>
             <p className="text-gray-600 mb-4">
               Founded in 1995, PGOS School has been committed to academic excellence and character development for over 25 years. Our school provides a supportive environment where students are encouraged to explore, learn, and grow.
             </p>
