@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useRef } from 'react';
+import HeroSection from '@/components/HeroSection';
+import FeatureSection from '@/components/FeatureSection';
+import ChatContainer from '@/components/ChatContainer';
+import Footer from '@/components/Footer';
 
 const Index = () => {
+  const chatRef = useRef<HTMLDivElement>(null);
+  
+  const scrollToChat = () => {
+    chatRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen flex flex-col">
+      <HeroSection scrollToChat={scrollToChat} />
+      
+      <FeatureSection />
+      
+      <div ref={chatRef} className="py-16 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-12">
+            Start a Conversation Now
+          </h2>
+          <div className="flex justify-center">
+            <ChatContainer />
+          </div>
+        </div>
       </div>
+      
+      <Footer />
     </div>
   );
 };
