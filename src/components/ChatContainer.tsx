@@ -12,7 +12,7 @@ type Message = {
 
 const ChatContainer: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
-    { text: "Hello! How can I help you today?", isUser: false }
+    { text: "Hi there! Welcome to PGOS School's virtual assistant. How can I help you today?", isUser: false }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -34,14 +34,16 @@ const ChatContainer: React.FC = () => {
     setIsLoading(true);
     setInputValue('');
     
-    // Simulate bot response delay
+    // School-specific bot responses
     setTimeout(() => {
       const botResponses = [
-        "I'm here to help! What would you like to know?",
-        "That's an interesting question. Let me think about that.",
-        "I'm a simple demo bot right now, but I'm learning!",
-        "I can provide information on various topics. Just ask!",
-        "Thank you for chatting with me today!"
+        "Thank you for your question! Our admissions office is open Monday through Friday from 9 AM to 3 PM.",
+        "PGOS School offers a comprehensive curriculum including arts, sciences, and athletics.",
+        "Our school year begins in September and ends in June, with breaks in December and April.",
+        "We offer various extracurricular activities including sports, robotics, debate, and arts programs.",
+        "For more detailed information, you can visit our About page or contact our administrative office.",
+        "Parents can access student records through our secure parent portal. Login credentials are provided at the beginning of each school year.",
+        "School tours are available by appointment. Please contact our admissions office to schedule a visit."
       ];
       
       const randomResponse = botResponses[Math.floor(Math.random() * botResponses.length)];
@@ -57,9 +59,10 @@ const ChatContainer: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-[500px] md:h-[600px] w-full max-w-md bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+    <div id="chatSection" className="flex flex-col h-[500px] md:h-[600px] w-full max-w-md bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
       <div className="bg-indigo-600 p-4">
-        <h2 className="text-white font-medium">Chat Assistant</h2>
+        <h2 className="text-white font-medium">PGOS School Assistant</h2>
+        <p className="text-white/80 text-sm">Ask about admissions, programs, or schedules</p>
       </div>
       
       <div className="flex-1 p-4 overflow-y-auto">
@@ -83,7 +86,7 @@ const ChatContainer: React.FC = () => {
       
       <div className="p-4 border-t border-gray-200 flex items-center">
         <Input
-          placeholder="Type a message..."
+          placeholder="Ask a question..."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -93,6 +96,7 @@ const ChatContainer: React.FC = () => {
           onClick={handleSendMessage}
           disabled={isLoading || inputValue.trim() === ''} 
           size="icon"
+          className="bg-indigo-600 hover:bg-indigo-700"
         >
           <Send className="h-4 w-4" />
         </Button>

@@ -13,8 +13,8 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message, isUser }) => {
       className={cn(
         "py-2 px-3 rounded-lg max-w-[80%] animate-fade-in",
         isUser 
-          ? "bg-chat-user ml-auto rounded-tr-none" 
-          : "bg-chat-bot mr-auto rounded-tl-none"
+          ? "bg-indigo-100 ml-auto rounded-tr-none text-gray-800" 
+          : "bg-indigo-600 mr-auto rounded-tl-none text-white"
       )}
     >
       <p className="text-sm md:text-base">{message}</p>

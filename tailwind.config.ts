@@ -66,6 +66,13 @@ export default {
 				chat: {
 					user: '#f0f4ff',
 					bot: '#e0e7ff'
+				},
+				school: {
+					primary: '#4f46e5',
+					secondary: '#7e22ce',
+					accent: '#f97316',
+					light: '#f3f4f6',
+					dark: '#1e293b',
 				}
 			},
 			borderRadius: {

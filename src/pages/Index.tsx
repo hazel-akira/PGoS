@@ -1,7 +1,10 @@
 
 import React, { useRef } from 'react';
+import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import FeatureSection from '@/components/FeatureSection';
+import AboutSection from '@/components/AboutSection';
+import ProgramsSection from '@/components/ProgramsSection';
 import ChatContainer from '@/components/ChatContainer';
 import Footer from '@/components/Footer';
 
@@ -14,15 +17,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Navigation />
       <HeroSection scrollToChat={scrollToChat} />
-      
+      <AboutSection />
       <FeatureSection />
+      <ProgramsSection />
       
       <div ref={chatRef} className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-12">
-            Start a Conversation Now
+          <h6 className="text-indigo-600 font-semibold mb-2">VIRTUAL ASSISTANT</h6>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Have Questions? Ask Our School Assistant
           </h2>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Our virtual assistant can help answer your questions about admissions, programs, 
+            schedules, and more. Try it now!
+          </p>
           <div className="flex justify-center">
             <ChatContainer />
           </div>
