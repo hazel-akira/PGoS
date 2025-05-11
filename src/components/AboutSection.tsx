@@ -1,38 +1,34 @@
-
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <div className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-            <div className="relative">
-              <div className="bg-indigo-600 absolute top-0 left-0 w-full h-full -translate-x-4 -translate-y-4 -z-10 rounded-lg"></div>
-              <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
-                  alt="School Campus" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="md:w-1/2">
-            <h6 className="text-indigo-600 font-semibold mb-2">ABOUT OUR SCHOOL</h6>
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">Nurturing Minds, Building Futures</h2>
-            <p className="text-gray-600 mb-4">
-              Founded in 1995, PGOS School has been committed to academic excellence and character development for over 25 years. Our school provides a supportive environment where students are encouraged to explore, learn, and grow.
-            </p>
-            <p className="text-gray-600 mb-6">
-              We believe in a holistic approach to education that balances academic rigor with creative expression, physical well-being, and social responsibility.
-            </p>
-            <Button className="bg-indigo-600 hover:bg-indigo-700">Learn More About Us</Button>
-          </div>
+    <section className="bg-[#02032D] text-white py-20">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-0">
+        {/* Text Block */}
+        <div className="bg-white text-black p-8 max-w-md shadow-lg  px-6 pl-8 md:pl-12">
+          <p className="text-sm text-orange-500 font-medium mb-2">GROW & THRIVE</p>
+          <h2 className="text-xl font-semibold mb-4">Pioneer Group of Schools</h2>
+          <p className="mb-6 text-sm">
+            For more than 25 years, Pioneer Schools have been nurturing and transforming the lives of young people through education.
+            We take pride in being a trusted beacon of educational success.
+          </p>
+          <button className="bg-orange-500 text-white font-bold px-6 py-2 flex items-center gap-2 hover:bg-orange-600 transition">
+            DISCOVER MORE <ArrowRight size={16} />
+          </button>
+        </div>
+
+        {/* Image Block */}
+        <div className="relative w-full md:w-1/2 h-full pr-0 md:pr-8">
+          <img
+            src="/images/aboutsection.jpg"
+            alt="aboutpgos"
+            loading='lazy'
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

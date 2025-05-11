@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
-import FeatureSection from '@/components/FeatureSection';
+import GlanceSection from '@/components/AtGlanceSection';
 import AboutSection from '@/components/AboutSection';
 import ProgramsSection from '@/components/ProgramsSection';
 import ChatContainer from '@/components/ChatContainer';
@@ -19,7 +19,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <HeroSection scrollToChat={scrollToChat} />
-      <FeatureSection />
+      <GlanceSection />
       <AboutSection />
       <ProgramsSection />
       
