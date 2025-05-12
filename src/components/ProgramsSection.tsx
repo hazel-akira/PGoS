@@ -5,21 +5,33 @@ import { Button } from '@/components/ui/button';
 const ProgramsSection = () => {
   const programs = [
     {
-      title: "Elementary Education",
+      title: "Pioneer School",
       description: "Building a strong foundation with engaging curriculum for grades K-5.",
-      buttonText: "Elementary Details",
+      buttonText: "Pioneer School Details",
       image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1422&q=80"
     },
     {
-      title: "Middle School",
+      title: "Pioneer Girls High School",
       description: "Developing critical thinking and independence for grades 6-8.",
-      buttonText: "Middle School Details",
+      buttonText: "Pioneer Girls HighSchool Details",
       image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
     },
     {
-      title: "High School",
+      title: "Pioneer junior School",
       description: "College preparatory curriculum for grades 9-12 with specialized paths.",
-      buttonText: "High School Details",
+      buttonText: "Pioneer juniorSchool Details",
+      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"
+    },
+    {
+      title: "Pioneer Girls junior School",
+      description: "College preparatory curriculum for grades 9-12 with specialized paths.",
+      buttonText: "Pioneer Girls junior School Details",
+      image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"
+    },
+    {
+      title: "St Paul Thomas Academy",
+      description: "College preparatory curriculum for grades 9-12 with specialized paths.",
+      buttonText: "St Paul Thomas Academy Details",
       image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"
     }
   ];

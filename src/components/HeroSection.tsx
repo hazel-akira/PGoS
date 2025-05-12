@@ -1,37 +1,71 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { ChevronDown } from 'lucide-react';
 
 type HeroSectionProps = {
   scrollToChat: () => void;
 };
 
 const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const dropdownOptions = [
+    { name: 'Academic Programs', path: '#programs' },
+    { name: 'Student Life', path: '#student-life' },
+    { name: 'Admissions', path: '#admissions' },
+    { name: 'Campus Tour', path: '#campus-tour' },
+  ];
+
   return (
-    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 md:py-28">
-      <div className="container mx-auto px-4 md:flex md:items-center md:justify-between">
+    <div className="relative text-white pt-32 pb-20 md:pt-40 md:pb-28">
+    {/* Background wrapper */}
+    <div className="absolute inset-0 z-0">
+      {/* Background image */}
+      <div
+        className="w-full h-full"
+        style={{
+          backgroundImage: 'url("/images/hero-bg.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Overlay to dim the image only */}
+        <div className="w-full h-full bg-black opacity-50"></div>
+      </div>
+    </div>
+    
+      {/* Content */}
+      <div className="container mx-auto px-4 md:flex md:items-center md:justify-between relative z-10">
         <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-          <h1 className="text-3xl md:text-5xl font-bold mb-6">
-            Welcome to PGOS School
+          <h1 className="text-3xl text-white-800 md:text-5xl font-bold mb-6">
+            Our school welcomes you to come explore with us
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl opacity-90">
-            Empowering students with knowledge, innovation, and excellence in education.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <Button 
-              onClick={scrollToChat}
-              size="lg"
-              className="bg-white text-indigo-600 hover:bg-gray-100 font-semibold"
+          
+          {/* Dropdown Menu */}
+          <div className="relative inline-block">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="flex items-center gap-2 bg-purple-600 hover:bg-white/10 text-white px-6 py-3 rounded-lg backdrop-blur-sm transition-colors"
             >
-              Chat with Us
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/20 font-semibold"
-            >
-              Explore Programs
-            </Button>
+              Travel
+              <ChevronDown className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            {isDropdownOpen && (
+              <div className="absolute left-0 mt-2 w-48 bg-blue-800 rounded-lg shadow-lg overflow-hidden">
+                {dropdownOptions.map((option) => (
+                  <a
+                    key={option.name}
+                    href={option.path}
+                    className="block px-4 py-3 text-white-800 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    {option.name}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-end">
