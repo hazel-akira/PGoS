@@ -8,6 +8,7 @@ import AboutSection from '@/components/AboutSection';
 import ProgramsSection from '@/components/ProgramsSection';
 import ChatIcon from '@/components/ChatIcon';
 import Footer from '@/components/Footer';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 const Index = () => {
   return (
@@ -16,8 +17,10 @@ const Index = () => {
       <HeroSection scrollToChat={() => {}} />
       <AboutSection />     
       {/* <AtAGlanceSection /> */}
+     
       <AtGlanceSection/>
       <StudentsLifeSection />
+      <TestimonialCarousel />
       <ProgramsSection />
       <ChatIcon />
       <Footer />
