@@ -1,11 +1,21 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { isButtonElement } from 'react-router-dom/dist/dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,14 +27,22 @@ const Navigation = () => {
     { name: 'Programs', path: '/programs' },
     { name: 'Faculty', path: '/faculty' },
     { name: 'Contact', path: '/contact' },
+    { name: 'Join Us', path: '/contact', isButton:true},
   ];
 
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
+    <nav className={cn(
+      "fixed w-full top-0 z-50 transition-colors duration-300",
+      isScrolled ? "bg-[#0E013D] shadow-md" : "bg-transparent"
+    )}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <div className="text-indigo-600 font-bold text-2xl">PGOS</div>
+            <img 
+              src="/images/Pgos Logo.png" 
+              alt="PGOS School Logo" 
+              className="h-13 w-auto mr-2"
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -33,23 +51,16 @@ const Navigation = () => {
               <a 
                 key={item.name} 
                 href={item.path}
-                className="text-gray-700 hover:text-indigo-600 transition-colors font-medium"
+                className="text-white hover:text-indigo-300 transition-colors font-medium"
               >
                 {item.name}
               </a>
             ))}
-            <Button 
-              variant="outline" 
-              className="border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white"
-              onClick={() => document.getElementById('chatSection')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Chat with Us
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <Button variant="ghost" className="p-2" onClick={toggleMenu}>
+            <Button variant="ghost" className="p-2 text-white" onClick={toggleMenu}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
           </div>
@@ -58,7 +69,8 @@ const Navigation = () => {
 
       {/* Mobile Menu */}
       <div className={cn(
-        "md:hidden bg-white overflow-hidden transition-all duration-300",
+        "md:hidden overflow-hidden transition-all duration-300",
+        isScrolled ? "bg-[#0E013D]" : "bg-transparent",
         isMenuOpen ? "max-h-96" : "max-h-0"
       )}>
         <div className="container mx-auto px-4 py-2 flex flex-col">
@@ -66,20 +78,20 @@ const Navigation = () => {
             <a 
               key={item.name} 
               href={item.path}
-              className="py-3 text-gray-700 hover:text-indigo-600 transition-colors"
+              className="py-3 text-white hover:text-indigo-300 transition-colors"
             >
               {item.name}
             </a>
           ))}
           <Button 
             variant="outline" 
-            className="border-indigo-600 text-indigo-600 hover:bg-indigo-600 hover:text-white mt-3"
+            className="border-orange text-white hover:bg-white hover:text-[#0E013D] mt-3"
             onClick={() => {
               document.getElementById('chatSection')?.scrollIntoView({ behavior: 'smooth' });
               setIsMenuOpen(false);
             }}
           >
-            Chat with Us
+           Join US
           </Button>
         </div>
       </div>
