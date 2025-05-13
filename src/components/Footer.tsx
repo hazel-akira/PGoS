@@ -1,16 +1,5 @@
 import React from 'react';
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
-   X,
-  
-  Mail,
-  Phone,
-  MapPin,
-  ArrowUp
-} from 'lucide-react';
+import {ArrowUp} from 'lucide-react';
 import { RiTwitterXFill } from "react-icons/ri";
 import { RiTiktokLine } from "react-icons/ri";
 import { FiFacebook } from "react-icons/fi";
