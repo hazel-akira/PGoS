@@ -22,10 +22,10 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: 'Home', path: '/' },
+    // { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Programs', path: '/programs' },
-    { name: 'Faculty', path: '/faculty' },
+    // { name: 'Faculty', path: '/faculty' },
     { name: 'Contact', path: '/contact' },
     { name: 'Join Us', path: '/contact', isButton:true},
   ];
@@ -33,7 +33,7 @@ const Navigation = () => {
   return (
     <nav className={cn(
       "fixed w-full top-0 z-50 transition-colors duration-300",
-      isScrolled ? "bg-[#0E013D] shadow-md" : "bg-transparent"
+      isScrolled ? "bg-[#02032d] shadow-md" : "bg-transparent"
     )}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">

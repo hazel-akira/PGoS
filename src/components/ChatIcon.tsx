@@ -8,14 +8,14 @@ const ChatIcon = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
       {!isOpen && (
-        <div className="bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg max-w-[200px] animate-bounce">
-          <p className="text-sm">Hello, I'm PGoS AI assistant. Need help?</p>
+        <div className=" text-gray-800 px-4 py-2 rounded-lg shadow-lg max-w-[200px] animate-bounce">
+          {/* <p className="text-sm">Hello, I'm PGoS AI assistant. Need help?</p> */}
         </div>
       )}
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-colors"
+          className="bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-colors animate-bounce"
         >
           <MessageCircle size={24} />
         </button>
