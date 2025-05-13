@@ -2,23 +2,23 @@ import React, { useState, useEffect } from 'react';
 
 const schools = [
   {
-    name: 'Pioneer School',
+    name: 'Swimming',
     image: '/images/pioneerboysswimming.jpg',
   },
   {
-    name: 'Pioneer Girls School',
+    name: 'Playing Hockey',
     image: '/images/pioneergirlshockey.jpg',
   },
   {
-    name: 'Pioneer Junior School',
+    name: 'Aviation Trip',
     image: '/images/boysjunioraviation.jpg',
   },
   {
-    name: 'Pioneer Girls Junior Academy',
+    name: 'Drama Club',
     image: '/images/girlsjuniordramaclub.jpg',
   },
   {
-    name: 'St. Paul Thomas Academy',
+    name: 'The Band',
     image: '/images/stpaulsorchestra.jpg',
   },
 ];
