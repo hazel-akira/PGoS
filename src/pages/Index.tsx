@@ -9,6 +9,7 @@ import ProgramsSection from '@/components/ProgramsSection';
 import ChatIcon from '@/components/ChatIcon';
 import Footer from '@/components/Footer';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
+import SchoolsSection from '@/components/SchoolsSection';
 
 const Index = () => {
   return (
@@ -21,7 +22,8 @@ const Index = () => {
       <AtGlanceSection/>
       <StudentsLifeSection />
       <TestimonialCarousel />
-      <ProgramsSection />
+      <SchoolsSection />
+      {/* <ProgramsSection /> */}
       <ChatIcon />
       <Footer />
     </div>
