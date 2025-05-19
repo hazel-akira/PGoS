@@ -1,24 +1,35 @@
 {
   "name": "pgos",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
-    "@types/node": "^16.18.0",
+    "@radix-ui/react-slot": "^1.2.2",
+    "@radix-ui/react-toast": "^1.2.13",
+    "@radix-ui/react-tooltip": "^1.2.6",
+    "@tanstack/react-query": "^5.76.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.511.0",
+    "next-themes": "^0.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.6.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "sonner": "^2.0.3",
+    "tailwind-merge": "^3.3.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vite test",
+    "eject": "vite eject"
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +48,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.19",
+    "@vitejs/plugin-react": "^4.4.1",
+    "@vitejs/plugin-react-swc": "^3.9.0",
+    "autoprefixer": "^10.4.21",
+    "lovable-tagger": "^1.1.8",
+    "tailwindcss-animate": "^1.0.7",
+    "vite": "^5.4.19"
   }
 }
