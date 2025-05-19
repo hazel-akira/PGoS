@@ -8,7 +8,7 @@ import WhyChoosePioneer from "@/components/WhyChoosePioneer";
 
 
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <div>
      <HeroAbout />
