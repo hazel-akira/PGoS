@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
         }}
       >
         {/* Overlay to dim the image only */}
-        <div className="w-full h-full bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
       </div>
     </div>
     

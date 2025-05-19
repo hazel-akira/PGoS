@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="relative text-white bg-cover bg-center"
+      className="relative h-[500px] py-12 text-white bg-cover bg-center"
       style={{ backgroundImage: "url('/images/footerimage2.jpg')" }}
     >
       {/* Overlay */}
@@ -30,47 +30,38 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-orange-400 text-lg font-semibold mb-4">Quick Links</h3>
+          <h3 className="text-[#ff9800] text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:underline">About</a></li>
-            <li><a href="#" className="hover:underline">Visit</a></li>
-            <li><a href="#" className="hover:underline">Schools</a></li>
-            <li><a href="#" className="hover:underline">Admissions</a></li>
-            <li><a href="#" className="hover:underline">Testimonials</a></li>
-            <li><a href="#" className="hover:underline">Students Life</a></li>
-            <li><a href="#" className="hover:underline">Why choose Pioneer Schools</a></li>
+            <li><a href="#" className="hover:decoration-[#ff9800] hover:underline">About</a></li>
+            <li><a href="#" className="hover:decoration-[#ff9800] hover:underline">Visit</a></li>
+            <li><a href="#" className="hover:decoration-[#ff9800] hover:underline">Schools</a></li>
+            <li><a href="#" className="hover:decoration-[#ff9800] hover:underline">Admissions</a></li>
+            <li><a href="#" className="hover:decoration-[#ff9800] hover:underline">Testimonials</a></li>
+            <li><a href="#" className="hover:decoration-[#ff9800] hover:underline">Students Life</a></li>
+            <li><a href="#" className="hover:decoration-[#ff9800] hover:underline">Why choose Pioneer Schools</a></li>
           </ul>
         </div>
 
         {/* Search and Socials */}
         <div className="space-y-4">
-  
-          {/* <div className="flex border-b border-orange-400 w-full items-center">
-            <input
-              type="text"
-              placeholder="Search PGOS"
-              className="bg-transparent text-white placeholder-gray-400 outline-none flex-grow pr-2"
-            />
-            <svg
-              className="h-5 w-5 text-orange-400"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M16.5 10.5a6 6 0 11-12 0 6 6 0 0112 0z" />
-            </svg>
-          </div> */}
 
           {/* Social Icons */}
           <div className="flex space-x-4 mt-10 text">
-            <a href="#"><FiFacebook /></a>
-            <a href="#"><FiInstagram /></a>
-            <a href="#"><RiTwitterXFill /></a>
-            <a href="#"><FiLinkedin /></a>
-            <a href="#"><FiYoutube /></a>
-            <a href="#"><RiTiktokLine /></a>
+            <a href="#" className='hover:text-[#ff9800] transition-colors duration-300'><FiFacebook /></a>
+            <a href="#" className='hover:text-[#ff9800] transition-colors duration-300'><FiInstagram /></a>
+            <a href="#" className='hover:text-[#ff9800] transition-colors duration-300'><RiTwitterXFill /></a>
+            <a href="#" className='hover:text-[#ff9800] transition-colors duration-300'><FiLinkedin /></a>
+            <a href="#" className='hover:text-[#ff9800] transition-colors duration-300'><FiYoutube /></a>
+            <a href="#" className='hover:text-[#ff9800] transition-colors duration-300'><RiTiktokLine /></a>
           </div>
+
+          {/* Scroll to Top */}
+          <button
+            className="mt-6 bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-40 transition flex-row"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            <ArrowUp className="text-white" size={24} />
+          </button>
         </div>
         
       </div>
@@ -87,14 +78,6 @@ const Footer = () => {
           <a href="#" className="hover:underline">Sitemap</a>
         </div>
       </div>
-
-      {/* Scroll to Top */}
-      <button
-        className="absolute top-4 right-4 bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-40 transition"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      >
-      <ArrowUp className="text-white" size={24} />
-      </button>
     </footer>
   );
 };
