@@ -1,13 +1,12 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
-import AtAGlanceSection from '@/components/AtAGlanceSection';
+// import AtAGlanceSection from '@/components/AtAGlanceSection';
 import AtGlanceSection from '@/components/AtGlanceSection';
 import StudentsLifeSection from '@/components/StudentsLifeSection';
 import AboutSection from '@/components/AboutSection';
 import ProgramsSection from '@/components/ProgramsSection';
 import ChatIcon from '@/components/ChatIcon';
-import Footer from '@/components/Footer';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import SchoolsSection from '@/components/SchoolsSection';
 
@@ -25,7 +24,7 @@ const Index = () => {
       <SchoolsSection />
       {/* <ProgramsSection /> */}
       <ChatIcon />
-      <Footer />
+     
     </div>
   );
 };
