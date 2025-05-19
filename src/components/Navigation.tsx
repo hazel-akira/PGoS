@@ -3,6 +3,8 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { isButtonElement } from 'react-router-dom/dist/dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +32,8 @@ const Navigation = () => {
     { name: 'Join Us', path: '/contact', isButton:true},
   ];
 
+  const navigate = useNavigate()
+
   return (
     <nav className={cn(
       "fixed w-full top-0 z-50 transition-colors duration-300",
@@ -42,6 +46,7 @@ const Navigation = () => {
               src="/images/Pgos Logo.png" 
               alt="PGOS School Logo" 
               className="h-13 w-auto mr-2"
+              onClick={() => navigate('/')}
             />
           </div>
 
@@ -51,7 +56,7 @@ const Navigation = () => {
               <a 
                 key={item.name} 
                 href={item.path}
-                className="text-white hover:text-indigo-300 transition-colors font-medium"
+                className="text-white hover:text-[#FF8C00] transition-colors font-medium"
               >
                 {item.name}
               </a>

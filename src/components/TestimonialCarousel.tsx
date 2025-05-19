@@ -84,7 +84,7 @@ const TestimonialCarousel: React.FC = () => {
           {i === index && (
             <div className="absolute bottom-4 left-4 sm:bottom-10 sm:left-10 bg-white bg-opacity-80 p-4 sm:p-6 max-w-sm sm:max-w-md max-h-[60vh] overflow-y-auto rounded-lg shadow backdrop-blur">
               <h3 className="text-[#ff9800] font-semibold text-base sm:text-lg mb-1">Testimonials</h3>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Hear It From Us</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 hover:underline hover:decoration-[#ff9800] transition-all duration-300">Hear It From Us</h2>
               <p className="text-xs sm:text-sm font-semibold mt-2">{testimonial.role}</p>
               <p className="text-gray-800 mt-3 text-sm leading-relaxed">{testimonial.text}</p>
             </div>
