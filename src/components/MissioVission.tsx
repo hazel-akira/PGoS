@@ -7,7 +7,7 @@ const MissioVission: React.FC = () => {
 
    
   return (
-    <section className="bg-[#f1f2fc] py-20 px-4 md:max-h-[900px]" style={{backgroundImage: 'url(/images/admin.png)'}}>
+    <section className="bg-[#f1f2fc] py-20 md:max-h-[900px]" style={{backgroundImage: 'url(/images/admin.png)'}}>
         <div className="max-w-4xl mx-auto space-y-16 border-t-0  bg-white shadow-md rounded-xl p-6 text-gray-800 max-w-3xl mx-auto">
         {/* Mission Section */}
         <div>

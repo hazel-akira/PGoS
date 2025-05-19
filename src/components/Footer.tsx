@@ -13,14 +13,14 @@ const Footer = () => {
 
   return (
     <footer
-      className="relative h-[500px] py-12 text-white bg-cover bg-center"
+      className="relative pt-48 text-white bg-cover bg-center"
       style={{ backgroundImage: "url('/images/footerimage2.jpg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#02032D] bg-opacity-80"></div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-16 grid md:grid-cols-3 gap-8">
+      <div className="relative z-10 container mx-auto grid md:grid-cols-4 gap-8 py-8">
         {/* Contact Us / Logos */}
         <div>
           <div className="flex space-x-2 mb-4">
@@ -55,19 +55,20 @@ const Footer = () => {
             <a href="#" className='hover:text-[#ff9800] transition-colors duration-300'><RiTiktokLine /></a>
           </div>
 
-          {/* Scroll to Top */}
-          <button
-            className="mt-6 bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-40 transition flex-row"
+          
+        </div>
+        {/* Scroll to Top */}
+        <button
+            className="mt-6 bg-white bg-opacity-20 w-10 h-10 mb-10 rounded-full hover:bg-opacity-40 transition flex flex-col items-center justify-center"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <ArrowUp className="text-white" size={24} />
           </button>
-        </div>
         
       </div>
 
       {/* Bottom Footer Row */}
-      <div className="relative z-10 border-t border-gray-700 py-4 text-center text-sm text-gray-300">
+      <div className="relative z-10 border-t border-gray-700 py-4 text-center text-sm text-gray-300 mt-10">
         <div className="flex md:flex-row justify-center items-center space-x-2 md:space-y-0 md:space-x-2">
           <p>&copy; {currentYear}</p>
           <span>|</span>
