@@ -56,7 +56,7 @@ const Navigation = () => {
                 key={item.name} 
                 variant = "outline"
                 onClick={() => navigate(item.path)}
-                className="text-white hover:text-[#02032d] transition-colors font-medium bg-[#ffbc04] hover:bg-transparent rounded-full"
+                className="text-white hover:text-[#02032d] transition-colors font-medium bg-[#ffbc04] hover:bg-orange-500 rounded-full"
               >
                 {item.name}
               </Button>
