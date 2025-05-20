@@ -11,12 +11,12 @@ const SchoolsSection: React.FC = () => {
   ];
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full md:pt-24">
       {/* Main content container */}
       <div className="flex flex-col md:flex-row">
         {/* Text Section */}
         <div className="bg-[#02032d] text-white p-6 md:p-10 flex flex-col justify-center items-center text-center w-full md:w-1/2">
-          <h2 className="text-2xl font-bold text-orange-400 mb-4">Our Schools</h2>
+          <h2 className="text-2xl font-bold text-[#FFBC04] mb-4">Our Schools</h2>
           <p className="text-sm md:text-base max-w-xl">
             With cutting-edge programs, state-of-the-art facilities, a focus on character-building, and
             passionate educators, we create transformative educational experiences that shape futures
@@ -24,7 +24,7 @@ const SchoolsSection: React.FC = () => {
           </p>
             {/* CTA Button */}
             <div className="w-full bg-[#02032d] py-8 text-center">
-                <button className="bg-orange-400 hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-full transition-colors">
+                <button className="bg-[#FFBC04] hover:bg-[#FFD86D] text-white font-bold py-3 px-8 rounded-full transition-colors">
                 Explore Programs
                 </button>
             </div>
@@ -41,18 +41,18 @@ const SchoolsSection: React.FC = () => {
         </div>
       </div>
       {/* Schools navigation bar - Overlapping both sections */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-4 md:-bottom-10 z-20 
+      <div className="absolute left-1/2 transform -translate-x-1/2 bottom-4 md:-bottom-20 z-20 
                       w-[calc(100%-2rem)] sm:w-[calc(100%-2rem)] md:w-full max-w-6xl 
-                      bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] px-2 sm:px-4">
+                      bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] px-2 sm:px-4 md:h-32">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row justify-center">
+          <div className="flex flex-col md:flex-row justify-center md:pt-5">
             {schools.map((school, index) => (
               <React.Fragment key={school.name}>
                 <a
                   href={school.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between px-4 py-4 hover:text-orange-500 
+                  className="flex items-center justify-between px-4 py-4 hover:text-[#ffbc04] 
                             border-b md:border-b-0 border-gray-200 last:border-b-0 transition-all"
                 >
                   <span className="text-sm md:text-base font-medium">{school.name}</span>

@@ -51,11 +51,20 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item) => item.isButton ?(
+              <Button
+                key={item.name} 
+                variant = "outline"
+                onClick={() => navigate(item.path)}
+                className="text-white hover:text-[#02032d] transition-colors font-medium bg-[#ffbc04] hover:bg-transparent rounded-full"
+              >
+                {item.name}
+              </Button>
+            ) : (
               <a 
                 key={item.name} 
                 href={item.path}
-                className="text-white hover:text-[#FF8C00] transition-colors font-medium"
+                className="text-white hover:text-[#FFBC04] transition-colors font-medium"
               >
                 {item.name}
               </a>
