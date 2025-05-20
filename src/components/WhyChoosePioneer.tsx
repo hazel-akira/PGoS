@@ -1,18 +1,29 @@
 import React from 'react';
-import Carousel from './Carousel';
 
-const customSettings = {
-  slidesToShow: 3,
-  dots: true,
+// Add styles for 3D card flip effect
+const styles = `
+  .perspective {
+    perspective: 1000px;
+  }
   
-};
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+`;
 
 type Activity = {
   title: string;
   description: string;
   image: string;
 }
-
 
 const activities: Activity[] = [
   {
@@ -29,23 +40,36 @@ const activities: Activity[] = [
     title: "Strong Co-Curricular Programs", 
     description: "We offer a wide range of co-curricular activities to help students develop their talents and interests.",
     image: "/images/orchestra.jpg"
-
   },
   {
     title: "Spirituality and Values",
     description: "We instill strong values and spiritual principles in our students to help them become responsible and compassionate individuals.",
     image: "/images/wellness.jpg"
   },
-  
-  
 ]
-
-
-
 
 const WhyChoosePioneer: React.FC = () => {
   return (
     <div className="w-full overflow-x-hidden">
+      {/* Add style tag for 3D card effects */}
+      <style>{`
+        .perspective {
+          perspective: 1000px;
+        }
+        
+        .preserve-3d {
+          transform-style: preserve-3d;
+        }
+        
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      `}</style>
+
       {/* Hero Banner with CTA */}
       <div className="relative w-full h-[900px]">
         {/* Banner Image */}
@@ -55,7 +79,6 @@ const WhyChoosePioneer: React.FC = () => {
             alt="Students celebrating with trophy" 
             className="w-full h-full object-cover"
           />
-          
         </div>
         
         {/* CTA Text */}
@@ -82,7 +105,7 @@ const WhyChoosePioneer: React.FC = () => {
                 </div>
               </div>
             
-              {/* Star Decorations - Right Side - Modified to stay within bounds */}
+              {/* Star Decorations - Right Side */}
               <div className="absolute bottom-0 right-0 md:w-32 md:h-32 w-8 h-8 overflow-visible">
                 <div className="relative w-full h-full">
                   <div className="absolute bottom-0 right-0 md:w-20 md:h-20 w-10 h-10 text-white transform translate-x-1/4 -translate-y-1/4">
@@ -98,33 +121,66 @@ const WhyChoosePioneer: React.FC = () => {
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
-        
-        
       
-      {/* Features Grid */}
-      <Carousel settings = {customSettings}>
-        {activities.map((activity, index) => (
-          <div key={index} className="px-4">
-            <div className="w-full h-64 mb-4 overflow-hidden">
-              <img 
-                src={activity.image}
-                alt={activity.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-semibold text-center text-white bg-[#02032d] px-6 py-2">
-              {activity.title}
-            </h3>
+      {/* Interactive 3D Cards Grid */}
+      <div className="py-16 px-4 md:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {activities.map((activity, index) => (
+              <div key={index} className="group" style={{ perspective: '1000px' }}>
+                <div 
+                  className="relative w-full h-[400px] transition-all duration-500 group-hover:rotate-y-180"
+                  style={{ 
+                    transformStyle: 'preserve-3d',
+                    transform: 'rotateY(0deg)'
+                  }}
+                >
+                  {/* Front of card */}
+                  <div 
+                    className="absolute w-full h-full"
+                    style={{ backfaceVisibility: 'hidden' }}
+                  >
+                    <div className="w-full h-full rounded-xl overflow-hidden shadow-lg">
+                      <img 
+                        src={activity.image}
+                        alt={activity.title}
+                        loading='lazy'
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                      <h3 className="absolute bottom-0 left-0 right-0 text-xl font-bold text-white p-6">
+                        {activity.title}
+                      </h3>
+                    </div>
+                  </div>
+                  
+                  {/* Back of card */}
+                  <div 
+                    className="absolute w-full h-full bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between"
+                    style={{ 
+                      backfaceVisibility: 'hidden',
+                      transform: 'rotateY(180deg)'
+                    }}
+                  >
+                    <div>
+                      <h3 className="text-xl font-bold text-[#02032d] mb-4">
+                        {activity.title}
+                      </h3>
+                      <p className="text-gray-600">
+                        {activity.description}
+                      </p>
+                    </div>
+                    <button className="mt-6 px-6 py-3 bg-[#02032d] text-white rounded-lg hover:bg-[#02032d]/90 transition-colors duration-300">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </Carousel>
-      
-      {/* Bottom Divider */}
-      <div className="w-full flex justify-center px-4 mb-16">
-        <div className="h-2 bg-[#02032d] w-full max-w-xl rounded-full"></div>
+        </div>
       </div>
     </div>
   );
