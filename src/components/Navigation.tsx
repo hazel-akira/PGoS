@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { isButtonElement } from 'react-router-dom/dist/dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,8 +23,8 @@ const Navigation = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Programs', path: '/programs' },
-    { name: 'Faculty', path: '/faculty' },
+    { name: 'Academics', path: '/academics' },
+    { name: 'Visit Us', path: '/visit Us' },
     { name: 'Contact', path: '/contact' },
     { name: 'Join Us', path: '/contact', isButton:true},
   ];
