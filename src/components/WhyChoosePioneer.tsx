@@ -50,40 +50,55 @@ const WhyChoosePioneer: React.FC = () => {
 
   return (
     <section className="py-28 bg-white">
+      <hr className="border-t border-gray-300 mb-6 mx-24 md:mx-60" />
       <div className="text-center pb-10">
-        <h2 className="text-xl md:text-4xl font-bold text-orange-400 px-4">
+        <h2 className="text-xl md:text-4xl font-bold font-serif text-[#FFC300] px-4">
           WHY CHOOSE OUR SCHOOLS
         </h2>
       </div>
 
-      <div className="container mx-auto px-4">
-        {/* Desktop: Grid View */}
+      <div className="relative container mx-auto px-4 w-full h-full">
+        {/* Desktop: Grid View with slide-in from top */}
         {!isMobile && (
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center transition-opacity duration-500 ease-in-out"
-            style={{ opacity: fade ? 0 : 1 }}
-          >
-            {currentImages.map((image, index) => (
-              <div
-                key={index}
-                className={`w-80 ${image.offset} transform transition-transform duration-700 ease-out`}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-auto rounded-lg shadow-lg object-cover"
-                />
-                <p className="text-lg sm:text-sm font-bold mt-2 text-center text-[#0e013d]">
-                  {image.title}
-                </p>
-              </div>
-            ))}
+          <div className="relative h-[500px] mt-10"> {/* Adjust height to fit images smoothly */}
+            {allImageSets.map((imageSet, idx) => {
+              const isActive = idx === currentSetIndex;
+              return (
+                <div
+                  key={idx}
+                  className={`absolute inset-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center transition-all duration-1000 ease-in-out transform ${
+                    isActive
+                      ? 'opacity-100 translate-y-0 z-10'
+                      : 'opacity-0 -translate-y-10 pointer-events-none z-0'
+                  }`}
+                >
+                  {imageSet.map((image, index) => {
+                    const centerImageOffset = index === 1 ? 'mt-16' : 'mt-0'; // push center image down
+                    return (
+                      <div
+                        key={index}
+                        className={`w-80 transition-transform duration-700 ease-out ${centerImageOffset} `}
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover rounded-lg relative drop-shadow-[5px_0px_2px_rgba(0,0,0,0.5)]"
+                        />
+                        <div className="mt-4 text-center">
+                          <h3 className="text-lg font-semibold text-[#0e013d] drop-shadow-[5px_0px_2px_rgba(255,255,255,0)]">{image.title}</h3>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
           </div>
         )}
 
         {/* Mobile: Single Image View */}
         {isMobile && (
-          <div className="relative w-[90%] max-w-md h-[400px] mx-auto overflow-hidden">
+          <div className="relative w-[90%] max-w-md h-[400px] mx-auto overflow-hidden mt-10">
             {currentImages.map((image, index) => {
               const isActive = index === currentMobileImageIndex;
               return (
