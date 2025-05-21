@@ -46,19 +46,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
           <div className="relative inline-block">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center gap-2 bg-[#1F0287] hover:bg-white/10 text-white px-6 py-3 rounded-lg backdrop-blur-sm transition-colors"
+              className="flex items-center gap-2 bg-[#02032d] hover:bg-white/10 text-white px-6 py-3 rounded-lg backdrop-blur-sm transition-colors z-10"
             >
               Pioneer with us
               <ChevronDown className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             
             {isDropdownOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-[#FF8C00] rounded-lg shadow-lg overflow-hidden">
+              <div className="absolute left-0 mt-2 w-48 bg-[#FFBC04] rounded-lg shadow-lg overflow-hidden">
                 {dropdownOptions.map((option) => (
                   <a
                     key={option.name}
                     href={option.path}
-                    className="block px-4 py-3 text-white-800 hover:bg-[#1F0287] hover:text-[#FFFF8] transition-colors"
+                    className="block px-4 py-3 text-white-800 hover:bg-[#02032d] hover:text-[#FFFF8] transition-colors"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     {option.name}

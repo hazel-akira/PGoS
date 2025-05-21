@@ -63,7 +63,7 @@ const StudentsLifeSection: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto">
         <hr className="border-t border-gray-300 mb-6 mx-6" />
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide text-[#FFA726]">Life in Abundance</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide text-[#FFBC04]">Life in Abundance</h2>
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
           {/* Timeline */}
           <div className="flex-1 flex justify-center">
@@ -78,20 +78,20 @@ const StudentsLifeSection: React.FC = () => {
                     <span 
                       className={`w-5 h-5 rounded-full border-2 transition-all duration-300 ${
                         idx === selected 
-                          ? 'bg-[#FFA726] border-[#FFA726] scale-110' 
+                          ? 'bg-[#FFBC04] border-[#FFBC04] scale-110' 
                           : 'bg-[#02032d] border-[#02032d]'
                       }`}
                     ></span>
                     {idx !== schools.length - 1 && (
                       <span className={`w-0.5 h-8 bg-[#02032d] transition-all duration-300 ${
-                        idx === selected ? 'bg-[#FFA726]' : ''
+                        idx === selected ? 'bg-[#FFBC04]' : ''
                       }`}></span>
                     )}
                   </div>
                   <span 
                     className={`text-lg font-medium transition-all duration-300 ${
                       idx === selected 
-                        ? 'text-[#FFA726] scale-105' 
+                        ? 'text-[#FFBC04] scale-105' 
                         : 'text-gray-900'
                     }`}
                   >
@@ -111,7 +111,7 @@ const StudentsLifeSection: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-left">
-          <button className="border border-[#FFA726] text-[#FFA726] rounded px-6 py-2 font-medium hover:bg-[#FFA726] hover:text-white transition-all">
+          <button className="border border-[#FFBC04] text-[#FFBC04] rounded px-6 py-2 font-medium hover:bg-[#FFBC04] hover:text-white transition-all">
             What distinguishes your journey with us?
           </button>
         </div>
