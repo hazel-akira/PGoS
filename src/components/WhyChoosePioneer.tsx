@@ -1,188 +1,122 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-// Add styles for 3D card flip effect
-const styles = `
-  .perspective {
-    perspective: 1000px;
-  }
-  
-  .preserve-3d {
-    transform-style: preserve-3d;
-  }
-  
-  .backface-hidden {
-    backface-visibility: hidden;
-  }
-  
-  .rotate-y-180 {
-    transform: rotateY(180deg);
-  }
-`;
-
-type Activity = {
-  title: string;
-  description: string;
-  image: string;
-}
-
-const activities: Activity[] = [
-  {
-    title: "Modern Facilities",
-    description: "We offer state-of-the-art facilities to ensure a comfortable and conducive learning environment for our students.",
-    image: "/images/sciencelab.jpg"
-  },
-  {
-    title: "Proven Academic Performance",
-    description: "Our students consistently achieve high scores in national exams, reflecting our commitment to academic excellence.",
-    image: "/images/academicperformance.jpg"
-  },
-  {
-    title: "Strong Co-Curricular Programs", 
-    description: "We offer a wide range of co-curricular activities to help students develop their talents and interests.",
-    image: "/images/orchestra.jpg"
-  },
-  {
-    title: "Spirituality and Values",
-    description: "We instill strong values and spiritual principles in our students to help them become responsible and compassionate individuals.",
-    image: "/images/wellness.jpg"
-  },
-]
+const allImageSets = [
+  [
+    { src: '/images/academicperformance.jpg', alt: 'Academic Performance', offset: 'translate-y-6', title: 'Academic Performance' },
+    { src: '/images/sciencelab.jpg', alt: 'Science Lab', offset: 'translate-y-0', title: 'Modern Facilities' },
+    { src: '/images/wellness.jpg', alt: 'Wellness', offset: 'translate-y-12', title: 'Wellness & Spirituality' },
+  ],
+  [
+    { src: '/images/orchestra.jpg', alt: 'Orchestra', offset: 'translate-y-4', title: 'Extra-curricular Activities' },
+    { src: '/images/whychoosepgos.png', alt: 'Why Choose Pioneer', offset: 'translate-y-8', title: 'A Tradition of Excellence' },
+    { src: '/images/activitiesfield.png', alt: 'Activities Field', offset: 'translate-y-2', title: 'Sports & Games' },
+  ],
+];
 
 const WhyChoosePioneer: React.FC = () => {
-  return (
-    <div className="w-full overflow-x-hidden">
-      {/* Add style tag for 3D card effects */}
-      <style>{`
-        .perspective {
-          perspective: 1000px;
-        }
-        
-        .preserve-3d {
-          transform-style: preserve-3d;
-        }
-        
-        .backface-hidden {
-          backface-visibility: hidden;
-        }
-        
-        .rotate-y-180 {
-          transform: rotateY(180deg);
-        }
-      `}</style>
+  const [currentSetIndex, setCurrentSetIndex] = useState(0);
+  const [currentMobileImageIndex, setCurrentMobileImageIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [fade, setFade] = useState(false);
 
-      {/* Hero Banner with CTA */}
-      <div className="relative w-full h-[900px]">
-        {/* Banner Image */}
-        <div className="absolute inset-0 w-full h-full">
-          <img 
-            src="/images/whychoosepgos.png" 
-            alt="Students celebrating with trophy" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        
-        {/* CTA Text */}
-        <div className="relative h-full flex flex-col justify-end">
-          <div className="relative z-10">
-            {/* Purple Overlay - Now only behind the text */}
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-[#02032d] bg-opacity-80"></div>
-              <h2 className="text-2xl md:text-4xl font-bold text-orange-400 text-center px-4 pb-10 relative z-20">
-                WHY CHOOSE PIONEER GROUP OF SCHOOLS
-              </h2>
-              {/* Star Decorations - Left Side */}
-              <div className="absolute bottom-0 left-0 md:w-32 md:h-32 w-8 h-8 overflow-visible">
-                <div className="relative w-full h-full">
-                  <div className="absolute bottom-0 left-0 md:w-20 md:h-20 w-10 h-10 text-white transform -translate-x-1/4 -translate-y-1/4">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                    </svg>
-                  </div>
-                  <div className="absolute top-0 left-12 md:w-14 md:h-14 w-6 h-6 text-orange-400 transform -translate-y-1/4">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            
-              {/* Star Decorations - Right Side */}
-              <div className="absolute bottom-0 right-0 md:w-32 md:h-32 w-8 h-8 overflow-visible">
-                <div className="relative w-full h-full">
-                  <div className="absolute bottom-0 right-0 md:w-20 md:h-20 w-10 h-10 text-white transform translate-x-1/4 -translate-y-1/4">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                    </svg>
-                  </div>
-                  <div className="absolute top-0 right-12 md:w-14 md:h-14 w-6 h-6 text-orange-400 transform -translate-y-1/4">
-                    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      
-      {/* Interactive 3D Cards Grid */}
-      <div className="py-16 px-4 md:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {activities.map((activity, index) => (
-              <div key={index} className="group" style={{ perspective: '1000px' }}>
-                <div 
-                  className="relative w-full h-[400px] transition-all duration-500 group-hover:rotate-y-180"
-                  style={{ 
-                    transformStyle: 'preserve-3d',
-                    transform: 'rotateY(0deg)'
-                  }}
-                >
-                  {/* Front of card */}
-                  <div 
-                    className="absolute w-full h-full"
-                    style={{ backfaceVisibility: 'hidden' }}
-                  >
-                    <div className="w-full h-full rounded-xl overflow-hidden shadow-lg">
-                      <img 
-                        src={activity.image}
-                        alt={activity.title}
-                        loading='lazy'
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                      <h3 className="absolute bottom-0 left-0 right-0 text-xl font-bold text-white p-6">
-                        {activity.title}
-                      </h3>
-                    </div>
-                  </div>
-                  
-                  {/* Back of card */}
-                  <div 
-                    className="absolute w-full h-full bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between"
-                    style={{ 
-                      backfaceVisibility: 'hidden',
-                      transform: 'rotateY(180deg)'
-                    }}
-                  >
-                    <div>
-                      <h3 className="text-xl font-bold text-[#02032d] mb-4">
-                        {activity.title}
-                      </h3>
-                      <p className="text-gray-600">
-                        {activity.description}
-                      </p>
-                    </div>
-                    <button className="mt-6 px-6 py-3 bg-[#02032d] text-white rounded-lg hover:bg-[#02032d]/90 transition-colors duration-300">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
+  useEffect(() => {
+    const checkIsMobile = () => setIsMobile(window.innerWidth < 640); // Tailwind's `sm` breakpoint
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(true);
+      setTimeout(() => {
+        if (isMobile) {
+          const currentSet = allImageSets[currentSetIndex];
+          const nextImageIndex = (currentMobileImageIndex + 1) % currentSet.length;
+          const nextSetIndex = nextImageIndex === 0 ? (currentSetIndex + 1) % allImageSets.length : currentSetIndex;
+          setCurrentSetIndex(nextSetIndex);
+          setCurrentMobileImageIndex(nextImageIndex);
+        } else {
+          setCurrentSetIndex((prev) => (prev + 1) % allImageSets.length);
+        }
+        setFade(false);
+      }, 1000);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isMobile, currentSetIndex, currentMobileImageIndex]);
+
+  const currentImages = allImageSets[currentSetIndex];
+
+  return (
+    <section className="py-28 bg-white">
+      <div className="text-center pb-10">
+        <h2 className="text-xl md:text-4xl font-bold text-orange-400 px-4">
+          WHY CHOOSE OUR SCHOOLS
+        </h2>
+      </div>
+
+      <div className="container mx-auto px-4">
+        {/* Desktop: Grid View */}
+        {!isMobile && (
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center transition-opacity duration-500 ease-in-out"
+            style={{ opacity: fade ? 0 : 1 }}
+          >
+            {currentImages.map((image, index) => (
+              <div
+                key={index}
+                className={`w-80 ${image.offset} transform transition-transform duration-700 ease-out`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-auto rounded-lg shadow-lg object-cover"
+                />
+                <p className="text-lg sm:text-sm font-bold mt-2 text-center text-[#0e013d]">
+                  {image.title}
+                </p>
               </div>
             ))}
           </div>
-        </div>
+        )}
+
+        {/* Mobile: Single Image View */}
+        {isMobile && (
+          <div className="relative w-[90%] max-w-md h-[400px] mx-auto overflow-hidden">
+            {currentImages.map((image, index) => {
+              const isActive = index === currentMobileImageIndex;
+              return (
+                <div
+                  key={index}
+                  className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out rounded-lg shadow-lg ${
+                    isActive
+                      ? 'z-20 opacity-100 scale-100 translate-y-0'
+                      : 'z-10 opacity-0 scale-90 translate-y-6'
+                  }`}
+                  style={{ transitionProperty: 'opacity, transform' }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                  {isActive && (
+                    <div className="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 py-2 px-2 rounded-b-lg">
+                      <p className="text-sm font-bold text-center text-[#0e013d]">
+                        {image.title}
+                      </p>
+                    </div>
+                  )}
+
+                </div>
+              );
+            })}
+          </div>
+        )}
+
       </div>
-    </div>
+    </section>
   );
 };
 

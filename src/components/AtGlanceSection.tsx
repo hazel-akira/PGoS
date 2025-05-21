@@ -65,7 +65,7 @@ const GlanceSection: React.FC = () => {
           ))}
         </div>
 
-        <button className="mt-20 bg-[#ff9800] hover:bg-[#FFB357] text-white px-6 py-3 rounded hover:bg-orange-600  transition font-semibold rounded shadow-md transition-all text-base md:text-lg" style={{boxShadow: '2px 2px 0 #8884'}}>
+        <button className="mt-20 bg-[#FFBC04] hover:bg-orange-200 text-white px-6 py-3 rounded hover:bg-orange-600  transition font-semibold rounded shadow-md transition-all text-base md:text-lg" style={{boxShadow: '2px 2px 0 #8884'}}>
           MORE FACTS
         </button>
       </div>
