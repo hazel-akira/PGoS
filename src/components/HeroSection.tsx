@@ -17,7 +17,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
   ];
 
   return (
-    <div className="relative text-white pt-32 pb-20 md:pt-40 md:pb-28">
+    <div className="relative min-h-[700px] md:min-h-[800px] text-white pt-32 pb-20 md:pt-40 md:pb-28">
     {/* Background wrapper */}
     <div className="absolute inset-0 z-0">
       {/* Background image */}
@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
         }}
       >
         {/* Overlay to dim the image only */}
-        <div className="w-full h-full bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
       </div>
     </div>
     
@@ -39,26 +39,26 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
       <div className="container mx-auto px-4 md:flex md:items-center md:justify-between relative z-10">
         <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
           <h1 className="text-3xl text-white-800 md:text-5xl font-bold mb-6">
-            Our school welcomes you to come explore with us
+          Shaping Futures, One School at a Time.
           </h1>
           
           {/* Dropdown Menu */}
           <div className="relative inline-block">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center gap-2 bg-purple-600 hover:bg-white/10 text-white px-6 py-3 rounded-lg backdrop-blur-sm transition-colors"
+              className="flex items-center gap-2 bg-[#1F0287] hover:bg-white/10 text-white px-6 py-3 rounded-lg backdrop-blur-sm transition-colors"
             >
-              Travel
+              Pioneer with us
               <ChevronDown className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             
             {isDropdownOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-blue-800 rounded-lg shadow-lg overflow-hidden">
+              <div className="absolute left-0 mt-2 w-48 bg-[#FF8C00] rounded-lg shadow-lg overflow-hidden">
                 {dropdownOptions.map((option) => (
                   <a
                     key={option.name}
                     href={option.path}
-                    className="block px-4 py-3 text-white-800 hover:bg-indigo-50 hover:text-indigo-600 transition-colors"
+                    className="block px-4 py-3 text-white-800 hover:bg-[#1F0287] hover:text-[#FFFF8] transition-colors"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     {option.name}
