@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { isButtonElement } from 'react-router-dom/dist/dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,7 +55,7 @@ const Navigation = () => {
                 key={item.name} 
                 variant = "outline"
                 onClick={() => navigate(item.path)}
-                className="text-white hover:text-[#02032d] transition-colors font-medium bg-[#ffbc04] hover:bg-orange-500 rounded-full"
+                className="text-white hover:text-[#e6e6eb] transition-colors font-medium bg-[#ffbc04] hover:bg-orange-500 rounded-full"
               >
                 {item.name}
               </Button>
@@ -83,7 +83,7 @@ const Navigation = () => {
       <div className={cn(
         "md:hidden overflow-hidden transition-all duration-300",
         isScrolled ? "bg-[#0E013D]" : "bg-transparent",
-        isMenuOpen ? "max-h-96" : "max-h-0"
+        isMenuOpen ? "max-h-96 bg-[#0E013D]" : "max-h-0"
       )}>
         <div className="container mx-auto px-4 py-2 flex flex-col">
           {navItems.map((item) => (
