@@ -2,30 +2,31 @@ import React, { useState, useEffect } from 'react';
 
 const schools = [
   {
-    name: 'Pioneer School',
-    image: '/images/stpa swimmers.png',
+    name: 'Swimming',
+    image: '/images/pioneerboysswimming.jpg',
   },
   {
-    name: 'Pioneer Girls School',
-    image: '/images/girls hockey.png',
+    name: 'Playing Hockey',
+    image: '/images/pioneergirlshockey.jpg',
   },
   {
-    name: 'Pioneer Junior School',
-    image: '/images/stpa swimmers.png',
+    name: 'Aviation Trip',
+    image: '/images/boysjunioraviation.jpg',
   },
   {
-    name: 'Pioneer Girls Junior Academy',
-    image: '/images/girls hockey.png',
+    name: 'Drama Club',
+    image: '/images/girlsjuniordramaclub.jpg',
   },
   {
-    name: 'St. Paul Thomas Academy',
-    image: '/images/stpa swimmers.png',
+    name: 'The Band',
+    image: '/images/stpaulsorchestra.jpg',
   },
 ];
 
 const StudentsLifeSection: React.FC = () => {
   const [selected, setSelected] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  
 
   // Auto-slide functionality
   useEffect(() => {
@@ -61,8 +62,8 @@ const StudentsLifeSection: React.FC = () => {
       onMouseLeave={handleMouseLeave}
     >
       <div className="max-w-6xl mx-auto">
-        <hr className="border-t border-gray-300 mb-6" />
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide text-[#FFA726]">Students Life</h2>
+        <hr className="border-t border-gray-300 mb-6 mx-6" />
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide text-[#FFBC04]">Life in Abundance</h2>
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
           {/* Timeline */}
           <div className="flex-1 flex justify-center">
@@ -77,20 +78,20 @@ const StudentsLifeSection: React.FC = () => {
                     <span 
                       className={`w-5 h-5 rounded-full border-2 transition-all duration-300 ${
                         idx === selected 
-                          ? 'bg-[#FFA726] border-[#FFA726] scale-110' 
-                          : 'bg-gray-800 border-gray-800'
+                          ? 'bg-[#FFBC04] border-[#FFBC04] scale-110' 
+                          : 'bg-[#02032d] border-[#02032d]'
                       }`}
                     ></span>
                     {idx !== schools.length - 1 && (
-                      <span className={`w-1 h-8 bg-gray-400 transition-all duration-300 ${
-                        idx === selected ? 'bg-[#FFA726]' : ''
+                      <span className={`w-0.5 h-8 bg-[#02032d] transition-all duration-300 ${
+                        idx === selected ? 'bg-[#FFBC04]' : ''
                       }`}></span>
                     )}
                   </div>
                   <span 
                     className={`text-lg font-medium transition-all duration-300 ${
                       idx === selected 
-                        ? 'text-[#FFA726] scale-105' 
+                        ? 'text-[#FFBC04] scale-105' 
                         : 'text-gray-900'
                     }`}
                   >
@@ -101,16 +102,16 @@ const StudentsLifeSection: React.FC = () => {
             </div>
           </div>
           {/* Image */}
-          <div className="flex-1 flex justify-center border-r-4">
+          <div className="flex-1 flex justify-center border-r-5 border-b-5  relative drop-shadow-[5px_0px_2px_rgba(0,0,0,0.5)]">
             <img
               src={schools[selected].image}
               alt={schools[selected].name}
-              className="w-96 h-96 object-contain rounded-[30%] transition-all duration-500 transform hover:scale-110"
+              className="w-full h-full object-cover transition-all duration-500 transform hover:scale-110"
             />
           </div>
         </div>
-        <div className="flex justify-center">
-          <button className="border border-[#FFA726] text-[#FFA726] rounded px-6 py-2 font-medium hover:bg-[#FFA726] hover:text-white transition-all">
+        <div className="flex justify-left">
+          <button className="border border-[#FFBC04] text-[#FFBC04] rounded px-6 py-2 font-medium hover:bg-[#FFBC04] hover:text-white transition-all">
             What distinguishes your journey with us?
           </button>
         </div>

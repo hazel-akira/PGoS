@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { isButtonElement } from 'react-router-dom/dist/dom';
+import { useNavigate } from 'react-router-dom';
+
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,18 +23,20 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: 'Home', path: '/' },
+    // { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Programs', path: '/programs' },
-    { name: 'Faculty', path: '/faculty' },
+    // { name: 'Faculty', path: '/faculty' },
     { name: 'Contact', path: '/contact' },
     { name: 'Join Us', path: '/contact', isButton:true},
   ];
 
+  const navigate = useNavigate()
+
   return (
     <nav className={cn(
       "fixed w-full top-0 z-50 transition-colors duration-300",
-      isScrolled ? "bg-[#0E013D] shadow-md" : "bg-transparent"
+      isScrolled ? "bg-[#02032d] shadow-md" : "bg-transparent"
     )}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
@@ -42,16 +45,26 @@ const Navigation = () => {
               src="/images/Pgos Logo.png" 
               alt="PGOS School Logo" 
               className="h-13 w-auto mr-2"
+              onClick={() => navigate('/')}
             />
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
+            {navItems.map((item) => item.isButton ?(
+              <Button
+                key={item.name} 
+                variant = "outline"
+                onClick={() => navigate(item.path)}
+                className="text-white hover:text-[#02032d] transition-colors font-medium bg-[#ffbc04] hover:bg-orange-500 rounded-full"
+              >
+                {item.name}
+              </Button>
+            ) : (
               <a 
                 key={item.name} 
                 href={item.path}
-                className="text-white hover:text-indigo-300 transition-colors font-medium"
+                className="text-white hover:text-[#FFBC04] transition-colors font-medium"
               >
                 {item.name}
               </a>

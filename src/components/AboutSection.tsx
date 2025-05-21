@@ -1,38 +1,50 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
 
 const AboutSection = () => {
   return (
-    <div className="py-16 bg-[#f3f2f5]">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-            <div className="relative">
-              <div className="bg-indigo-600 absolute top-0 left-0 w-full h-full -translate-x-4 -translate-y-4 -z-10 rounded-lg"></div>
-             
+    <section className="relative bg-white py-8 md:py-20 overflow-x-hidden">
+      <hr className="border-t border-gray-300 mb-6 mx-96" />
+      {/* Large Outlined Heading */}
+      <h2 className="absolute left-1/2 top-0 -translate-x-1/2 text-xl md:text-4xl tracking-wide font-semibold text-[#02032d] mt-12 md:mt-24">
+        Grow &amp; Thrive
+      </h2>
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-0 relative z-10 pt-24 md:pt-40">
+        {/* Text Block */}
+        <div className="relative flex flex-col items-center w-full md:w-auto md:ml-28">
+          <div className="bg-white text-[#02032d] p-6 md:p-12 max-w-md w-full shadow-lg text-center">
+            <h3 className="text-2xl md:text-4xl font-light mb-2">Excellence Rooted in </h3>
+            <div className="text-[#FFBC04] text-2xl md:text-4xl font-normal leading-tight mb-4">
+            Character and <br />Leadership
             </div>
-          </div>
-          <div className="md:w-1.9/2  ">
-            <h6 className="text-black font-semibold mb-2">Grow and Thrive</h6>
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">Nurturing Minds, Building Futures</h2>
-            <p className="text-gray-600 mb-4">
-            For more than 25 years, Pioneer Schools have been nurturing and transforming the lives of young people through education. We take pride in being a trusted beacon of educational success. </p>
-            <p className="text-gray-600 mb-6">
-              We believe in a holistic approach to education that balances academic rigor with creative expression, physical well-being, and social responsibility.
+            <p className="mb-6 text-base">
+              For more than 25 years, Pioneer Schools have been nurturing and transforming the lives of young people through education. We take pride in being a trusted beacon of educational success.
             </p>
-            <Button className="bg-indigo-600 hover:bg-indigo-700">Learn More About Us</Button>
           </div>
-          <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
-                  alt="School Campus" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
+          {/* Button below, overlapping the card */}
+          <span className="inline-flex items-center justify-center w-40 h-12 bg-[#FFBC04] rounded-r-full font-semibold text-white cursor-pointer transition hover:bg-[#ff8c00] shadow-[-8px_8px_20px_0_rgba(0,0,0,0.15)] -mt-6 md:-mt-6 mx-auto">
+            Core &amp; Culture
+          </span>
+        </div>
+       
+        {/* Image Block */}
+        <div className="flex-1 flex justify-center md:justify-start relative w-full max-w-xl md:mr-15 mt-8 md:mt-0">
+          {/* Accent border */}
+          <div className="absolute -top-2 -right-2 w-full h-full p-1 rounded-lg bg-gradient-to-br from-[#0E013d] to-[#ffbc04] z-0"></div>
+          <img
+            src="/images/aboutsection2.jpg"
+            alt="aboutpgos"
+            loading="lazy"
+            className="relative w-full h-auto rounded-lg shadow-xl z-10"
+          />
+          {/* Circular Badge */}
+          <div className="absolute -top-4 -right-4 sm:-top-6 sm:-right-6 md:-top-10 md:-right-10 bg-gradient-to-br from-[#0E013d] via-[#1E2A60] to-[#ffbc04] text-white flex items-center justify-center rounded-full shadow-lg w-16 h-16 sm:w-20 sm:h-20 md:w-32 md:h-32 z-20 p-2">
+            <span className="text-[0.6rem] sm:text-sm md:text-lg font-light text-center leading-tight">
+              A Tradition of Excellence
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
