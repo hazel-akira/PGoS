@@ -53,7 +53,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
             </button>
             
             {isDropdownOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-[#FFBC04] rounded-lg shadow-lg overflow-hidden">
+              <div className="absolute left-0 mt-2 w-48 bg-[#FFC300] rounded-lg shadow-lg overflow-hidden">
                 {dropdownOptions.map((option) => (
                   <a
                     key={option.name}
