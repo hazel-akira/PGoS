@@ -30,15 +30,15 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-[#FFC300] text-lg font-semibold mb-4">Quick Links</h3>
+          <h3 className="text-[#F4B24A] text-lg font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:decoration-[#FFC300] hover:underline">About</a></li>
-            <li><a href="#" className="hover:decoration-[#FFC300] hover:underline">Visit</a></li>
-            <li><a href="#" className="hover:decoration-[#FFC300] hover:underline">Schools</a></li>
-            <li><a href="#" className="hover:decoration-[#FFC300] hover:underline">Admissions</a></li>
-            <li><a href="#" className="hover:decoration-[#FFC300] hover:underline">Testimonials</a></li>
-            <li><a href="#" className="hover:decoration-[#FFC300] hover:underline">Students Life</a></li>
-            <li><a href="#" className="hover:decoration-[#FFC300] hover:underline">Why choose Pioneer Schools</a></li>
+            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">About</a></li>
+            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Visit</a></li>
+            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Schools</a></li>
+            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Admissions</a></li>
+            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Testimonials</a></li>
+            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Students Life</a></li>
+            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Why choose Pioneer Schools</a></li>
           </ul>
         </div>
 
@@ -47,12 +47,12 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex space-x-4 mt-10 text">
-            <a href="#" className='hover:text-[#FFC300] transition-colors duration-300'><FiFacebook /></a>
-            <a href="#" className='hover:text-[#FFC300] transition-colors duration-300'><FiInstagram /></a>
-            <a href="#" className='hover:text-[#FFC300] transition-colors duration-300'><RiTwitterXFill /></a>
-            <a href="#" className='hover:text-[#FFC300] transition-colors duration-300'><FiLinkedin /></a>
-            <a href="#" className='hover:text-[#FFC300] transition-colors duration-300'><FiYoutube /></a>
-            <a href="#" className='hover:text-[#FFC300] transition-colors duration-300'><RiTiktokLine /></a>
+            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><FiFacebook /></a>
+            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><FiInstagram /></a>
+            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><RiTwitterXFill /></a>
+            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><FiLinkedin /></a>
+            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><FiYoutube /></a>
+            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><RiTiktokLine /></a>
           </div>
 
           

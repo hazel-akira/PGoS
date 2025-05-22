@@ -52,7 +52,7 @@ const WhyChoosePioneer: React.FC = () => {
     <section className="py-28 bg-white">
       <hr className="border-t border-gray-300 mb-6 mx-24 md:mx-60" />
       <div className="text-center pb-10">
-        <h2 className="text-xl md:text-4xl font-bold font-serif text-[#FFC300] px-4">
+        <h2 className="text-xl md:text-4xl font-bold font-serif text-[#F4B24A] px-4">
           WHY CHOOSE OUR SCHOOLS
         </h2>
       </div>
