@@ -19,51 +19,54 @@ const About: React.FC = () => {
 
   return (
     <div>
-      <HeroAbout />
-      
-      {/* Sticky Navigation */}
-      <div className="sticky top-[100px] z-30">
-        <div className="bg-[#f1f2fc] shadow-md rounded-xl px-4 md:px-8 py-4 md:py-10 text-sm md:text-base">
-          <div className="flex justify-center space-x-8">
-            <p
-              onClick={() => scrollToSection(missionRef)}
-              className="text-[#0e013d] hover:text-[#FF8C00] font-medium"
-            >
-              Mission & Vision
-            </p>
-            <p
-              onClick={() => scrollToSection(historyRef)}
-              className="text-[#0e013d] hover:text-[#FF8C00] font-medium"
-            >
-              Our History
-            </p>
-            <p 
-              onClick={() => scrollToSection(leadershipRef)}
-              className="text-[#0e013d] hover:text-[#FF8C00] font-medium"
-            >
-              Leadership
-            </p>
-            <p 
-              onClick={() => scrollToSection(whyChoosePioneerRef)}
-              className="text-[#0e013d] hover:text-[#FF8C00] font-medium"
-            >
-              Why Choose Pioneer
-            </p>
+      <div className="relative">
+        <HeroAbout />
+        {/* Sticky Navigation */}
+        <div className="absolute bottom-0 left-0 right-0 z-30 transform translate-y-1/2">
+          <div className="bg-[#f1f2fc] shadow-md rounded-xl px-4 md:px-8 py-4 md:py-6 text-sm md:text-base mx-4 md:mx-8">
+            <div className="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-4 md:space-y-0">
+              <button 
+                onClick={() => scrollToSection(missionRef)}
+                className="text-[#0e013d] hover:text-[#FF8C00] font-medium w-full md:w-auto text-center py-2 md:py-0"
+              >
+                Mission & Vision
+              </button>
+              <button 
+                onClick={() => scrollToSection(historyRef)}
+                className="text-[#0e013d] hover:text-[#FF8C00] font-medium w-full md:w-auto text-center py-2 md:py-0"
+              >
+                Our History
+              </button>
+              <button 
+                onClick={() => scrollToSection(leadershipRef)}
+                className="text-[#0e013d] hover:text-[#FF8C00] font-medium w-full md:w-auto text-center py-2 md:py-0"
+              >
+                Leadership
+              </button>
+              <button 
+                onClick={() => scrollToSection(whyChoosePioneerRef)}
+                className="text-[#0e013d] hover:text-[#FF8C00] font-medium w-full md:w-auto text-center py-2 md:py-0"
+              >
+                Why Choose Pioneer
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-      <div ref={missionRef}>
-        <MissionVission />
-      </div>
-      <div ref={historyRef}>
-        <History />
-      </div>
-      <div ref={leadershipRef}>
-        <Leadership />
-      </div>
-      <div ref={whyChoosePioneerRef}>
-        <WhyChoosePioneer />
+      <div className="mt-32">
+        <div ref={missionRef}>
+          <MissionVission />
+        </div>
+        <div ref={historyRef}>
+          <History />
+        </div>
+        <div ref={leadershipRef}>
+          <Leadership />
+        </div>
+        <div ref={whyChoosePioneerRef}>
+          <WhyChoosePioneer />
+        </div>
       </div>
     </div>
   );
