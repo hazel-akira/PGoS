@@ -96,7 +96,7 @@ const Leadership: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <hr className="border-t border-gray-300 mb-6" />
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-bold font-serif text-[#FFC300] mb-8 mt-10 text-center">LEADERSHIP</h2>
+          <h2 className="text-3xl font-bold font-serif text-[#F4B24A] mb-8 mt-10 text-center">LEADERSHIP</h2>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center max-w-4xl mx-auto">
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
@@ -121,7 +121,7 @@ const Leadership: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="flex items-center justify-center mb-6 mt-2"> 
           <span className="w-8 md:w-24 h-px bg-orange-300"/>
-            <h2 className="text-2xl font-bold font-serif text-[#FFC300] px-2">BOARD OF TRUSTEES</h2>
+            <h2 className="text-2xl font-bold font-serif text-[#F4B24A] px-2">BOARD OF TRUSTEES</h2>
           <span className="w-8 md:w-24 h-px bg-orange-300"/>
         </div>
         <div className="max-w-7xl mx-auto px-4">
