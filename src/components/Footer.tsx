@@ -17,7 +17,7 @@ const Footer = () => {
       style={{ backgroundImage: "url('/images/footerimage2.jpg')" }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#02032D] bg-opacity-80"></div>
+      <div className="absolute inset-0 bg-[#02032D] bg-opacity-70"></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto grid md:grid-cols-4 gap-8 py-8">

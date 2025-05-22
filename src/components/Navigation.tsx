@@ -22,14 +22,18 @@ const Navigation = () => {
   };
 
   const navItems = [
-    // { name: 'Home', path: '/' },
+    { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Academics', path: '/academics' },
-    { name: 'Visit Us', path: '/visit Us' },
+    { name: 'VisitUs', path: '/visit-us' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Join Us', path: '/contact', isButton:true},
+    { 
+      name: 'Join Us', 
+      path: 'https://enquireto.pioneergroupofschools.co.ke/SignIn?ReturnUrl=%2F', 
+      isButton: true
+    },
   ];
-
+  
   const navigate = useNavigate()
 
   return (
@@ -95,16 +99,21 @@ const Navigation = () => {
               {item.name}
             </a>
           ))}
-          <Button 
-            variant="outline" 
-            className="border-orange text-white hover:bg-white hover:text-[#0E013D] mt-3"
-            onClick={() => {
-              document.getElementById('chatSection')?.scrollIntoView({ behavior: 'smooth' });
-              setIsMenuOpen(false);
-            }}
-          >
-           Join US
-          </Button>
+         <a 
+          href="https://enquireto.pioneergroupofschools.co.ke/SignIn?ReturnUrl=%2F" 
+          target="_blank" 
+          rel="noopener noreferrer"
+         >
+  <Button 
+    variant="outline" 
+    className="border-orange text-white hover:bg-white hover:text-[#0E013D] mt-3"
+  >
+    Join US
+  </Button>
+</a>
+
+
+
         </div>
       </div>
     </nav>
