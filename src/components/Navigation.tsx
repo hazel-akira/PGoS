@@ -67,7 +67,7 @@ const Navigation = () => {
               <a 
                 key={item.name} 
                 href={item.path}
-                className="text-white hover:text-[#FFBC04] transition-colors font-medium"
+                className="text-white hover:text-[#FFC300] transition-colors font-medium"
               >
                 {item.name}
               </a>

@@ -15,8 +15,8 @@ const SchoolsSection: React.FC = () => {
       {/* Main content container */}
       <div className="flex flex-col md:flex-row">
         {/* Text Section */}
-        <div className="bg-[#02032d] text-white p-6 md:p-10 flex flex-col justify-center items-center text-center w-full md:w-1/2">
-          <h2 className="text-2xl font-bold text-[#FFBC04] mb-4">Our Schools</h2>
+        <div className="bg-[#02032d] text-white p-6 flex flex-col justify-center items-center text-center w-full md:w-1/2">
+          <h2 className="text-2xl font-bold text-[#FFC300] mb-4">Our Schools</h2>
           <p className="text-sm md:text-base max-w-xl">
             With cutting-edge programs, state-of-the-art facilities, a focus on character-building, and
             passionate educators, we create transformative educational experiences that shape futures
@@ -24,7 +24,7 @@ const SchoolsSection: React.FC = () => {
           </p>
             {/* CTA Button */}
             <div className="w-full bg-[#02032d] py-8 text-center">
-                <button className="bg-[#FFBC04] hover:bg-[#FFD86D] text-white font-bold py-3 px-8 rounded-full transition-colors">
+                <button className="bg-[#FFC300] hover:bg-[#FFD86D] text-white font-bold py-3 px-8 rounded-full transition-colors">
                 Explore Programs
                 </button>
             </div>
@@ -52,7 +52,7 @@ const SchoolsSection: React.FC = () => {
                   href={school.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between px-4 py-4 hover:text-[#ffbc04] 
+                  className="flex items-center justify-between px-4 py-4 hover:text-[#FFC300] 
                             border-b md:border-b-0 border-gray-200 last:border-b-0 transition-all"
                 >
                   <span className="text-sm md:text-base font-medium">{school.name}</span>
