@@ -23,32 +23,32 @@ const About: React.FC = () => {
       
       {/* Sticky Navigation */}
       <div className="sticky top-[100px] z-30">
-        <div className="bg-[#f1f2fc] shadow-md rounded-xl px-8 py-10">
+        <div className="bg-[#f1f2fc] shadow-md rounded-xl px-4 md:px-8 py-4 md:py-10 text-sm md:text-base">
           <div className="flex justify-center space-x-8">
-            <button 
+            <p
               onClick={() => scrollToSection(missionRef)}
               className="text-[#0e013d] hover:text-[#FF8C00] font-medium"
             >
               Mission & Vision
-            </button>
-            <button 
+            </p>
+            <p
               onClick={() => scrollToSection(historyRef)}
               className="text-[#0e013d] hover:text-[#FF8C00] font-medium"
             >
               Our History
-            </button>
-            <button 
+            </p>
+            <p 
               onClick={() => scrollToSection(leadershipRef)}
               className="text-[#0e013d] hover:text-[#FF8C00] font-medium"
             >
               Leadership
-            </button>
-            <button 
+            </p>
+            <p 
               onClick={() => scrollToSection(whyChoosePioneerRef)}
               className="text-[#0e013d] hover:text-[#FF8C00] font-medium"
             >
               Why Choose Pioneer
-            </button>
+            </p>
           </div>
         </div>
       </div>
