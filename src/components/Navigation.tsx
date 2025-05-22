@@ -22,16 +22,12 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Academics', path: '/academics' },
-    { name: 'VisitUs', path: '/visit-us' },
-    { name: 'Contact', path: '/contact' },
-    { 
-      name: 'Join Us', 
-      path: 'https://enquireto.pioneergroupofschools.co.ke/SignIn?ReturnUrl=%2F', 
-      isButton: true
-    },
+    { name: 'Home', path: '/', isButton: false },
+    { name: 'About', path: '/about', isButton: false },
+    { name: 'Academics', path: '/academics', isButton: false },
+    { name: 'VisitUs', path: '/visit-us', isButton: false },
+    { name: 'Contact', path: '/contact', isButton: false },
+    { name: 'Join Us', path: '/join', isButton: true },
   ];
   
   const navigate = useNavigate()

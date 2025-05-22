@@ -1,10 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
 import HeroVisit from '@/components/HeroVisit';
 import SchoolsCarousel from '@/components/SchoolsCarousel';
 import ContactForm from '@/components/contactForm';
+
 const VisitUs = () => {
-  const [activeTab, setActiveTab] = useState<'schools' | 'map' | 'contact' | 'faq'>('schools');
+  const tabNames = ['schools', 'map', 'contact', 'faq'];
+  const [activeTab, setActiveTab] = useState<'schools' | 'map' | 'contact' | 'faq'>(tabNames[0] as 'schools');
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isAutoPlaying) {
+      interval = setInterval(() => {
+        setActiveTab((currentTabName) => {
+          const currentIndex = tabNames.indexOf(currentTabName);
+          const nextIndex = (currentIndex + 1) % tabNames.length;
+          return tabNames[nextIndex] as typeof activeTab;
+        });
+      }, 5000); // Change tab every 5 seconds
+    }
+
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
+  }, [isAutoPlaying, tabNames]);
+
+  const handleTabClick = (tabName: 'schools' | 'map' | 'contact' | 'faq') => {
+    setActiveTab(tabName);
+    setIsAutoPlaying(false); // Pause auto-play on user interaction
+  };
+
+  const handleMouseEnterTabs = () => {
+    setIsAutoPlaying(false); // Pause on hover
+  };
+
+  const handleMouseLeaveTabs = () => {
+    setIsAutoPlaying(true); // Resume on mouse leave
+  };
 
   return (
     <div className="min-h-screen bg-[#3f3636] text-white">
@@ -14,15 +50,15 @@ const VisitUs = () => {
       <Navigation />
       <HeroVisit scrollToChat={() => {}} />
          {/* Tabs */}
-      <div className="py-4">
+      <div className="py-1" onMouseEnter={handleMouseEnterTabs} onMouseLeave={handleMouseLeaveTabs}>
         <div className="container mx-auto px-4">
-        <div className="bg-[#727277] text-white py-3 px-6 
+        <div className="bg-[#727277] text-white py-1 px-6 
   rounded-tl-x4 rounded-tr-xl rounded-bl-md rounded-br-md 
   flex justify-center space-x-8 mx-auto w-fit my-8">
-            {['schools', 'map', 'contact', 'faq'].map((tab) => (
+            {tabNames.map((tab) => (
              <span
   key={tab}
-  onClick={() => setActiveTab(tab as any)}
+  onClick={() => handleTabClick(tab as 'schools' | 'map' | 'contact' | 'faq')}
   className={`cursor-pointer font-medium px-4 py-2 
     ${
       activeTab === tab
