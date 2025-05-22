@@ -6,6 +6,8 @@ import AboutSection from '@/components/AboutSection';
 import ChatIcon from '@/components/ChatIcon';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import SchoolsSection from '@/components/SchoolsSection';
+import ContactInfoSection from '@/components/ContactInfoSection';
+import CampusesSection from '@/components/CampusesSection';
 
 const Index = () => {
   return (
@@ -18,9 +20,12 @@ const Index = () => {
       <TestimonialCarousel />
       <SchoolsSection />
       <ChatIcon />
+      <ContactInfoSection />
+      <CampusesSection />
      
     </div>
   );
 };
 
 export default Index;
+
