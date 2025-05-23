@@ -12,17 +12,17 @@ const HeroAcademics: React.FC = () => {
        {/* Navigation */}
         <div className="absolute bottom-0 left-0 right-0 z-30 transform translate-y-1/2">
             <div className="bg-[#f1f2fc] shadow-md rounded-xl px-4 md:px-8 py-4 md:py-6 text-sm md:text-base mx-4 md:mx-96">
-                <div className="flex flex-col md:flex-row md:justify-center md:items-center items-start space-y-4 md:space-y-0 md:space-x-8">
-                <button className="text-[#0e013d] hover:text-[#F4B24A] font-medium w-full md:w-auto text-left md:text-center py-2 md:py-0">
+                <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                <button className="text-[#0e013d] hover:text-[#F4B24A] font-small w-full md:w-auto text-center py-2 md:py-0">
                     Curriculum Overview
                 </button>
-                <button className="text-[#0e013d] hover:text-[#F4B24A] font-medium w-full md:w-auto text-left md:text-center py-2 md:py-0">
+                <button className="text-[#0e013d] hover:text-[#F4B24A] font-small w-full md:w-auto text-center py-2 md:py-0">
                     Unique Programs
                 </button>
-                <button className="text-[#0e013d] hover:text-[#F4B24A] font-medium w-full md:w-auto text-left md:text-center py-2 md:py-0">
+                <button className="text-[#0e013d] hover:text-[#F4B24A] font-small w-full md:w-auto text-center py-2 md:py-0">
                     Academic Achievements
                 </button>
-                <button className="text-[#0e013d] hover:text-[#F4B24A] font-medium w-full md:w-auto text-left md:text-center py-2 md:py-0">
+                <button className="text-[#0e013d] hover:text-[#F4B24A] font-small w-full md:w-auto text-center py-2 md:py-0">
                     Experienced Moderators
                 </button>
                 </div>
