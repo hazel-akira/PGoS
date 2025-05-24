@@ -14,7 +14,7 @@ const Academics = () => {
       <Curriculum />
       <UniquePrograms />
       <AcademicAchievements />
-      <AcademicFacaulty />
+      {/* <AcademicFacaulty /> */}
     </div>
   );
 };
