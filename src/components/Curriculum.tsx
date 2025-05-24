@@ -70,11 +70,11 @@ const Curriculum: React.FC = () => {
         <div className="relative z-10 -mt-10 px-4">
           <div className="bg-white bg-opacity-90 backdrop-blur-md px-6 py-8 shadow-2xl rounded-lg max-w-lg w-full mx-auto">
             <div className="flex items-center gap-4 mb-6">
-              <span className="flex-grow h-px bg-orange-300" />
+              <span className="flex-grow h-px bg-[#F4B24A]" />
                 <h2 className="text-md font-bold text-[#0e013d] whitespace-nowrap">
                   Curriculum Overview
                 </h2>
-              <span className="flex-grow h-px bg-orange-300" />
+              <span className="flex-grow h-px bg-[#F4B24A]" />
             </div>
             <h3 className="text-xl font-semibold mb-2 text-[#F4B24A] text-center">{schools[selected].title}</h3>
             <p className="text-sm text-[#0e013d] text-center">{schools[selected].description}</p>
