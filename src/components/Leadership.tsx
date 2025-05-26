@@ -47,12 +47,7 @@ const trustees: Trustee[] = [
     school: "Pioneer  girls School",
     image: "/images/deputygirls.png",
   },
-  {
-    name: "Mr. Gichengo",
-    title: "Principal",
-    school: "Pioneer Group",
-    image: "/images/principalpgos.png",
-  },
+  
   // Add 2 more entries here to make 5
 ];
 
@@ -102,8 +97,8 @@ const Leadership: React.FC = () => {
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
             <img src="/images/directorpgos.png" alt="Leadership" className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-md shadow-md" />
             <div className="mt-6 text-center">
-              <h5 className="text-xl font-bold text-[#02032d]">Dr. P. Munga</h5>
-              <h6 className="text-md font-semibold text-gray-[#02032d] mt-2">Chairman Group of Schools</h6>
+              <h5 className="text-xl font-bold text-[#02032d]">Mr. Gichengo</h5>
+              <h6 className="text-md font-semibold text-gray-[#02032d] mt-2">Principal Group of Schools</h6>
             </div>
           </div>
           
