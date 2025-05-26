@@ -58,7 +58,7 @@ const StudentsLifeSection: React.FC = () => {
 
   return (
     <section 
-      className="w-full bg-white py-12 px-2 md:px-0"
+      className="w-full bg-[#f7f7f7] py-12 px-2 md:px-0"
       onMouseLeave={handleMouseLeave}
     >
       <div className="max-w-6xl mx-auto">
