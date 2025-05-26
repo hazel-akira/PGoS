@@ -7,8 +7,8 @@ const MissionVission: React.FC = () => {
 
    
   return (
-    <section className="bg-[#f1f2fc] py-20 md:max-h-[900px] py-16" style={{backgroundImage: 'url(/images/admin.png)'}}>
-        <div className="max-w-4xl mx-auto space-y-16 border-t-0  bg-white shadow-md rounded-xl p-6 text-gray-800 max-w-3xl mx-auto">
+    <section className="bg-[#f1f2fc]  md:max-h-[900px] py-16" style={{backgroundImage: 'url(/images/admin.png)'}}>
+        <div className=" space-y-16 border-t-0  bg-white shadow-md rounded-xl p-6 text-gray-800 max-w-3xl mx-auto">
         {/* Mission Section */}
         <div>
             <h2 className="text-xl font-semibold text-orange-500 text-center">Our Mission</h2>

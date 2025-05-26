@@ -25,7 +25,7 @@ const Navigation = () => {
     { name: 'Home', path: '/', isButton: false },
     { name: 'About', path: '/about', isButton: false },
     { name: 'Academics', path: '/academics', isButton: false },
-    { name: 'VisitUs', path: '/visit-us', isButton: false },
+    { name: 'Admissions', path: '/admissions', isButton: false },
     { name: 'Contact', path: '/contact', isButton: false },
     { name: 'Join Us', path: '/join', isButton: true },
   ];

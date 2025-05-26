@@ -1,33 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { ArrowLeft, ArrowRight, Play } from 'lucide-react';
+import { Play } from 'lucide-react';
+import CloudBackground from '@/components/CloudBackground';
 
-// Custom Arrow components
-const NextArrow = (props: any) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", right: "-25px", top: "50%", transform: "translateY(-50%)", zIndex: 1 }}
-      onClick={onClick}
-    >
-     <ArrowRight size={30} color="#FFC300" />
-    </div>
-  );
-};
-
-const PrevArrow = (props: any) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-       style={{ ...style, display: "block", left: "-25px", top: "50%", transform: "translateY(-50%)", zIndex: 1 }}
-      onClick={onClick}
-    >
-     <ArrowLeft size={30} color="#FFC300" />
-    </div>
-  );
-};
 
 const SchoolsCarousel = () => {
   const schools = [
@@ -83,8 +58,7 @@ const SchoolsCarousel = () => {
     slidesToScroll: 1,
     autoplay: true, // Enable autoplay
     autoplaySpeed: 5000, // Set autoplay speed to 5 seconds
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+   
     appendDots: (dots: any) => (
       <div
         style={{
@@ -136,9 +110,10 @@ const SchoolsCarousel = () => {
   };
 
   return (
-    <div className="relative py-12 overflow-hidden" style={{ backgroundImage: "linear-gradient(to bottom right, #0E013D, #02032d)" }}>
+    <div className="relative py-12 overflow-hidden" style={{ backgroundImage: "linear-gradient(to bottom right, #fffff, #2C27C9)" }}>
       {/* Curved Frame Effect - Basic implementation using borders and pseudo-elements */}
       <div className="container mx-auto px-4">
+          <CloudBackground />
         <div className="relative border border-[#c9a030be] rounded-[60px] p-8 md:p-12" style={{ boxShadow: "0 0 30px rgba(255, 188, 4, 0.5)" }}>
           <Slider {...settings}>
             {schools.map((school, index) => (
@@ -150,7 +125,7 @@ const SchoolsCarousel = () => {
                       <img 
                         src={school.logo} 
                         alt={`${school.name} Logo`} 
-                        className="h-10 w-10 mr-2"
+                        className="h-15 w-12 mr-2"
                       />
 
                       <div>
@@ -158,8 +133,6 @@ const SchoolsCarousel = () => {
                         <p className="text-sm text-gray-600 text-left">{school.subhead}</p>
                       </div>
                     </div>
-                    {/* Three Dots Icon Placeholder */}
-                    
                   </div>
 
                   {/* Video/Image Placeholder with Play Icon */}
@@ -168,7 +141,8 @@ const SchoolsCarousel = () => {
                     style={{ backgroundImage: `url('${school.image}')` }}
                   >
                     <div className="absolute inset-0  opacity-30 rounded-lg"></div>
-                    <Play size={40} color="white" className="relative z-9" />
+                    <Play size={40} className="relative z-9 fill-white stroke-black" />
+
                   </div>
 
                   <p className="text-xs text-gray-600 mb-4">{school.subtitle}</p>

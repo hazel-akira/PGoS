@@ -9,9 +9,10 @@ import About from "./pages/About";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import VisitUsPage from "./pages/VisitUs";
+import Admissions from "./pages/Admissions.tsx";
 import ContactPage from "./pages/ContactPage";
 import JoinUsPage from "./pages/JoinUsPage";
-
+import EnrollmentProcess from "./components/Enrollment.tsx";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -24,9 +25,11 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
+          <Route path="/admissions" element={<Admissions />} />
           <Route path="/visit-us" element={<VisitUsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/join" element={<JoinUsPage />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
