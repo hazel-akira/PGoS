@@ -38,7 +38,7 @@ const UniquePrograms = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-32 px-4 bg-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center py-32 px-4 bg-[#ECECFB] overflow-hidden">
       {/* Conditional Background */}
       {isMobile ? (
         <div
@@ -102,7 +102,7 @@ const UniquePrograms = () => {
                   {features.map((feature, index) => (
                     <SwiperSlide key={index}>
                       <div className="p-2 sm:p-4 w-full max-w-xs mx-auto">
-                        <div className="bg-white w-full rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 border border-gray-100">
+                        <div className="bg-[#f1f2fc] w-full rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border border-gray-100">
                           <div className="flex justify-center mb-6">
                             <img src={feature.icon} alt={feature.title} className="w-16 h-16 rounded-full" />
                           </div>
