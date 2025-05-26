@@ -3,7 +3,6 @@ import HeroSection from '@/components/HeroSection';
 import AtGlanceSection from '@/components/AtGlanceSection';
 import StudentsLifeSection from '@/components/StudentsLifeSection';
 import AboutSection from '@/components/AboutSection';
-import ChatIcon from '@/components/ChatIcon';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import SchoolsSection from '@/components/SchoolsSection';
 
@@ -17,8 +16,6 @@ const Index = () => {
       <StudentsLifeSection />
       <TestimonialCarousel />
       <SchoolsSection />
-      <ChatIcon />
-     
     </div>
   );
 };
