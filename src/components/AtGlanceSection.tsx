@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const stats = [
   {
-    icon: <Users size={32} className='h-16 w-16 object-contain'/>,
+    icon: <Users size={32} className='h-18 w-18 object-contain'/>,
     title: 'Community & Collaboration',
     description: '1000+ Students Connected & Thriving',
     color: 'from-blue-500 to-yellow-500',
@@ -12,7 +12,7 @@ const stats = [
     shadow: 'shadow-blue-200',
   },
   {
-    icon: <BookOpen size={32} className='h-16 w-16 object-contain'/>,
+    icon: <BookOpen size={32} className='h-18 w-18 object-contain'/>,
     title: 'Academic Excellence',
     description: '#1 in Academic Performance Countywide',
     color: 'from-amber-500 to-purple-600',
@@ -20,7 +20,7 @@ const stats = [
     shadow: 'shadow-orange-200',
   },
   {
-    icon: <BarChart2 size={32} className='h-16 w-16 object-contain' />,
+    icon: <BarChart2 size={32} className='h-18 w-18 object-contain' />,
     title: 'Progress & Growth',
     description: '25% Year-Over-Year Growth in Key Areas',
     color: 'from-blue-400 to-yellow-400',
@@ -28,7 +28,7 @@ const stats = [
     shadow: 'shadow-blue-100',
   },
   {
-    icon: <School size={32} className='h-16 w-16 object-contain' />,
+    icon: <School size={32} className='h-18 w-18 object-contain' />,
     title: 'Dedicated Educators',
     description: 'Award-Winning Faculty with Over 15 Years Average Experience',
     color: 'from-orange-300 to-amber-500',
@@ -39,10 +39,10 @@ const stats = [
 
 const GlanceSection: React.FC = () => {
   return (
-    <section className="relative bg-[#ECECFB] py-28 px-4">
+    <section className="relative bg-[#f1f2fc] py-28 px-4">
       <div className="max-w-6xl mx-auto text-center relative">
         <hr className="border-t border-gray-300 mb-6" />
-        <h2 className="text-2xl font-semibold text-[#0D0B3B] mb-20 tracking-wide">
+        <h2 className="text-5xl font-semibold text-[#02032d] mb-20 tracking-wide">
           PIONEER SCHOOLS AT A GLANCE
         </h2>
 
@@ -60,12 +60,12 @@ const GlanceSection: React.FC = () => {
                 {stat.icon}
               </div>
               <h3 className="font-bold text-[#0D0B3B]">{stat.title}</h3>
-              <p className="text-sm mt-1 text-gray-700">{stat.description}</p>
+              <p className="text-md mt-1 text-gray-700">{stat.description}</p>
             </div>
           ))}
         </div>
 
-        <button className="mt-20 bg-[#F4B24A] hover:bg-[#D3AF37] text-white px-6 py-3 rounded  transition font-semibold rounded shadow-md transition-all text-base md:text-lg" style={{boxShadow: '2px 2px 0 #8884'}}>
+        <button className="mt-20 bg-[#F4B24A] hover:bg-orange-400 text-white px-6 py-3 rounded  transition font-semibold rounded shadow-md transition-all text-base md:text-lg" style={{boxShadow: '2px 2px 0 #8884'}}>
           MORE FACTS
         </button>
       </div>

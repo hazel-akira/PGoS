@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 type Props ={
-    onClose: () => void;
+  onClose: () => void;
 
 }
 
@@ -11,7 +11,7 @@ const FullScreenMenu = ({onClose}: Props) => {
     const navigate = useNavigate();
 
     return (
-        <div className="fixed inset-0 z-50 flex">
+        <div className="fixed inset-0 z-[999] flex">
             {/* Left: Image */}
             <div className="w-1/2 hidden lg:block">
                 <img
@@ -44,8 +44,8 @@ const FullScreenMenu = ({onClose}: Props) => {
                   <ul className="space-y-4 sm:space-y-6 text-lg sm:text-xl font-serif text-white text-left">
                     <li><button className="hover:underline hover:text-[#f4b24a] transition-colors text-left" onClick={() => {navigate('/about'); onClose();} }>About Pioneer Schools</button></li>
                     <li><button className="hover:underline hover:text-[#f4b24a] transition-colors text-left" onClick={() => {navigate('/academics'); onClose();}}>Academics</button></li>
-                    <li><button className="hover:underline hover:text-[#f4b24a] transition-colors text-left" onClick={() => {navigate('/contact us'); onClose();}}>Contact Us</button></li>
                     <li><button className="hover:underline hover:text-[#f4b24a] transition-colors text-left" onClick={() => {navigate('/admissions'); onClose();}}>Admissions</button></li>
+                    <li><button className="hover:underline hover:text-[#f4b24a] transition-colors text-left" onClick={() => {navigate('/contact us'); onClose();}}>Contact Us</button></li>
                   </ul>
                 </div>
                 {/* Vertical Center Border */}

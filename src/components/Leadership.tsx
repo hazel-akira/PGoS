@@ -14,7 +14,7 @@ const trustees: Trustee[] = [
   {
     name: "Madam Susan",
     title: "Headmistress",
-    school: "Pioneer Girls Junior Academy",
+    school: "Pioneer Girls Junior",
     image: "/images/headmistressgirls.png",
   },
   {
@@ -89,9 +89,9 @@ const Leadership: React.FC = () => {
   return (
     <section className="bg-[#f1f2fc] py-16 text-center">
       <div className="max-w-7xl mx-auto">
-        <hr className="border-t border-gray-300 mb-6" />
+        <hr className="border-t border-gray-300 mb-6 mx-8" />
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-bold font-serif text-[#F4B24A] mb-8 mt-10 text-center">LEADERSHIP</h2>
+          <h2 className="text-3xl font-bold font-serif text-[#F4B24A] my-16 text-center">LEADERSHIP</h2>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center max-w-4xl mx-auto">
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
@@ -103,7 +103,7 @@ const Leadership: React.FC = () => {
           </div>
           
           <div className="w-full md:w-1/2 mt-10 md:mt-0 px-4 md:px-0">
-            <p className="text-sm md:text-base md:shadow-none shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded p-4 text-left">
+            <p className="text-md md:text-lg md:shadow-none shadow-[2px_2px_4px_rgba(0,0,0,0.1)] rounded p-4 text-left font-sans">
               Welcome to Pioneer Group of Schools, where excellence meets opportunity!
               At our schools, we believe that education is the foundation of a brighter tomorrow. With a commitment to nurturing every child's unique potential, we provide a dynamic learning environment that blends academic rigor, creativity, and character-building.
               Our educators are passionate about inspiring young minds, equipping them with the skills and values needed to thrive in a rapidly changing world. From cutting-edge facilities to a curriculum that encourages exploration and innovation, we ensure that every student is prepared to succeed not just in the classroom, but in life.
@@ -129,10 +129,10 @@ const Leadership: React.FC = () => {
                     alt={trustee.name}
                     className="w-32 h-32 object-cover rounded-full mb-4"
                   />
-                  <p className="font-semibold">{trustee.name}</p>
+                  <p className="font-semibold text-md">{trustee.name}</p>
                   <div className="mt-2 bg-[#02032d] text-white text-xs px-4 py-2 rounded-lg">
-                    <p className="font-bold">{trustee.title}</p>
-                    <p>{trustee.school}</p>
+                    <p className="font-bold text-md">{trustee.title}</p>
+                    <p className="text-sm">{trustee.school}</p>
                   </div>
                 </div>
               </div>

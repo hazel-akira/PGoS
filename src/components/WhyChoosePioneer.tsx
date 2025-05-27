@@ -1,17 +1,99 @@
 import React, { useEffect, useState } from 'react';
-
 const allImageSets = [
   [
-    { src: '/images/academicperformance.jpg', alt: 'Academic Performance', offset: 'translate-y-6', title: 'Academic Performance' },
-    { src: '/images/sciencelab.jpg', alt: 'Science Lab', offset: 'translate-y-0', title: 'Modern Facilities' },
-    { src: '/images/wellness.jpg', alt: 'Wellness', offset: 'translate-y-12', title: 'Wellness & Spirituality' },
+    {
+      src: '/images/koreaexchange.jpg',
+      alt: 'Korea Exchange Program',
+      offset: 'translate-y-6',
+      title: 'Korea Exchange Program',
+      description: 'Immerse in global cultures through our prestigious Mandarin exchange experience in South Korea.'
+    },
+    {
+      src: '/images/marine.png',
+      alt: 'Marine Studies',
+      offset: 'translate-y-6',
+      title: 'Marine Studies',
+      description: 'Dive into marine science with real-world exploration of oceans, ecosystems, and conservation.'
+    },
+    {
+      src: '/images/aviation.png',
+      alt: 'Aviation Studies',
+      offset: 'translate-y-6',
+      title: 'Aviation Studies',
+      description: 'Take flight with hands-on learning in aviation fundamentals, navigation, and aircraft systems.'
+    }
   ],
   [
-    { src: '/images/orchestra.jpg', alt: 'Orchestra', offset: 'translate-y-4', title: 'Extra-curricular Activities' },
-    { src: '/images/whychoosepgos.png', alt: 'Why Choose Pioneer', offset: 'translate-y-8', title: 'A Tradition of Excellence' },
-    { src: '/images/activitiesfield.png', alt: 'Activities Field', offset: 'translate-y-2', title: 'Sports & Games' },
+    {
+      src: '/images/ai.png',
+      alt: 'AI Studies',
+      offset: 'translate-y-4',
+      title: 'AI & Robotics',
+      description: 'Shape the future with courses in Artificial Intelligence, coding, and robotics innovation.'
+    },
+    {
+      src: '/images/whychoosepgos.png',
+      alt: 'Why Choose Pioneer',
+      offset: 'translate-y-8',
+      title: 'A Tradition of Excellence',
+      description: 'From academic awards to championship medals—our legacy speaks for itself.'
+    },
+    {
+      src: '/images/golf.jpg',
+      alt: 'Golf Club',
+      offset: 'translate-y-2',
+      title: 'Golf Club',
+      description: 'Where discipline meets focus—students develop skill and sportsmanship on the green.'
+    }
   ],
+  [
+    {
+      src: '/images/debate.jpg',
+      alt: 'Debate Club',
+      offset: 'translate-y-4',
+      title: 'Debate Club',
+      description: 'Sharpen your voice and mind—our champions compete nationally with eloquence and logic.'
+    },
+    {
+      src: '/images/art.jpg',
+      alt: 'Arts & Creativity',
+      offset: 'translate-y-8',
+      title: 'Arts & Creativity',
+      description: 'From painting to performance—our arts program nurtures imagination and expression.'
+    },
+    {
+      src: '/images/mentorship.png',
+      alt: 'Mentorship',
+      offset: 'translate-y-2',
+      title: 'Student Leadership & Mentorship',
+      description: 'Empowering the next generation through guided mentorship and leadership roles.'
+    }
+  ],
+  [
+    {
+      src: '/images/orchestra.jpg',
+      alt: 'Orchestra Band',
+      offset: 'translate-y-4',
+      title: 'Orchestra Band',
+      description: 'Fueling rhythm and teamwork through our celebrated school orchestra and music clubs.'
+    },
+    {
+      src: '/images/sciencelab.jpg',
+      alt: 'Science Lab',
+      offset: 'translate-y-0',
+      title: 'Modern Science Labs',
+      description: 'Equipped for discovery—our labs inspire curiosity through cutting-edge experiments.'
+    },
+    {
+      src: '/images/wellness.jpg',
+      alt: 'Wellness & Spirituality',
+      offset: 'translate-y-12',
+      title: 'Wellness & Chaplaincy',
+      description: 'Nurturing mind and soul through spiritual guidance, mental health, and holistic care.'
+    }
+  ]
 ];
+
 
 const WhyChoosePioneer: React.FC = () => {
   const [currentSetIndex, setCurrentSetIndex] = useState(0);
@@ -49,7 +131,7 @@ const WhyChoosePioneer: React.FC = () => {
   const currentImages = allImageSets[currentSetIndex];
 
   return (
-    <section className="py-28 bg-white">
+    <section className="py-28 bg-[#f7f7f7]">
       <hr className="border-t border-gray-300 mb-6 mx-24 md:mx-60" />
       <div className="text-center pb-10">
         <h2 className="text-xl md:text-4xl font-bold font-serif text-[#F4B24A] px-4">
@@ -85,7 +167,10 @@ const WhyChoosePioneer: React.FC = () => {
                           className="w-full h-full object-cover rounded-lg relative drop-shadow-[5px_0px_2px_rgba(0,0,0,0.5)]"
                         />
                         <div className="mt-4 text-center">
-                          <h3 className="text-lg font-semibold text-[#0e013d] drop-shadow-[5px_0px_2px_rgba(255,255,255,0)]">{image.title}</h3>
+                          <h3 className="text-xl font-bold font-serif text-[#0e013d] leading-tight">{image.title}</h3>
+                          <p className="text-base font-normal text-[#0e013d] mt-1">
+                            {image.description}
+                          </p>
                         </div>
                       </div>
                     );
@@ -117,9 +202,12 @@ const WhyChoosePioneer: React.FC = () => {
                     className="w-full h-full object-cover rounded-lg"
                   />
                   {isActive && (
-                    <div className="absolute bottom-0 left-0 w-full bg-white bg-opacity-80 py-2 px-2 rounded-b-lg">
-                      <p className="text-sm font-bold text-center text-[#0e013d]">
+                    <div className="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 py-2 px-2 rounded-b-lg">
+                      <p className="text-base font-semibold font-serif text-[#0e013d]">
                         {image.title}
+                      </p>
+                      <p className="text-sm font-normal text-center text-[#0e013d] mt-1">
+                        {image.description}
                       </p>
                     </div>
                   )}
@@ -131,6 +219,10 @@ const WhyChoosePioneer: React.FC = () => {
         )}
 
       </div>
+      <div className='flex flex-col  justify-center mx-auto md:mt-48 mt-24 flex flex-col justify-center items-center'>
+       <button className="px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#0E013d] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300">Get Prospectus</button>
+      </div>
+     
     </section>
   );
 };
