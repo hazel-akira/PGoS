@@ -3,6 +3,8 @@ import Navigation from '@/components/Navigation';
 import HeroVisit from '@/components/HeroVisit';
 import SchoolsCarousel from '@/components/SchoolsCarousel';
 import ContactForm from '@/components/contactForm';
+import { ContactIcon } from 'lucide-react';
+import ContactInfoSection from '@/components/ContactInfoSection';
 
 const VisitUs = () => {
   const tabNames = ['schools', 'map', 'contact'];
@@ -80,7 +82,7 @@ const VisitUs = () => {
         </div>
       </div>
       {activeTab === 'schools' && <SchoolsCarousel />}
-      {activeTab === 'contact' &&  <ContactForm />}
+      {activeTab === 'contact' &&  <ContactInfoSection />}
      
  {activeTab === 'map' && (
         <div className="container mx-auto px-4 py-12">
