@@ -10,10 +10,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const dropdownOptions = [
-    { name: 'Academic Programs', path: '#programs' },
-    { name: 'Student Life', path: '#student-life' },
-    { name: 'Admissions', path: '#admissions' },
-    { name: 'Campus Tour', path: '#campus-tour' },
+    { name: 'Academics', path: '/programs' },
+    { name: 'The community', path: '/student-life' },
+    { name: 'Admissions', path: '/admissions' },
+    { name: 'Campus Tour', path: '/visit' },
   ];
 
   useEffect(() => {
