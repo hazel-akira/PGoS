@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
-
+import CloudDivider from '@/components/CloudDivider';
 type HeroSectionProps = {
   scrollToChat: () => void;
 };
@@ -30,6 +30,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
           backgroundRepeat: 'no-repeat',
         }}
       >
+          {/*<CloudDivider fillColor="#ffffff" />*/}
         {/* Overlay to dim the image only */}
         <div className="absolute inset-0 bg-black bg-opacity-75 z-0"></div>
       </div>
@@ -69,11 +70,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
             )}
           </div>
         </div>
-       
       </div>
     </div>
   
   );
 };
-
+<CloudDivider  flip fillColor="#0000000" />
 export default HeroSection;

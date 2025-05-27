@@ -24,14 +24,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
       <div
         className="w-full h-full"
         style={{
-          backgroundImage: 'url("/images/adminblock.png")',
+          backgroundImage: 'url("/images/hero-bg.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
         {/* Overlay to dim the image only */}
-        <div className="absolute inset-0 bg-black bg-opacity-5 z-0"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
       </div>
     </div>
     

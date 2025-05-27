@@ -3,9 +3,11 @@ import Navigation from '@/components/Navigation';
 import HeroVisit from '@/components/HeroVisit';
 import SchoolsCarousel from '@/components/SchoolsCarousel';
 import ContactForm from '@/components/contactForm';
+import { ContactIcon } from 'lucide-react';
+import ContactInfoSection from '@/components/ContactInfoSection';
 
 const VisitUs = () => {
-  const tabNames = ['schools', 'map', 'contact', 'faq'];
+  const tabNames = ['schools', 'map', 'contact'];
   const [activeTab, setActiveTab] = useState<'schools' | 'map' | 'contact' | 'faq'>(tabNames[0] as 'schools');
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -43,16 +45,18 @@ const VisitUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#3f3636] text-white">
+    <div className="min-h-screen bg-white text-#2C27C9">
     
     
        
       <Navigation />
       <HeroVisit scrollToChat={() => {}} />
+      <hr className="border-t border-gray-300 mb-6 mx-96" />
+      
          {/* Tabs */}
       <div className="py-1" onMouseEnter={handleMouseEnterTabs} onMouseLeave={handleMouseLeaveTabs}>
         <div className="container mx-auto px-4">
-        <div className="bg-[#727277] text-white py-1 px-6 
+        <div className="bg-[#0d0d4e] text-white py-1 px-6 
   rounded-tl-x4 rounded-tr-xl rounded-bl-md rounded-br-md 
   flex justify-center space-x-8 mx-auto w-fit my-8">
             {tabNames.map((tab) => (
@@ -71,21 +75,16 @@ const VisitUs = () => {
                 {tab === 'schools' && 'Our Schools'}
                 {tab === 'map' && 'View on Map'}
                 {tab === 'contact' && 'Contact'}
-                {tab === 'faq' && 'FAQs'}
+              
               </span>
             ))}
           </div>
         </div>
       </div>
       {activeTab === 'schools' && <SchoolsCarousel />}
-      {activeTab === 'contact' &&  <ContactForm />}
+      {activeTab === 'contact' &&  <ContactInfoSection />}
      
-
-     
-
- 
-
-      {activeTab === 'map' && (
+ {activeTab === 'map' && (
         <div className="container mx-auto px-4 py-12">
           <iframe
             className="w-full h-96 rounded-lg border-2 border-[#ffbc04]"
@@ -111,23 +110,12 @@ const VisitUs = () => {
         </div>
       )}
 
-      {activeTab === 'faq' && (
-        <div className="container mx-auto px-4 py-12 max-w-2xl">
-          <h2 className="text-2xl font-semibold mb-4 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-4">
-            <div className="bg-[#0E013D] p-4 rounded">
-              <h4 className="font-semibold">Q: What are your visiting hours?</h4>
-              <p>A: Monday to Friday, 8:00 AM – 5:00 PM.</p>
-            </div>
-            <div className="bg-[#0E013D] p-4 rounded">
-              <h4 className="font-semibold">Q: Can I schedule a tour?</h4>
-              <p>A: Yes! Please contact our admissions office to book a campus tour.</p>
-            </div>
-          </div>
-        </div>
-      )}
+     
+     
     </div>
   );
 };
 
 export default VisitUs;
+
+
