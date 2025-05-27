@@ -63,7 +63,7 @@ const StudentsLifeSection: React.FC = () => {
     >
       <div className="max-w-6xl mx-auto">
         <hr className="border-t border-gray-300 mb-6 mx-6" />
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 tracking-wide text-[#F4B24A]">Life in Abundance</h2>
+        <h2 className="text-2xl md:text-5xl font-bold font-serif text-center mb-10 tracking-wide text-[#F4B24A] mt-4 md:py-12">Life in Abundance</h2>
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
           {/* Timeline */}
           <div className="flex-1 flex justify-center">
