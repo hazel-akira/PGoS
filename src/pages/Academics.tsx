@@ -4,7 +4,7 @@ import AcademicPhilosophy from '../components/AcademicPhilosophy';
 import Curriculum from '../components/Curriculum';
 import UniquePrograms from '../components/UniquePrograms';
 import AcademicAchievements from '../components/AcademicAchievements';
-import AcademicFacaulty from '../components/AcademicFacaulty';
+import AcademicJourney from '../components/AcademicJourney';
 
 const Academics = () => {
   return (
@@ -14,7 +14,7 @@ const Academics = () => {
       <Curriculum />
       <UniquePrograms />
       <AcademicAchievements />
-      <AcademicFacaulty />
+      <AcademicJourney />
     </div>
   );
 };
