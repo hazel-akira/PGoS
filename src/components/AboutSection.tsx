@@ -6,7 +6,7 @@ const AboutSection = () => {
     <section className="relative bg-white py-8 md:py-20 overflow-x-hidden">
       <hr className="border-t border-gray-300 mb-6 mx-96" />
       {/* Large Outlined Heading */}
-      <h2 className="absolute left-1/2 top-0 -translate-x-1/2 text-xl md:text-5xl tracking-wide font-semibold text-[#02032d] mt-12 md:mt-24">
+      <h2 className="absolute left-1/2 top-0 -translate-x-1/2 text-2xl md:text-5xl tracking-wide leading-relaxed font-semibold text-[#02032d] mt-12 md:mt-24">
         Grow &amp; Thrive
       </h2>
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-0 relative z-10 pt-24 md:pt-40">
