@@ -37,12 +37,12 @@ const stats = [
   },
 ];
 
-const GlanceSection: React.FC = () => {
+const AtGlanceSection: React.FC = () => {
   return (
     <section className="relative bg-[#f1f2fc] py-28 px-4">
       <div className="max-w-6xl mx-auto text-center relative">
         <hr className="border-t border-gray-300 mb-6" />
-        <h2 className="text-5xl font-semibold text-[#02032d] mb-20 tracking-wide">
+        <h2 className=" text-3xl md:text-5xl font-semibold text-[#02032d] mb-20 tracking-wide">
           PIONEER SCHOOLS AT A GLANCE
         </h2>
 
@@ -73,4 +73,4 @@ const GlanceSection: React.FC = () => {
   );
 };
 
-export default GlanceSection;
+export default AtGlanceSection;

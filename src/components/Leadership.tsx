@@ -116,7 +116,7 @@ const Leadership: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-20">
         <div className="flex items-center justify-center mb-6 mt-2"> 
           <span className="w-8 md:w-24 h-px bg-orange-300"/>
-            <h2 className="text-2xl font-bold font-serif text-[#F4B24A] px-2">BOARD OF TRUSTEES</h2>
+            <h2 className="text-xl font-bold font-serif text-[#F4B24A] px-2">BOARD OF TRUSTEES</h2>
           <span className="w-8 md:w-24 h-px bg-orange-300"/>
         </div>
         <div className="max-w-7xl mx-auto px-4">
