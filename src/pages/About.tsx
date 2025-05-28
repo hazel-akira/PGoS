@@ -29,7 +29,7 @@ const About: React.FC = () => {
                 onClick={() => scrollToSection(missionRef)}
                 className="text-[#0e013d] hover:text-[#F4b24a] font-medium w-full md:w-auto text-center py-2 md:py-0"
               >
-                Mission & Vision
+                Mission & Philosophy
               </button>
               <button 
                 onClick={() => scrollToSection(historyRef)}
@@ -47,7 +47,7 @@ const About: React.FC = () => {
                 onClick={() => scrollToSection(whyChoosePioneerRef)}
                 className="text-[#0e013d] hover:text-[#F4b24a] font-medium w-full md:w-auto text-center py-2 md:py-0"
               >
-                Why Choose Pioneer
+                Why Choose Our Schools
               </button>
             </div>
           </div>
