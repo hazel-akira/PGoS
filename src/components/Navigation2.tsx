@@ -8,6 +8,7 @@ interface Navigation2Props {
   isMenuOpen: boolean;
 }
 
+
 const Navigation2: React.FC<Navigation2Props> = ({ setIsMenuOpen, isMenuOpen }) => {
   const navigate = useNavigate();
 
@@ -15,16 +16,16 @@ const Navigation2: React.FC<Navigation2Props> = ({ setIsMenuOpen, isMenuOpen }) 
     <nav className="absolute top-0 left-0 right-0 z-30 flex items-center justify-between p-4 bg-transparent">
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <img src="/images/pgos_logo.png" alt="Logo" className="h-12 md:h-16" />
+        <img src="/images/pgos_logo.png" alt="Logo" className="h-12 md:h-16" onClick={() => navigate('/')} />
       </div>
 
       {/*Desktop nav items */}
       <div className="hidden md:flex items-center space-x-4">
-        <div className="text-white text-lg hover:text-[#f4b24a] font-semi-bold text-sm px-4 py-2 flex items-center shadow-lg bg-white/30 rounded-md" onClick={() => navigate('/')}>
+        <div className="text-orange-400 text-lg hover:text-[#f4b24a] font-semi-bold text-sm px-4 py-2 flex items-center shadow-lg bg-white/30 rounded-md" onClick={() => navigate('/')}>
             HOME
         </div>
-        <button className="bg-[#F4B24A] hover:bg-white/30 text-[#oe013d] hover:text-white font-semi-bold px-4  py-2 rounded-md text-sm flex items-center">
-          <span className="mr-1">!</span> INQUIRE
+        <button className="bg-[#F4B24A] hover:bg-white/30 text-[#oe013d] hover:text-white font-semi-bold px-4  py-2 rounded-md text-sm flex items-center" onClick={() => navigate('/contact')}>
+          <span className="mr-1">?</span> INQUIRE
         </button>
         <button className="bg-[#F4B24A] hover:bg-white/30 text-[#oe013d] hover:text-white font-semi-bold px-4 py-2 rounded-md text-sm flex items-center" onClick={() => navigate('/admissions')}>
          JOIN US
