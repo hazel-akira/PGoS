@@ -1,4 +1,5 @@
 import React from 'react';
+import{useNavigate} from 'react-router';
 import {ArrowUp} from 'lucide-react';
 import { RiTwitterXFill } from "react-icons/ri";
 import { RiTiktokLine } from "react-icons/ri";
@@ -8,19 +9,30 @@ import { FiLinkedin } from "react-icons/fi";
 import { FiYoutube } from "react-icons/fi";
 
 
+const footerLinks = [
+  {title: 'Home', path: '/'},
+  {title: 'About', path: '/about'},
+  {title: 'Academics', path: '/academics'},
+  {title: 'Admissions', path: '/admissions'},
+  {title: 'Contacts', path: '/contact'},
+  {title: 'Visit', path: '/visit-us'}
+  
+]
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate()
 
   return (
     <footer
-      className="relative pt-48 text-white bg-cover bg-center border-t border-gray-500"
+      className="relative pt-16 md:pt-32 text-white bg-cover bg-center border-t border-gray-500"
       style={{ backgroundImage: "url('/images/footerimage2.jpg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#02032D] bg-opacity-70"></div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto grid md:grid-cols-4 gap-8 py-8">
+      <div className="relative z-10 container mx-auto flex flex-col md:flex-row justify-between  gap-8 px-4 py-8">
         {/* Contact Us / Logos */}
         <div>
           <div className="flex space-x-2 mb-4">
@@ -30,15 +42,15 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-[#F4B24A] text-lg font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">About</a></li>
-            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Visit</a></li>
-            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Schools</a></li>
-            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Admissions</a></li>
-            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Testimonials</a></li>
-            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Students Life</a></li>
-            <li><a href="#" className="hover:decoration-[#F4B24A] hover:underline">Why choose Pioneer Schools</a></li>
+          <h3 className="text-[#F4B24A] text-lg font-serif mb-4 mt-4">Quick Links</h3>
+          <ul className="grid grid-cols-2 md:flex gap-x-6 gap-y-2 font-serif">
+            {footerLinks.map((item) => (
+               <li key={item.path}><button className="hover:decoration-[#F4B24A] hover:underline" onClick={() => navigate(item.path)}>
+                 {item.title}
+                </button></li>
+            ) )}
+           
+           
           </ul>
         </div>
 
@@ -59,7 +71,7 @@ const Footer = () => {
         </div>
         {/* Scroll to Top */}
         <button
-            className="mt-6 bg-white bg-opacity-20 w-10 h-10 mb-10 rounded-full hover:bg-opacity-40 transition flex flex-col items-center justify-center"
+            className="mt-6 bg-white bg-opacity-20 w-10 h-10 rounded-full hover:bg-opacity-40 transition flex flex-col items-center justify-center"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <ArrowUp className="text-white" size={24} />
@@ -68,6 +80,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Footer Row */}
+      <div>
       <div className="relative z-10 border-t border-gray-700 py-4 text-center text-sm text-gray-300 mt-10">
         <div className="flex md:flex-row justify-center items-center space-x-2 md:space-y-0 md:space-x-2">
           <p>&copy; {currentYear}</p>
@@ -78,6 +91,7 @@ const Footer = () => {
           <span>|</span>
           <a href="#" className="hover:underline">Sitemap</a>
         </div>
+      </div>
       </div>
     </footer>
   );
