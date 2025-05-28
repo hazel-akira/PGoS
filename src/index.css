@@ -101,21 +101,8 @@
     @apply bg-background text-foreground;
   }
 }
-html {
-  scroll-behavior: smooth;
-}
 
-@keyframes drawPath {
-  0% {
-    stroke-dasharray: 1500;
-    stroke-dashoffset: 1500;
-  }
-  100% {
-    stroke-dasharray: 1500;
-    stroke-dashoffset: 0;
-  }
-}
 
-.animate-draw-path .path {
-  animation: drawPath 3s ease forwards;
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
 }

@@ -49,7 +49,7 @@ const TestimonialCarousel: React.FC = () => {
     if (paused) return;
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [paused]);
 
@@ -63,9 +63,10 @@ const TestimonialCarousel: React.FC = () => {
 
   return (
     <div
-      className="relative w-full h-[500px] md:h-[750px] flex items-center justify-center overflow-hidden bg-white md:py-48"
-      onMouseEnter={() => setPaused(true)}
+      className="relative w-full h-[500px] md:h-[750px] flex items-center justify-center overflow-hidden bg-white md:py-48 md:mt-12 my-20"
+      // onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onClick={() => setPaused(true)}
     >
       {testimonials.map((testimonial, i) => (
         <div
@@ -86,7 +87,7 @@ const TestimonialCarousel: React.FC = () => {
               <h3 className="text-[#FF8C00] font-semibold text-base sm:text-lg mb-1">Testimonials</h3>
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 hover:underline hover:decoration-[#F4B24A] transition-all duration-300">Hear It From Our Own</h2>
               <p className="text-xs sm:text-sm font-semibold mt-2">{testimonial.role}</p>
-              <p className="text-gray-800 mt-3 text-sm leading-relaxed">{testimonial.text}</p>
+              <p className="text-gray-800 mt-3 md:text-md text-sm leading-relaxed">{testimonial.text}</p>
             </div>
           )}
         </div>

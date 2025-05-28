@@ -7,19 +7,19 @@ const MissionVission: React.FC = () => {
 
    
   return (
-    <section className="bg-[#f1f2fc]  md:max-h-[900px] py-16" style={{backgroundImage: 'url(/images/admin.png)'}}>
-        <div className=" space-y-16 border-t-0  bg-white shadow-md rounded-xl p-6 text-gray-800 max-w-3xl mx-auto">
+    <section className="bg-[#f1f2fc] mx-auto" style={{backgroundImage: 'url(/images/admin.png)'}}>
+        <div className="mx-4 md:mx-auto my-32 md:p-16  p-4 space-y-20 border-t-0 shadow-lg rounded-xl text-gray-800 max-w-6xl">
         {/* Mission Section */}
         <div>
-            <h2 className="text-xl font-semibold text-orange-500 text-center">Our Mission</h2>
+            <h2 className="text-2xl font-semibold text-[#f4b24a] text-center">Our Mission</h2>
             <div className="flex items-center justify-center mt-2 mb-6">
-            <span className="w-20 h-px bg-orange-300" />
-            <RocketIcon className="mx-4 text-orange-500" />
-            <span className="w-20 h-px bg-orange-300" />
+            <span className="w-20 h-px bg-[#f4b24a]" />
+            <RocketIcon className="mx-4 text-[#f4b24a]" />
+            <span className="w-20 h-px bg-[#f4b24a]" />
             </div>
             <div>
-            <p className="text-sm sm:text-base">
-                "At Pioneer Group of Schools, our mission is to empower young minds with knowledge,
+            <p className="text-md sm:text-base font-sans">
+                "To empower young minds with knowledge,
                 inspire creativity, and cultivate integrity. We are dedicated to providing a holistic
                 education that nurtures academic excellence, personal growth, and social responsibility.
                 Through innovation, passion, and a commitment to high standards, we prepare our students
@@ -30,19 +30,17 @@ const MissionVission: React.FC = () => {
 
         {/* Education Philosophy Section */}
         <div>
-            <h2 className="text-xl font-semibold text-orange-500 text-center">Our Education Philosophy</h2>
+            <h2 className="text-2xl font-semibold text-[#f4b24a] text-center">Our Philosophy</h2>
             <div className="flex items-center justify-center mt-2 mb-6">
-            <span className="w-20 h-px bg-orange-300" />
-            <BrainIcon className="mx-4 text-orange-500" />
-            <span className="w-20 h-px bg-orange-300" />
+            <span className="w-20 h-px bg-[#f4b24a]" />
+            <BrainIcon className="mx-4 text-[#f4b24a]" />
+            <span className="w-20 h-px bg-[#f4b24a]" />
             </div>
             <div>
-            <p className="text-sm sm:text-base">
-                "At Pioneer Group of Schools, we believe in the transformative power of education to ignite
+            <p className="text-md sm:text-base">
+                "We believe in the transformative power of education to ignite
                 curiosity, foster critical thinking, and shape character. Our philosophy is rooted in nurturing
-                a learning environment that values individuality, collaboration, and innovation. We strive to
-                create a culture where students are encouraged to explore their passions, challenge boundaries,
-                and grow into resilient, responsible global citizens. Through a balance of academic rigor,
+                a learning environment that values individuality, collaboration, and innovation.Through a balance of academic rigor,
                 creative exploration, and moral guidance, we aim to empower students to lead lives of purpose
                 and impact."
             </p>

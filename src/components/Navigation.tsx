@@ -22,6 +22,13 @@ const Navigation = () => {
   };
 
   const navItems = [
+<<<<<<< HEAD
+    // { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Academics', path: '/academics' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Join Us', path: '/contact', isButton:true},
+=======
     { name: 'Home', path: '/', isButton: false },
     { name: 'About', path: '/about', isButton: false },
     { name: 'Academics', path: '/academics', isButton: false },
@@ -29,6 +36,7 @@ const Navigation = () => {
     { name: 'Visit', path: '/visit-us', isButton: false },
     { name: 'Contact', path: '/contact', isButton: false },
     { name: 'Join Us', path: '/join', isButton: true },
+>>>>>>> 10ba065e4472e015d9ad49c57900aff86a7ecaab
   ];
   
   const navigate = useNavigate()

@@ -4,13 +4,22 @@ import ChatContainer from './ChatContainer';
 
 
 
-const ChatIcon = () => {
+interface ChatIconProps {
+  isMenuOpen: boolean;
+}
+
+const ChatIcon: React.FC<ChatIconProps> = ({ isMenuOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Only show the chat icon when the menu is not open
+  if (isMenuOpen) {
+    return null;
+  }
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
       {!isOpen && (
-        <div className=" text-gray-800 px-4 py-2 rounded-lg shadow-lg max-w-[200px] animate-bounce">
+        <div className="text-gray-800 px-4 py-2 rounded-lg shadow-lg max-w-[200px] animate-bounce">
           {/* <p className="text-sm">Hello, I'm PGoS AI assistant. Need help?</p> */}
         </div>
       )}
