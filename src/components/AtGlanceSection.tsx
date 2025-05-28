@@ -9,7 +9,7 @@ const stats = [
     description: '1000+ Students Connected & Thriving',
     color: 'from-blue-500 to-yellow-500',
     position: 'md:top-0 md:left-1/2 md:-translate-x-1/2',
-    shadow: 'shadow-blue-200',
+    shadow: 'shadow-orange-200',
   },
   {
     icon: <BookOpen size={32} className='h-18 w-18 object-contain'/>,
@@ -25,7 +25,7 @@ const stats = [
     description: '25% Year-Over-Year Growth in Key Areas',
     color: 'from-blue-400 to-yellow-400',
     position: 'md:top-1/3 md:left-3/4 md:-translate-x-1/2',
-    shadow: 'shadow-blue-100',
+    shadow: 'shadow-blue-200',
   },
   {
     icon: <School size={32} className='h-18 w-18 object-contain' />,
@@ -33,7 +33,7 @@ const stats = [
     description: 'Award-Winning Faculty with Over 15 Years Average Experience',
     color: 'from-orange-300 to-amber-500',
     position: 'md:top-2/3 md:left-1/2 md:-translate-x-1/2',
-    shadow: 'shadow-orange-200',
+    shadow: 'shadow-blue-200',
   },
 ];
 

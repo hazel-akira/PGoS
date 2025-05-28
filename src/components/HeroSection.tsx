@@ -75,18 +75,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
             )}
           </div>
         </div>
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <div className="bg-white/20 rounded-lg p-6 backdrop-blur-sm w-full max-w-md">
+        <div className="md:w-1/3 flex justify-center md:justify-end bg-clip-padding:1">
+          <div className="bg-white/50 rounded-lg p-6 backdrop-blur-sm w-full max-w-md">
             <h3 className="text-xl font-semibold mb-3">Upcoming Events</h3>
-            <div className="bg-white/10 rounded p-4 mb-3 hover:bg-white/20 transition-colors">
+            <div className="bg-white/40 rounded p-4 mb-3 hover:bg-white/20 transition-colors">
               <p className="font-semibold">Annual Science Fair</p>
               <p className="text-sm opacity-90">May 15, 2025 • 9:00 AM</p>
             </div>
-            <div className="bg-white/10 rounded p-4 mb-3 hover:bg-white/20 transition-colors">
+            <div className="bg-white/40 rounded p-4 mb-3 hover:bg-white/30 transition-colors">
               <p className="font-semibold">Parent-Teacher Conference</p>
               <p className="text-sm opacity-90">May 20, 2025 • 2:00 PM</p>
             </div>
-            <div className="bg-white/10 rounded p-4 hover:bg-white/20 transition-colors">
+            <div className="bg-white/40 rounded p-4 hover:bg-white/30 transition-colors">
               <p className="font-semibold">Summer Break Begins</p>
               <p className="text-sm opacity-90">June 12, 2025</p>
             </div>
