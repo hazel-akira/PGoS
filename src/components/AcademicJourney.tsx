@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-const AcademicFacaulty = () => {
+const AcademicJourney = () => {
 
   return (
     <section className='w-full h-screen bg-[#f7f7f7] py-16 px-4 text-[#02032d]'>
@@ -40,4 +40,4 @@ const AcademicFacaulty = () => {
 
 };
 
-export default AcademicFacaulty;
+export default AcademicJourney;

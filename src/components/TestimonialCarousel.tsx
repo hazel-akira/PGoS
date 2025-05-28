@@ -63,7 +63,7 @@ const TestimonialCarousel: React.FC = () => {
 
   return (
     <div
-      className="relative w-full h-[500px] md:h-[750px] flex items-center justify-center overflow-hidden bg-white md:py-48 md:mt-12 my-20"
+      className="relative w-full h-[500px] md:h-[750px] flex items-center justify-center overflow-hidden bg-white md:py-48 md:mt-12 my-20 bg-[#f9f9f9]"
       // onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onClick={() => setPaused(true)}

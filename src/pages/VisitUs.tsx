@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navigation from '@/components/Navigation';
+// import Navigation from '@/components/Navigation';
 import HeroVisit from '@/components/HeroVisit';
 import SchoolsCarousel from '@/components/SchoolsCarousel';
 import ContactForm from '@/components/contactForm';
@@ -46,10 +46,8 @@ const VisitUs = () => {
 
   return (
     <div className="min-h-screen bg-white text-#2C27C9">
-    
-    
-       
-      <Navigation />
+
+      {/* <Navigation /> */}
       <HeroVisit scrollToChat={() => {}} />
       <hr className="border-t border-gray-300 mb-6 mx-96" />
       
