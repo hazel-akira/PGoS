@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 import ChatContainer from './ChatContainer';
+import { useMenu } from './MenuContext';
 
 
+// interface ChatIconProps {
+//   isMenuOpen: boolean;
+// }
 
-interface ChatIconProps {
-  isMenuOpen: boolean;
-}
-
-const ChatIcon: React.FC<ChatIconProps> = ({ isMenuOpen }) => {
+const ChatIcon: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isMenuOpen } = useMenu();
 
-  // Only show the chat icon when the menu is not open
+  // Don't show chat icon when menu is open
   if (isMenuOpen) {
     return null;
   }
