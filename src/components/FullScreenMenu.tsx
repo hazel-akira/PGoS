@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import { useMenu } from './MenuContext';
 
 type Props ={
   onClose: () => void;
@@ -14,7 +15,7 @@ const navLinks = [
     name: 'Home',
     path: '/',
     sublinks: [
-      {name: 'About', path: '/about-section'},
+      {name: 'About', path: '/home-about'},
       {name: 'Pioneer Highlights', path:'/at-glance'},
       {name: 'Life in Abundance', path:'/student-life'},
       {name: 'Testimonials', path:'/testimonials'},
@@ -58,7 +59,7 @@ const navLinks = [
 
 
 const navButtons = [
-  {label: 'INQUIRE', icon: '?', path: '/contact'},
+  {label: 'ENQUIRE', icon: '?', path: '/contact'},
   {label: 'JOIN US', icon: '', path: '/admissions'},
   {label: 'VISIT', icon: '📍', path: '/visit-us'},
 
@@ -67,14 +68,26 @@ const navButtons = [
 const FullScreenMenu = ({ onClose }: Props) => {
   const navigate = useNavigate();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { closeMenu, setIsSubMenuOpen } = useMenu();
 
   const toggleAccordion = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+    const newOpenIndex = openIndex === index ? null : index;
+    setOpenIndex(newOpenIndex);
+    setIsSubMenuOpen(newOpenIndex !== null);
+  };
+
+  
+  const handleClose = () => {
+    closeMenu();
+    onClose();
   };
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
-    return () => { document.body.style.overflow = ''; };
+    return () => { 
+      document.body.style.overflow = ''; 
+      setIsSubMenuOpen(false);
+    };
   }, []);
 
   return (
@@ -104,7 +117,7 @@ const FullScreenMenu = ({ onClose }: Props) => {
               <img src="/images/pgos_logo.png" alt="Logo" className="h-16" />
             </div>
             <button
-              onClick={onClose}
+              onClick={handleClose}
               className="absolute top-0 right-0 mt-2 mr-2 text-white hover:text-[#f4b24a] transition"
               aria-label="Close menu"
             >
@@ -126,7 +139,7 @@ const FullScreenMenu = ({ onClose }: Props) => {
                           toggleAccordion(index);
                         }else{
                           navigate(item.path);
-                          onClose();
+                          handleClose();
                         }
                         
                       }}
@@ -156,7 +169,7 @@ const FullScreenMenu = ({ onClose }: Props) => {
                               <button
                                 onClick={() => {
                                   navigate(sub.path);
-                                  onClose();
+                                  handleClose();
                                 }}
                                 className="block w-full text-left hover:underline hover:text-[#f4b24a] transition-colors"
                               >
@@ -200,7 +213,7 @@ const FullScreenMenu = ({ onClose }: Props) => {
                 className="flex-1 flex items-center justify-center space-x-1 px-4 py-1 rounded hover:text-[#0e013d] transition"
                 onClick={() => {
                   navigate(action.path);
-                  onClose();
+                  handleClose();
                 }}
               >
                 {action.icon && <span>{action.icon}</span>}

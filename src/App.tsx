@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { MenuProvider } from "./components/MenuContext.tsx";
 
 import NotFound from "./pages/NotFound";
 import ChatIcon from "./components/ChatIcon";
@@ -43,56 +44,58 @@ const queryClient = new QueryClient();
 
 
 const App = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+ 
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Navigation2 setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
-          <Routes>
-            {/* home page routes */}
-            <Route path="/" element={<Index />} />
-            <Route path="/home-about" element={<AboutSection/>}/>
-            <Route path="/at-glance" element={<AtGlanceSection/>}/>
-            <Route path="/student-life" element={<StudentsLifeSection/>}/>
-            <Route path="/testimonials" element={<TestimonialCarousel/>}/>
-            <Route path="/schools" element={<SchoolsSection/>}/>
+    <MenuProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Navigation2 />
+            <Routes>
+              {/* home page routes */}
+              <Route path="/" element={<Index />} />
+              <Route path="/home-about" element={<AboutSection/>}/>
+              <Route path="/at-glance" element={<AtGlanceSection/>}/>
+              <Route path="/student-life" element={<StudentsLifeSection/>}/>
+              <Route path="/testimonials" element={<TestimonialCarousel/>}/>
+              <Route path="/schools" element={<SchoolsSection/>}/>
 
-            {/* About Routes */}
-            <Route path="/about" element={<About />} />
-            <Route path="/about/mission" element={<MissionVission />} />
-            <Route path="/about/history" element={<History />} />
-            <Route path="/about/leadership" element={<Leadership />} />
-            <Route path="/about/why-choose" element={<WhyChoosePioneer />} />
+              {/* About Routes */}
+              <Route path="/about" element={<About />} />
+              <Route path="/about/mission" element={<MissionVission />} />
+              <Route path="/about/history" element={<History />} />
+              <Route path="/about/leadership" element={<Leadership />} />
+              <Route path="/about/why-choose" element={<WhyChoosePioneer />} />
 
-            {/* Academics Routes */}
-            <Route path="/academics" element={<Academics />} />
-            <Route path="/academics/curriculum" element={<Curriculum />} />
-            <Route path="/academics/learning-paths" element={<UniquePrograms />} />
-            <Route path="/academics/highlights" element={<AcademicAchievements />} />
-            <Route path="/academics/where-story-goes" element={<AcademicJourney />} />
+              {/* Academics Routes */}
+              <Route path="/academics" element={<Academics />} />
+              <Route path="/academics/curriculum" element={<Curriculum />} />
+              <Route path="/academics/learning-paths" element={<UniquePrograms />} />
+              <Route path="/academics/highlights" element={<AcademicAchievements />} />
+              <Route path="/academics/where-story-goes" element={<AcademicJourney />} />
 
-            {/* Admissions Routes */}
-            <Route path="/admissions" element={<Admissions />} />
-            <Route path="/admissions/enrollment" element={<EnrollmentProcess />} />
-            <Route path="/admissions/requirements" element={<AdmRequirements />} />
+              {/* Admissions Routes */}
+              <Route path="/admissions" element={<Admissions />} />
+              <Route path="/admissions/enrollment" element={<EnrollmentProcess />} />
+              <Route path="/admissions/requirements" element={<AdmRequirements />} />
 
-            {/* Other Pages */}
-            <Route path="/visit-us" element={<VisitUsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/join" element={<Admissions />} />
+              {/* Other Pages */}
+              <Route path="/visit-us" element={<VisitUsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/join" element={<Admissions />} />
 
-            {/* 404 */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-          <ChatIcon isMenuOpen={isMenuOpen} />
-          <Footer />
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+              {/* 404 */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+            <ChatIcon />
+            <Footer />
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </MenuProvider>
   );
 };
 

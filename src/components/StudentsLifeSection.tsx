@@ -58,11 +58,11 @@ const StudentsLifeSection: React.FC = () => {
 
   return (
     <section 
-      className="w-full bg-[#f7f7f7] py-12 px-2 md:px-0"
+      className="w-full bg-[#f2f2f2] py-32 px-2 md:px-0"
       onMouseLeave={handleMouseLeave}
     >
       <div className="max-w-6xl mx-auto">
-        <hr className="border-t border-gray-300 mb-6 mx-6" />
+        <hr className="border-t border-gray-300 mb-6 mx-20" />
         <h2 className="text-2xl md:text-5xl font-bold font-serif text-center mb-10 tracking-wide text-[#F4B24A] mt-4 md:py-12">Life in Abundance</h2>
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-10">
           {/* Timeline */}

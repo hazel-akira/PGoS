@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
+import { useMenu } from './MenuContext';
 
 type Testimonial = {
   role: string;
@@ -44,17 +45,25 @@ const testimonials: Testimonial[] = [
 const TestimonialCarousel: React.FC = () => {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const { isMenuOpen } = useMenu();
+
+  // Pause carousel when either manually paused or when menu is open
+  const isPaused = paused || isMenuOpen;
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || isMenuOpen) return; // Also stop interval if menu is open
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % testimonials.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, [paused]);
+  }, [isPaused, isMenuOpen, paused]); // Add isMenuOpen and paused to dependency array
 
   const getPosition = (i: number) => {
     const diff = i - index;
+
+    // This function's logic is now only relevant when the menu is closed.
+    // When the menu is open, testimonials won't be rendered.
+
     if (diff === 0) return 'z-30 scale-100';
     if (diff === -1 || (index === 0 && i === testimonials.length - 1)) return 'z-20 scale-90 -translate-x-20 opacity-50';
     if (diff === 1 || (index === testimonials.length - 1 && i === 0)) return 'z-20 scale-90 translate-x-20 opacity-50';
@@ -62,37 +71,40 @@ const TestimonialCarousel: React.FC = () => {
   };
 
   return (
-    <div
-      className="relative w-full h-[500px] md:h-[750px] flex items-center justify-center overflow-hidden bg-white md:py-48 md:mt-12 my-20 bg-[#f9f9f9]"
-      // onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onClick={() => setPaused(true)}
-    >
-      {testimonials.map((testimonial, i) => (
-        <div
-          key={i}
-          className={clsx(
-            'absolute transition-all duration-700 ease-in-out w-[80%] max-w-5xl h-full rounded-xl shadow-xl',
-            getPosition(i)
-          )}
-        >
-          <img
-            src={testimonial.image}
-            alt={testimonial.role}
-            className="w-full h-full object-cover rounded-xl"
-          />
-          {/* Testimonial card overlay */}
-          {i === index && (
-            <div className="absolute bottom-4 left-4 sm:bottom-10 sm:left-10 bg-white bg-opacity-80 p-4 sm:p-6 max-w-sm sm:max-w-md max-h-[60vh] overflow-y-auto rounded-lg shadow backdrop-blur">
-              <h3 className="text-[#FF8C00] font-semibold text-base sm:text-lg mb-1">Testimonials</h3>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 hover:underline hover:decoration-[#F4B24A] transition-all duration-300">Hear It From Our Own</h2>
-              <p className="text-xs sm:text-sm font-semibold mt-2">{testimonial.role}</p>
-              <p className="text-gray-800 mt-3 md:text-md text-sm leading-relaxed">{testimonial.text}</p>
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
+    <section className='py-32'>
+      <div
+        className="relative w-full h-[500px] md:h-[750px] flex items-center justify-center overflow-hidden bg-white bg-[rgb(163, 160, 160)]"
+        // onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+        onClick={() => setPaused(true)}
+      >
+        {/* Only render testimonials when the menu is not open */}
+        {!isMenuOpen && testimonials.map((testimonial, i) => (
+          <div
+            key={i}
+            className={clsx(
+              'absolute transition-all duration-700 ease-in-out w-[80%] max-w-5xl h-full rounded-xl shadow-xl',
+              getPosition(i)
+            )}
+          >
+            <img
+              src={testimonial.image}
+              alt={testimonial.role}
+              className="w-full h-full object-cover rounded-xl"
+            />
+            {/* Testimonial card overlay */}
+            {i === index && (
+              <div className="absolute bottom-4 left-4 sm:bottom-10 sm:left-10 bg-white bg-opacity-80 p-4 sm:p-6 max-w-sm sm:max-w-md max-h-[60vh] overflow-y-auto rounded-lg shadow backdrop-blur">
+                <h3 className="text-[#FF8C00] font-semibold text-base sm:text-lg mb-1">Testimonials</h3>
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 hover:underline hover:decoration-[#F4B24A] transition-all duration-300">Hear It From Our Own</h2>
+                <p className="text-xs sm:text-sm font-semibold mt-2">{testimonial.role}</p>
+                <p className="text-gray-800 mt-3 md:text-md text-sm leading-relaxed">{testimonial.text}</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

@@ -87,11 +87,11 @@ const Leadership: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#f1f2fc] py-16 text-center">
+    <section className="bg-[#f1f2fc] py-32 text-center">
       <div className="max-w-7xl mx-auto">
-        <hr className="border-t border-gray-300 mb-6 mx-8" />
+        <hr className="border-t border-gray-300 mb-6 mx-20" />
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-bold font-serif text-[#F4B24A] my-16 text-center">LEADERSHIP</h2>
+          <h2 className="text-3xl font-bold font-serif text-[#F4B24A] my-5 text-center">LEADERSHIP</h2>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center max-w-4xl mx-auto">
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
