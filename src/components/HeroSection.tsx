@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 type HeroSectionProps = {
   scrollToChat: () => void;
@@ -10,10 +11,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const dropdownOptions = [
-    { name: 'Academics', path: '/programs' },
+    { name: 'Academics', path: '/academics' },
     { name: 'The community', path: '/student-life' },
     { name: 'Admissions', path: '/admissions' },
-    { name: 'Campus Tour', path: '/visit' },
+    { name: 'Campus Tour', path: '/visit-us' },
   ];
 
   useEffect(() => {
@@ -21,6 +22,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
     window.addEventListener('scroll' , handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <div className="relative min-h-[700px] md:min-h-[800px] text-white pt-32 pb-20 md:pt-40 md:pb-28">
@@ -59,17 +62,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
             </button>
             
             {isDropdownOpen && (
-              <div className="absolute items-center justify-center
-               mt-2 w-48 bg-[#f4b24a] rounded-lg shadow-lg overflow-hidden relative z-20 md:absolute md:left-0">
+              <div className="absolute mt-2 w-48 bg-[#f4b24a] rounded-lg shadow-lg overflow-hidden z-20 md:left-0">
                 {dropdownOptions.map((option) => (
-                  <a
+                  <button
                     key={option.name}
-                    href={option.path}
-                    className="block px-4 py-3 text-white-800 hover:bg-[#f4b24a] hover:text-[#02032d] transition-colors"
-                    onClick={() => setIsDropdownOpen(false)}
+                    onClick={() => {
+                      navigate(option.path);
+                      setIsDropdownOpen(false);
+                    }}
+                    className="block w-full text-left px-4 py-3 text-white-800 hover:bg-[#f4b24a]/80 hover:text-[#02032d] transition-colors"
                   >
                     {option.name}
-                  </a>
+                  </button>
                 ))}
               </div>
             )}

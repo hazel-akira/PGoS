@@ -25,7 +25,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="relative pt-16 md:pt-32 text-white bg-cover bg-center border-t border-gray-500"
+      className="relative pt-16 md:pt-32 text-white bg-cover bg-center"
       style={{ backgroundImage: "url('/images/footerimage2.jpg')" }}
     >
       {/* Overlay */}

@@ -111,7 +111,7 @@ const StudentsLifeSection: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-left">
-          <button className="border border-[#F4B24A] text-[#F4B24A] rounded px-6 py-2 font-medium hover:bg-[#F4B24A] hover:text-white transition-all">
+          <button className="border border-[#F4B24A] text-[#F4B24A] rounded px-6 py-2 font-medium hover:bg-[#e68a00] hover:text-white transition-all">
             What distinguishes your journey with us?
           </button>
         </div>

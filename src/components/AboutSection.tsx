@@ -3,12 +3,15 @@ import { ArrowRight } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section className="relative bg-[#f2f2f2] py-8 md:py-32 overflow-x-hidden">
-      <hr className="border-t border-gray-300 mb-6 mx-96" />
-      {/* Large Outlined Heading */}
-      <h2 className="absolute left-1/2 top-0 -translate-x-1/2 text-2xl md:text-5xl tracking-wide leading-relaxed font-semibold text-[#02032d] mt-36">
-        Grow &amp; Thrive
-      </h2>
+    <section className="relative bg-[#f2f2f2] py-4 md:py-12 overflow-x-hidden">
+     <div className="mt-24 flex flex-col items-center text-center px-4">
+        <hr className="border-t border-gray-300 mb-6 w-11/12 sm:w-3/4 md:w-1/2" />
+        {/* Large Outlined Heading */}
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold font-serif tracking-wide text-[#0E013d] whitespace-nowrap">
+          Grow <span className="text-[#f4b24a]">&amp;</span> Thrive
+        </h2>
+      </div>
+      
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-0 relative z-10 pt-24 md:pt-40">
         {/* Text Block */}
         <div className="relative flex flex-col items-center w-full md:w-auto md:ml-28">
@@ -22,7 +25,7 @@ const AboutSection = () => {
             </p>
           </div>
           {/* Button below, overlapping the card */}
-          <span className="inline-flex items-center justify-center w-40 h-12 bg-[#F4B24A] rounded-r-full font-semibold text-white cursor-pointer transition hover:bg-orange-400 shadow-[-8px_8px_20px_0_rgba(0,0,0,0.15)] -mt-6 md:-mt-6 mx-auto">
+          <span className="inline-flex items-center justify-center w-40 h-12 bg-[#F4B24A] rounded-r-full font-semibold text-white cursor-pointer transition hover:bg-[#e68a00] shadow-[-8px_8px_20px_0_rgba(0,0,0,0.15)] -mt-6 md:-mt-6 mx-auto">
             Core &amp; Culture   
             <ArrowRight className="ml-3 w-5 h-5" />
           </span>

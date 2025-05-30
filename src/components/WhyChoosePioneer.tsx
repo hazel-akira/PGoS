@@ -167,8 +167,8 @@ const WhyChoosePioneer: React.FC = () => {
                           className="w-full h-full object-cover rounded-lg relative drop-shadow-[5px_0px_2px_rgba(0,0,0,0.5)]"
                         />
                         <div className="mt-4 text-center">
-                          <h3 className="text-xl font-bold font-serif text-[#0e013d] leading-tight">{image.title}</h3>
-                          <p className="text-base font-normal text-[#0e013d] mt-1">
+                          <h3 className="text-xl font-bold font-serif text-[#f4b24a] leading-tight">{image.title}</h3>
+                          <p className="text-base font-normal text-[#0e013d] mt-1 text-left">
                             {image.description}
                           </p>
                         </div>
@@ -203,7 +203,7 @@ const WhyChoosePioneer: React.FC = () => {
                   />
                   {isActive && (
                     <div className="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 py-2 px-2 rounded-b-lg">
-                      <p className="text-base font-semibold font-serif text-[#0e013d]">
+                      <p className="text-base font-semibold font-serif text-[#f4b24a]">
                         {image.title}
                       </p>
                       <p className="text-sm font-normal text-center text-[#0e013d] mt-1">

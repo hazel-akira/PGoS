@@ -42,7 +42,7 @@ const AtGlanceSection: React.FC = () => {
     <section className="relative bg-[#f1f2fc] py-28 px-4">
       <div className="max-w-6xl mx-auto text-center relative">
         <hr className="border-t border-gray-300 mb-6 mx-20" />
-        <h2 className=" text-3xl md:text-5xl font-semibold text-[#02032d] mb-20 tracking-wide">
+        <h2 className=" text-3xl md:text-5xl font-semibold font-serif text-[#02032d] mb-20 tracking-wide">
           PIONEER SCHOOLS AT A GLANCE
         </h2>
 
@@ -65,7 +65,7 @@ const AtGlanceSection: React.FC = () => {
           ))}
         </div>
 
-        <button className="mt-20 bg-[#F4B24A] hover:bg-orange-400 text-white px-6 py-3 rounded  transition font-semibold rounded shadow-md transition-all text-base md:text-lg" style={{boxShadow: '2px 2px 0 #8884'}}>
+        <button className="mt-20 bg-[#F4B24A] hover:bg-[#e68a00] text-white px-6 py-3 rounded  transition font-semibold rounded shadow-md transition-all text-base md:text-lg" style={{boxShadow: '2px 2px 0 #8884'}}>
           MORE FACTS
         </button>
       </div>
