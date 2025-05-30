@@ -1,6 +1,7 @@
 import React from 'react';
 import { Users, BookOpen, BarChart2, School } from 'lucide-react';
 import { motion } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
 
 const stats = [
   {
@@ -38,6 +39,9 @@ const stats = [
 ];
 
 const AtGlanceSection: React.FC = () => {
+
+  const navigate = useNavigate();
+
   return (
     <section className="relative bg-[#f1f2fc] py-28 px-4">
       <div className="max-w-6xl mx-auto text-center relative">
@@ -65,7 +69,8 @@ const AtGlanceSection: React.FC = () => {
           ))}
         </div>
 
-        <button className="mt-20 bg-[#F4B24A] hover:bg-[#e68a00] text-white px-6 py-3 rounded  transition font-semibold rounded shadow-md transition-all text-base md:text-lg" style={{boxShadow: '2px 2px 0 #8884'}}>
+        <button className="mt-20 bg-[#F4B24A] hover:bg-[#e68a00] text-white px-6 py-3 rounded  transition font-semibold rounded shadow-md transition-all text-base md:text-lg" style={{boxShadow: '2px 2px 0 #8884'}}
+          onClick={() => navigate('/academics')}>
           MORE FACTS
         </button>
       </div>
