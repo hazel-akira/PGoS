@@ -7,22 +7,22 @@ import 'swiper/css/autoplay';
 const features = [
   {
     title: "Aviation",
-    icon: "images/aviation.png",
+    icon: "/images/aviation.png",
     description: "At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders.",
   },
   {
     title: "Maritime",
-    icon: "images/marine.png",
+    icon: "/images/marine.png",
     description: "At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders.",
   },
   {
     title: "Foreign Languages",
-    icon: "images/foreignlanguages.png",
+    icon: "/images/foreignlanguages.png",
     description: "At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders.",
   },
   {
     title: "AI Studies",
-    icon: "images/ai.png",
+    icon: "/images/ai.png",
     description: "At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders.",
   }
 ];
@@ -44,7 +44,7 @@ const UniquePrograms = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(images/specialprogs.jpg)',
+            backgroundImage: 'url(/images/specialprogs.jpg)',
             opacity: 0.05,
             zIndex: 0,
           }}
@@ -53,7 +53,7 @@ const UniquePrograms = () => {
         <video
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none"
           style={{ width: '100%', height: '100%', opacity: 0.05, zIndex: 0, objectFit: 'cover' }}
-          src="images/specialprogs.mp4"
+          src="/images/specialprogs.mp4"
           autoPlay
           loop
           muted
@@ -71,7 +71,7 @@ const UniquePrograms = () => {
                 Elite Learning Paths
               </h1>
               <div className="w-16 h-px bg-[#F4B24A] mb-8"></div>
-              <p className="text-[#18144b] text-md leading-relaxed font-serif sm:text-base">
+              <p className="text-[#18144b] text-md md:text-lg leading-relaxed font-serif sm:text-base">
                 At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders. Our curriculum is designed to meet national standards while integrating innovation, digital skills, and real-world learning.
               </p>
             </div>
@@ -109,7 +109,7 @@ const UniquePrograms = () => {
                           <h3 className="text-lg sm:text-xl font-bold text-[#f4b24a] text-center mb-4 break-words">
                             {feature.title}
                           </h3>
-                          <p className="text-[#0e013d] text-center text-sm sm:text-base leading-relaxed mb-6 break-words">
+                          <p className="text-[#0e013d] text-center text-md  sm:text-base leading-relaxed mb-6 break-words">
                             {feature.description}
                           </p>
                           <div className="text-center">
