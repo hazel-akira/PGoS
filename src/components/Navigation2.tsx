@@ -28,7 +28,7 @@ const Navigation2: React.FC = () => {
         <img 
           src="/images/pgos_logo.png" 
           alt="Logo" 
-          className="h-12 md:h-16 bg-[#02032d] rounded-md transition-all duration-300 cursor-pointer brightness-105"
+          className="h-12 md:h-16 bg-[#02032d]/30 rounded-md transition-all duration-300 cursor-pointer brightness-105"
           onClick={() => navigate('/')} 
         />
       </div>
