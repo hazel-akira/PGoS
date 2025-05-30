@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const AboutSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative bg-[#f2f2f2] py-4 md:py-12 overflow-x-hidden">
      <div className="mt-24 flex flex-col items-center text-center px-4">
@@ -25,7 +28,8 @@ const AboutSection = () => {
             </p>
           </div>
           {/* Button below, overlapping the card */}
-          <span className="inline-flex items-center justify-center w-40 h-12 bg-[#F4B24A] rounded-r-full font-semibold text-white cursor-pointer transition hover:bg-[#e68a00] shadow-[-8px_8px_20px_0_rgba(0,0,0,0.15)] -mt-6 md:-mt-6 mx-auto">
+          <span className="inline-flex items-center justify-center w-40 h-12 bg-[#F4B24A] rounded-r-full font-semibold text-white cursor-pointer transition hover:bg-[#e68a00] shadow-[-8px_8px_20px_0_rgba(0,0,0,0.15)] -mt-6 md:-mt-6 mx-auto"
+           onClick={() => navigate('/about/history')}>
             Core &amp; Culture   
             <ArrowRight className="ml-3 w-5 h-5" />
           </span>
