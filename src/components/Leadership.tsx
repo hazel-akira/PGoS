@@ -35,12 +35,12 @@ const trustees: Trustee[] = [
     school: "Pioneer Group",
     image: "/images/deputypgos.png",
   },
-  // {
-  //   name: "Ms Fenty",
-  //   title: "Deputy Headmistress",
-  //   school: "Pioneer Girls Junior Academy",
-  //   image: "/images/usher.png",
-  // },
+  {
+    name: "Ms. Fenty",
+    title: "Deputy Headmistress",
+    school: "Pioneer Girls Junior Academy",
+    image: "/images/deputyheadmistressgirls.png",
+  },
   {
     name: "Mr. Kuria",
     title: "Deputy Principal",
@@ -58,7 +58,7 @@ const Leadership: React.FC = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,

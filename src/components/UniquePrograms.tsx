@@ -68,7 +68,7 @@ const UniquePrograms = () => {
           <div className="md:w-full lg:w-1/2 lg:pr-8 max-w-2xl flex-1 md:pt-48">
             <div className="rounded-2xl px-16 justify-center items-center">
               <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#F4b24a] mb-6 font-serif">
-                Our Special Programs
+                Elite Learning Paths
               </h1>
               <div className="w-16 h-px bg-[#F4B24A] mb-8"></div>
               <p className="text-[#18144b] text-md leading-relaxed font-serif sm:text-base">

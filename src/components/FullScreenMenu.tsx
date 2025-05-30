@@ -114,7 +114,7 @@ const FullScreenMenu = ({ onClose }: Props) => {
           {/* Top */}
           <div className="relative mb-6 md:mb-8">
             <div className="flex items-center justify-start">
-              <img src="/images/pgos_logo.png" alt="Logo" className="h-16" />
+              <img src="/images/pgos_logo.png" alt="Logo" className="h-16" onClick={() => navigate('/')} />
             </div>
             <button
               onClick={handleClose}
@@ -126,65 +126,73 @@ const FullScreenMenu = ({ onClose }: Props) => {
           </div>
 
           {/* Middle */}
-          <div className="flex flex-col lg:flex-row flex-1 relative items-center gap-6 lg:gap-0 mt-10 md:mt-0">
-            <div className="w-full lg:flex-1 flex flex-col z-10 self-center">
-              <ul className="space-y-4 sm:space-y-6 text-lg sm:text-xl font-serif text-white text-left">
-                {navLinks.map((item,index) => (
-                  <li key={item.path} className={`relative ${openIndex === index ? 'z-30' : 'z-10'}`}>
-                    <div className='relative'>
-                    <button
-                      className="w-full text-left text-white flex items-center justify-between py-1 px-4 hover:text-[#f4b24a] transition"
-                      onClick={() => {
-                        if (item.sublinks) {
-                          toggleAccordion(index);
-                        }else{
+        <div className="flex flex-col lg:flex-row flex-1 relative items-center gap-6 lg:gap-0 mt-10 md:mt-0">
+          <div className="w-full lg:flex-1 flex flex-col z-10 self-center">
+            <ul className="space-y-4 sm:space-y-6 text-lg sm:text-xl font-serif text-white text-left">
+              {navLinks.map((item,index) => (
+                <li key={item.path} className={`relative ${openIndex === index ? 'z-30' : 'z-10'}`}>
+                  <div className='relative'>
+                  <button
+                    className="w-full text-left text-white flex items-center justify-between py-1 px-4 hover:text-[#f4b24a] transition"
+                    onClick={() => {
+                      if (item.sublinks) {
+                        // If this accordion is already open, navigate to main page instead of closing
+                        if (openIndex === index) {
                           navigate(item.path);
                           handleClose();
+                        } else {
+                          // Open the accordion
+                          toggleAccordion(index);
                         }
-                        
-                      }}
-                    >
-                      <span>{item.name}</span>
-                      {item.sublinks && (
-                        <ChevronDown
-                          className={`ml-2 h-5 w-5 transform transition-transform duration-300 justify-right relative ${
-                            openIndex === index ? 'rotate-180 z-40' : 'z-10'
-                          }`}
-                        />
-                      )}
-                    </button>
+                      } else {
+                        // No sublinks, navigate directly
+                        navigate(item.path);
+                        handleClose();
+                      }
+                    }}
+                  >
+                    <span>{item.name}</span>
+                    {item.sublinks && (
+                      <ChevronDown
+                        className={`ml-2 h-5 w-5 transform transition-transform duration-300 justify-right relative ${
+                          openIndex === index ? 'rotate-180 z-40' : 'z-10'
+                        }`}
+                      />
+                    )}
+                  </button>
 
-                    {/* Sublinks Accordion */}
-                    <AnimatePresence initial={true}>
-                      {openIndex === index && item.sublinks && (
-                        <motion.ul
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: 'easeInOut' }}
-                          className="absolute left-1/3 top-0 mx-2 mt-2 bg-[#1b104e] p-3 rounded-md shadow-lg z-30 min-w-[180px] space-y-2 text-sm text-gray-200 font-light justify-center"
-                        >
-                          {item.sublinks.map((sub) => (
-                            <li key={sub.path}>
-                              <button
-                                onClick={() => {
-                                  navigate(sub.path);
-                                  handleClose();
-                                }}
-                                className="block w-full text-left hover:underline hover:text-[#f4b24a] transition-colors"
-                              >
-                                {sub.name}
-                              </button>
-                            </li>
-                          ))}
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                  {/* Sublinks Accordion */}
+                  <AnimatePresence initial={true}>
+                    {openIndex === index && item.sublinks && (
+                      <motion.ul
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}
+                        className="absolute left-1/3 top-0 mx-2 mt-2 bg-[#1b104e] p-3 rounded-md shadow-lg z-30 min-w-[180px] space-y-2 text-sm text-gray-200 font-light justify-center"
+                      >
+                        {item.sublinks.map((sub) => (
+                          <li key={sub.path}>
+                            <button
+                              onClick={() => {
+                                navigate(sub.path);
+                                handleClose();
+                              }}
+                              className="block w-full text-left hover:underline hover:text-[#f4b24a] transition-colors"
+                            >
+                              {sub.name}
+                            </button>
+                          </li>
+                        ))}
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
 
             {/* Vertical Divider */}
             <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 border-l border-gray-300 opacity-70 z-0 top-0 bottom-0" />
