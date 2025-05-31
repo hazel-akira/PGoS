@@ -203,7 +203,7 @@ const FullScreenMenu = ({ onClose }: Props) => {
                 <iframe
                   title="School Location"
                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4016685206457!2d37.16211697582504!3d-0.8280403352987525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1828a50c74d53417%3A0xff10395f6befaa0!2sPioneer%20School!5e0!3m2!1sen!2ske!4v1747380714086!5m2!1sen!2ske"
-                  className="w-full h-[200px] sm:h-[100px] lg:h-[350px] rounded-xl"
+                  className="w-full h-[150px] sm:h-[80px] lg:h-[350px] rounded-xl"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
@@ -214,7 +214,7 @@ const FullScreenMenu = ({ onClose }: Props) => {
           </div>
 
           {/* Bottom */}
-          <div className="flex justify-around py-4 bg-[#f4b24a] text-white rounded-md w-full mt-4">
+          <div className="flex justify-around py-2 bg-[#f4b24a] text-white rounded-md w-full mt-2">
             {navButtons.map((action) => (
               <button
                 key={action.path}
