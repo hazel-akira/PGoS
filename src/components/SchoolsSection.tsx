@@ -1,5 +1,7 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+
 
 const SchoolsSection: React.FC = () => {
   const schools = [
@@ -9,6 +11,8 @@ const SchoolsSection: React.FC = () => {
     { name: 'Pioneer Girls Junior Academy', link: 'https://www.pioneergirlsjunioracademy.co.ke/' },
     { name: 'St. Paul Thomas Academy', link: 'https://www.stpaulthomasacademy.co.ke/' },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <div className="relative w-full">
@@ -27,7 +31,7 @@ const SchoolsSection: React.FC = () => {
             </p>
             {/* CTA Button */}
             <div className="w-full bg-[#02032d] py-8 text-center">
-              <button className="bg-[#F4B24A] hover:bg-[#e68a00] text-white font-bold py-3 px-8 rounded-full transition-colors">
+              <button className="bg-[#F4B24A] hover:bg-[#e68a00] text-white font-bold py-3 px-8 rounded-full transition-colors" onClick={() => navigate('/academics')}>
                 Explore Programs
                 <span className="ml-3 transition-transform group-hover:translate-x-1 motion-reduce:transform-none">➔</span>
               </button>
@@ -107,7 +111,8 @@ const SchoolsSection: React.FC = () => {
 
         {/* Apply Now Button Section */}
         <div className='flex flex-col justify-center mx-auto pb-12 flex flex-col justify-center items-center'>
-          <button className="px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#0E013d] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300">
+          <button className="px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#0E013d] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300"
+          onClick={() => navigate('/admissions')} >
             Apply Now
           </button>
         </div>

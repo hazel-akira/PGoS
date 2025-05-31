@@ -3,9 +3,9 @@ import React from "react";
 const History: React.FC = () => {
   return (
     <section>
-     <div className="relative w-full">
+     <div className="relative w-full bg-[#02032d]">
         {/* Main content container */}
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row pt-12 md:pt-0">
           {/* Text Section */}
           <div className="bg-[#02032d] text-white p-6 md:p-10 flex flex-col justify-center items-center w-full md:w-1/2">
             <h2 className="text-2xl font-bold text-center tracking-wide font-serif text-[#f4b24a] md:my-0 my-4">From Heritage to Horizon</h2>
