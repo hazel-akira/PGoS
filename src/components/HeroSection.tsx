@@ -52,7 +52,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
           </h1>
           
           {/* Dropdown Menu */}
-          <div className="relative inline-block text-left">
+          <div className={`relative text-left transition-all duration-300 ${isDropdownOpen ? 'mb-4' : ''}`}>
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="flex items-center gap-2 bg-gradient-to-r from-[#02032d] to-[#F4b24a] hover:brightness-110 hover:scale-105 text-white font-semibold text-lg px-6 py-3 rounded-lg backdrop-blur-sm transition-colors z-10"
@@ -60,9 +60,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
               Pioneer with us
               <ChevronDown className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
-            
+
             {isDropdownOpen && (
-              <div className="absolute mt-2 w-48 bg-[#f4b24a] rounded-lg shadow-lg overflow-hidden z-20 md:left-0">
+              <div className="mt-2 w-48 bg-[#f4b24a] rounded-lg shadow-lg overflow-hidden z-20 md:absolute md:left-0">
                 {dropdownOptions.map((option) => (
                   <button
                     key={option.name}
@@ -78,6 +78,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
               </div>
             )}
           </div>
+
         </div>
         <div className="md:w-1/3 flex justify-center md:justify-end bg-clip-padding:1">
           <div className="bg-white/50 rounded-lg p-6 backdrop-blur-sm w-full max-w-md">
