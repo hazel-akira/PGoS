@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom"; 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -59,6 +60,8 @@ const AcademicJourney = () => {
     sliderRef.current?.slickPrev();
   };
 
+  const navigate = useNavigate();
+
   return (
     <section className="w-full min-h-screen bg-gradient-to-br from-[#00004d] via-slate-800 to-[#000033] flex items-center justify-center px-4 py-16 ">
       <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -117,8 +120,9 @@ const AcademicJourney = () => {
             </p>
           </div>
 
-          <button className="bg-gradient-to-r from-[#4d3900] to-[#f4b24a] hover:from-blue-900 hover:to-[#02032d] text-white font-semibold px-8 py-4 rounded-full justify-center items-center border border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl backdrop-blur-sm">
-            EXPLORE ADMISSIONS
+          <button className="px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#0E013d] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300"
+           onClick={() => navigate('/admissions')} >
+            Explore Admissions
           </button>
         </div>
       </div>

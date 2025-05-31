@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const schools = [
   {
@@ -56,6 +57,8 @@ const StudentsLifeSection: React.FC = () => {
     setIsAutoPlaying(true);
   };
 
+  const navigate = useNavigate();
+
   return (
     <section 
       className="w-full bg-[#f2f2f2] py-32 px-2 md:px-0"
@@ -111,7 +114,8 @@ const StudentsLifeSection: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-left">
-          <button className="border border-[#F4B24A] text-[#F4B24A] rounded px-6 py-2 font-medium hover:bg-[#e68a00] hover:text-white transition-all">
+          <button className="border border-[#F4B24A] text-[#F4B24A] rounded px-6 py-2 font-medium hover:bg-[#e68a00] hover:text-white transition-all"
+           onClick={() => navigate('/about/why-choose')}>
             What distinguishes your journey with us?
           </button>
         </div>
