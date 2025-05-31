@@ -28,7 +28,7 @@ const Navigation2: React.FC = () => {
         <img 
           src="/images/pgos_logo.png" 
           alt="Logo" 
-          className="h-12 md:h-16 bg-[#02032d]/30 rounded-md transition-all duration-300 cursor-pointer brightness-105"
+          className="h-12 md:h-16 bg-[#02032d]/10 rounded-md transition-all duration-300 cursor-pointer brightness-105"
           onClick={() => navigate('/')} 
         />
       </div>
@@ -51,7 +51,7 @@ const Navigation2: React.FC = () => {
       </div>
       {/* mobile only  */}
       <button className=" text-white flex md:hidden items-center px-4 py-1 text-lg text-white hover:text-[#f4b24a] gap-2 shadow-lg bg-gradient-to-r from-[#f4b24a] to-[#02032d] rounded-md " onClick={openMenu}>
-        MENU <Menu/>
+        <Menu/>
       </button>
 
       {isMenuOpen && <FullScreenMenu onClose={closeMenu} />}
