@@ -59,7 +59,7 @@ const getRandomFloat = (min: number, max: number) =>
 // Main Component
 const EnrollmentProcess: React.FC = () => {
   return (
-    <div className="relative bg-[#EDEDED] text-black py-56 h-screen flex flex-col items-center overflow-hidden">
+    <div className="relative bg-[#EDEDED] text-black p-8 min-h-50vh flex flex-col items-center overflow-hidden">
       {/* Floating Animations */}
       {animationSpots.map((pos, index) => {
         const animation = animations[index % animations.length]; // rotate animations

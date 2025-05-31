@@ -7,7 +7,7 @@ import sceneAnimation from '../animations/books.json';
 
 const AdmRequirements: React.FC = () => {
   return (
-    <div className="bg-[#D9D9D9] h-screen text-black px-8 py-32 flex justify-center items-start">
+    <div className="bg-[#D9D9D9] min-h-screen text-black px-8 py-16 flex justify-center items-start">
       {/* Left Lottie Animation */}
       <div className="hidden lg:block w-15 mr-8 mt-12">
         <Lottie
