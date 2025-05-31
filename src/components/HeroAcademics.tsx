@@ -4,7 +4,7 @@ const HeroAcademics: React.FC = () => {
   
 
     return(
-      <section className="relative bg-[#f1f2fc] bg-cover bg-center h-[80vh] text-white flex flex-col items-center justify-center" style={{ backgroundImage: "url('/images/academicbanner.png')" }}>
+      <section className="relative bg-[#f2f2f2] bg-cover bg-center h-[80vh] text-white flex flex-col items-center justify-center" style={{ backgroundImage: "url('/images/academicbanner.png')" }}>
         <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
         <div className="p-8 text-center rounded-lg relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-[#F4B24A]">
