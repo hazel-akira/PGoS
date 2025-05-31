@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -9,21 +10,25 @@ const features = [
     title: "Aviation",
     icon: "/images/aviation.png",
     description: "At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders.",
+    link: "https://www.pioneerschools.ac.ke/Leaders/Aviator/"
   },
   {
     title: "Maritime",
     icon: "/images/marine.png",
     description: "At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders.",
+    link: "https://www.pioneergirlsschool.co.ke/Inspired-Path/Marine-Program/"
   },
   {
     title: "Foreign Languages",
     icon: "/images/foreignlanguages.png",
     description: "At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders.",
+    link: "https://www.pioneerschools.ac.ke/Student-Life/Korea-Exchange-Program/"
   },
   {
     title: "AI Studies",
     icon: "/images/ai.png",
     description: "At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders.",
+    link: "https://www.stpaulthomasacademy.co.ke/Study-Life/Coding-Life/"
   }
 ];
 
@@ -36,6 +41,8 @@ const UniquePrograms = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  const navigate = useNavigate();
 
   return (
     <section className="relative min-h-screen flex items-center justify-center py-32 px-4 bg-[#ECECFB] overflow-hidden">
@@ -113,9 +120,14 @@ const UniquePrograms = () => {
                             {feature.description}
                           </p>
                           <div className="text-center">
-                            <button className="text-[#0e013d] hover:text-[#f4b24a] font-semibold border-b border-[#0e013d] hover:border-[#f4b24a] transition-colors duration-200 bg-transparent">
+                            <a 
+                            href={feature.link}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            className="text-[#0e013d] hover:text-[#f4b24a] font-semibold border-b border-[#0e013d] hover:border-[#f4b24a] transition-colors duration-200 bg-transparent"
+                            >
                               More
-                            </button>
+                            </a>
                           </div>
                         </div>
                       </div>
