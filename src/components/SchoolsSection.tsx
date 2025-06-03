@@ -17,7 +17,7 @@ const SchoolsSection: React.FC = () => {
   return (
     <div className="relative w-full">
       {/* Top Section - Dark Background */}
-      <div className="bg-[#02032d] pt-20">
+      <div className="bg-[#02032d] pt-20 md:pt-0">
         {/* Main content container */}
         <div className="bg-[#02032d] flex flex-col md:flex-row">
           {/* Text Section */}
