@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import ChatContainer from './ChatContainer';
 import { useMenu } from './MenuContext';
 
@@ -24,12 +24,17 @@ const ChatIcon: React.FC = () => {
           {/* <p className="text-sm">Hello, I'm PGoS AI assistant. Need help?</p> */}
         </div>
       )}
+      
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-indigo-600 text-white p-4 rounded-full shadow-lg hover:bg-indigo-700 transition-colors animate-bounce"
+          className="p-4 rounded-full shadow-lg bg-gray-100 transition-colors animate-bounce dark:bg-gray-800 dark:hover:bg-gray-700"
         >
-          <MessageCircle size={24} />
+          <img 
+            src="/images/chatbot.png" 
+            alt="Chat" 
+            className="w-20 h-20 dark:invert dark:brightness-200" 
+          />
         </button>
       ) : (
         <div className="relative">
@@ -39,7 +44,7 @@ const ChatIcon: React.FC = () => {
           >
             <X size={20} />
           </button>
-          <div className="bg-white rounded-lg shadow-xl w-[350px] h-[500px] overflow-hidden">
+          <div className="bg-white rounded-lg shadow-xl w-[350px] h-[500px]">
             <ChatContainer />
           </div>
         </div>
