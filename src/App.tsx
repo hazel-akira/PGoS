@@ -36,9 +36,7 @@ import UniquePrograms from "./components/UniquePrograms.tsx";
 import AcademicAchievements from "./components/AcademicAchievements.tsx";
 import AcademicJourney from "./components/AcademicJourney.tsx";
 
-
-
-
+import AdmProcessPage from './components/AdmProcessPage.tsx';
 
 const queryClient = new QueryClient();
 
@@ -86,6 +84,9 @@ const App = () => {
               <Route path="/visit-us" element={<VisitUsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/join" element={<Admissions />} />
+
+              {/* Adm Process */}
+              <Route path="/adm-process" element={<AdmProcessPage />} />
 
               {/* 404 */}
               <Route path="*" element={<NotFound />} />

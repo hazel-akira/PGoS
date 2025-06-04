@@ -14,6 +14,7 @@ const footerLinks = [
   {title: 'About', path: '/about'},
   {title: 'Academics', path: '/academics'},
   {title: 'Admissions', path: '/admissions'},
+  {title: 'Adm Process', path: '/adm-process'},
   {title: 'Contacts', path: '/contact'},
   {title: 'Visit', path: '/visit-us'}
   

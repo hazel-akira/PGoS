@@ -9,15 +9,17 @@ const animations = [topAnimation, sideAnimation, sceneAnimation];
 
 // Array of randomized positions
 const animationSpots = [
-  { top: "50%", left: "50%" },
-  { top: "30%", right: "30%" },
-  { bottom: "35%", left: "15%" },
-  { bottom: "15%", right: "5%" },
-  { top: "50%", left: "35%" },
+  { top: "10%", left: "5%" },
+  { top: "20%", right: "10%" },
+  { bottom: "15%", left: "15%" },
+  { bottom: "5%", right: "5%" },
+  { top: "35%", left: "50%" },
 ];
+
 const steps = [
   {
     number: 1,
+    icon: "📩",
     title: "Inquiry",
     description: "Submit an inquiry or call the admissions office.",
     color: "bg-sky-300",
@@ -25,6 +27,7 @@ const steps = [
   },
   {
     number: 2,
+    icon: "🏫",
     title: "Visit the School",
     description: "Schedule a guided tour.",
     color: "bg-orange-400",
@@ -32,13 +35,15 @@ const steps = [
   },
   {
     number: 3,
+    icon: "📝",
     title: "Application",
     description: "Submit application forms.",
     color: "bg-violet-700",
-    link: "https://enquireto.pioneergroupofschools.co.ke/Account/Login/Register?returnUrl=%2F",
+    link: "https://example.com/application",
   },
   {
     number: 4,
+    icon: "🎤",
     title: "Interview",
     description: "Attend a scheduled interview.",
     color: "bg-red-700",
@@ -46,12 +51,14 @@ const steps = [
   },
   {
     number: 5,
+    icon: "✅",
     title: "Admission",
     description: "Receive admission confirmation.",
-    color: "bg-green-800",
+    color: "bg-green-600",
     link: "https://example.com/admission",
   },
 ];
+
 // Generate a random float between min and max
 const getRandomFloat = (min: number, max: number) =>
   (Math.random() * (max - min) + min).toFixed(2);
@@ -59,7 +66,7 @@ const getRandomFloat = (min: number, max: number) =>
 // Main Component
 const EnrollmentProcess: React.FC = () => {
   return (
-    <div className="relative bg-[#EDEDED] text-black p-8 min-h-50vh flex flex-col items-center overflow-hidden">
+    <div className="relative bg-[#0E013D] text-white p-8 min-h-50vh flex flex-col items-center overflow-hidden">
       {/* Floating Animations */}
       {animationSpots.map((pos, index) => {
         const animation = animations[index % animations.length]; // rotate animations
@@ -89,60 +96,21 @@ const EnrollmentProcess: React.FC = () => {
         Steps to admission to the Pioneer Group of Schools
       </p>
 
-      {/* Container with stroke and shadow */}
-      <div className="bg-[#02032de1] p-4 md:p-6 rounded-3xl border-2 border-orange-400 max-w-6xl w-full mx-4 md:mx-8 shadow-[0_0_20px_rgba(255,165,0,0.3)] z-10">
-        {/* Steps Container */}
-        <div className="relative flex flex-col md:flex-row justify-between items-center min-h-[350px] px-4 w-full">
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="relative flex flex-col items-center text-center w-full md:w-1/5 mb-8 md:mb-0 transition-transform duration-300 hover:scale-105 cursor-pointer"
-              onClick={() => window.open(step.link, "_blank")}
-            >
-              <div
-                className={`w-20 h-20 rounded-full flex items-center justify-center text-black font-extrabold text-3xl mb-2 border-2 border-orange-400 ${step.color} shadow-md hover:shadow-lg`}
-              >
-                {step.number}
+      {/* Horizontal Stepper */}
+      <div className="w-full bg-[#f7f7f7] py-8 flex justify-center z-10">
+        <div className="flex flex-row flex-wrap justify-center gap-8 w-full max-w-5xl">
+          {steps.map((step) => (
+            <div key={step.number} className="flex flex-col items-center w-32 cursor-pointer" onClick={() => window.open(step.link, "_blank")}> 
+              <div className="relative mb-2">
+                <span className="absolute -top-3 -left-3 bg-[#c9a030] text-white font-bold rounded-full w-7 h-7 flex items-center justify-center text-sm z-10">
+                  {step.number}
+                </span>
+                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-200">
+                  <span className="text-3xl">{step.icon}</span>
+                </div>
               </div>
-              <div className="font-black text-white hover:text-orange-300">{step.title}</div>
-              <div className="text-sm mt-1 text-gray-300 px-2">{step.description}</div>
-
-              {/* Connecting Lines - Only show on desktop */}
-              {index < steps.length - 1 && (
-                <div
-                  className="hidden   absolute w-[120px] h-[2px] bg-orange-600"
-                  style={{
-                    top: index % 2 === 0 ? "20px" : "60px",
-                    left: "120px",
-                    transform: `rotate(${index % 2 === 0 ? "23deg" : "-25deg"})`,
-                    transformOrigin: "left center",
-                  }}
-                />
-              )}
-
-              {/* Vertical Lines for Mobile */}
-              {index < steps.length - 1 && (
-                <div
-                  className="md:hidden absolute w-[2px] h-12 bg-orange-600"
-                  style={{
-                    top: "97%",
-                    left: "50",
-                    transform: "translateX(-60%)",
-                  }}
-                />
-              )}
-               {/* Vertical Lines for ipad 
-             {index < steps.length - 1 && (
-              <div
-                className="lg:hidden absolute w-[120px] h-2 bg-orange-600"
-                style={{
-                  top: "100%",
-                  left: "50px",
-                  transform: "translateX(-60%)",
-                }}
-              />
-            )}*/}
-       
+              <div className="text-center text-base mt-2 font-bold text-[#0E013D]">{step.title}</div>
+              <div className="text-center text-xs text-gray-600 mt-1">{step.description}</div>
             </div>
           ))}
         </div>

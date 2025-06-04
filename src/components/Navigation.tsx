@@ -109,7 +109,9 @@
 //           </Button>
 //           </a>
 
-
+//           <li>
+//             <a href="/adm-process" className="hover:text-[#ffbc04] transition">Admissions Process</a>
+//           </li>
 
 //         </div>
 //       </div>
