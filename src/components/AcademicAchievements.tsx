@@ -3,19 +3,19 @@ import { ChevronDown, Award, Star } from "lucide-react";
 
 const schools = {
   "St.Paul's Thomas Academy": [
-    { year: '2022 🥇', description: "Top 5 National Level - Murang'a County", image: '/images/stpaulsdashboard.png' },
+    { year: '2022', description: "Top 5 National Level - Murang'a County", image: '/images/stpaulsdashboard.png' },
   ],
   "Pioneer School": [
-    { year: '2024 🥈', description: 'Top 10 National Level - Nairobi County', image: '/images/highschooldashboard.png' },
+    { year: '2024', description: 'Top 10 National Level - Nairobi County', image: '/images/highschooldashboard.png' },
   ],
   "Pioneer Girl's School": [
-    { year: '2020 🥉', description: 'Top 15 National Level - Nairobi County', image: '/images/highschooldashboard.png' },
+    { year: '2020', description: 'Top 15 National Level - Nairobi County', image: '/images/highschooldashboard.png' },
   ],
   "Pioneer Girls Junior School": [
-    { year: '2022 🥈', description: 'National Science Fair Finalist', image: '/images/juniorschooldashboard.png' },
+    { year: '2022', description: 'National Science Fair Finalist', image: '/images/juniorschooldashboard.png' },
   ],
   "Pioneer Junior School": [
-    { year: '2023 🥇', description: 'National Music Champions', image: '/images/juniorschooldashboard.png' },
+    { year: '2023', description: 'National Music Champions', image: '/images/juniorschooldashboard.png' },
   ]
 };
 
@@ -166,16 +166,16 @@ const AcademicAchievements = () => {
             <div className="text-sm text-gray-300">Schools</div>
           </div>
           <div className="text-center bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6">
-            <div className="text-3xl font-bold text-yellow-400 mb-2">2</div>
-            <div className="text-sm text-gray-300">Gold Awards</div>
+            <div className="text-3xl font-bold text-yellow-400 mb-2">10+</div>
+            <div className="text-sm text-gray-300"> Awards at Science Contests</div>
           </div>
           <div className="text-center bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6">
-            <div className="text-3xl font-bold text-gray-300 mb-2">2</div>
-            <div className="text-sm text-gray-300">Silver Awards</div>
+            <div className="text-3xl font-bold text-gray-300 mb-2">10+</div>
+            <div className="text-sm text-gray-300"> Awards at Maths Contests</div>
           </div>
           <div className="text-center bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6">
-            <div className="text-3xl font-bold text-amber-500 mb-2">1</div>
-            <div className="text-sm text-gray-300">Bronze Award</div>
+            <div className="text-3xl font-bold text-amber-500 mb-2">5+ </div>
+            <div className="text-sm text-gray-300">Award at Computer Studies Contests</div>
           </div>
         </div>
       </div>

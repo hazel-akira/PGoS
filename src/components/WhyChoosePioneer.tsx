@@ -131,7 +131,7 @@ const WhyChoosePioneer: React.FC = () => {
   const currentImages = allImageSets[currentSetIndex];
 
   return (
-    <section className="py-28 bg-[#f7f7f7]">
+    <section className="py-28 bg-[#f7f7f7] bg-fixed">
       <hr className="border-t border-gray-300 mb-6 mx-24 md:mx-60" />
       <div className="text-center pb-10">
         <h2 className="text-xl md:text-4xl font-bold font-serif text-[#F4B24A] px-4">

@@ -87,7 +87,7 @@ const Leadership: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#f1f2fc] py-32 text-center">
+    <section className="bg-[#f1f2fc] py-32 text-center bg-fixed">
       <div className="max-w-7xl mx-auto">
         <hr className="border-t border-gray-300 mb-6 mx-20" />
         <div className="flex flex-col items-center">
