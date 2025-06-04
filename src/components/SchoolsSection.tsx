@@ -18,27 +18,42 @@ const SchoolsSection: React.FC = () => {
     <div className="relative w-full">
       {/* Top Section - Dark Background */}
       <div className="bg-[#02032d] pt-20 md:pt-0">
-        {/* Main content container */}
-        <div className="bg-[#02032d] flex flex-col md:flex-row">
-          {/* Text Section */}
-          <div className="bg-[#02032d] text-white p-6 flex flex-col justify-center items-center text-center w-full md:w-1/2">
-            <h2 className="text-2xl font-bold md:text-5xl font-serif text-[#F4B24A] mb-4">Our Schools</h2>
-            <div className="w-16 h-px bg-[#F4B24A]"></div>
-            <p className="text-md md:text-xl max-w-xl my-10">
-              With cutting-edge programs, state-of-the-art facilities, a focus on character-building, and
-              passionate educators, we create transformative educational experiences that shape futures
-              and inspire greatness.
-            </p>
-            {/* CTA Button */}
-            <div className="w-full bg-[#02032d] py-8 text-center">
-              <button className="bg-[#F4B24A] hover:bg-[#e68a00] text-white font-bold py-3 px-8 rounded-full transition-colors" onClick={() => navigate('/academics')}>
-                Explore Programs
-                <span className="ml-3 transition-transform group-hover:translate-x-1 motion-reduce:transform-none">➔</span>
-              </button>
+        <div className="flex flex-col md:flex-row">
+          {/*Text Section with Background Image + Overlay */}
+          <div
+            className="relative text-white p-6 flex flex-col justify-center items-center text-center w-full md:w-1/2"
+            style={{
+              backgroundImage: 'url("/images/specialprogsnobg.png")',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+            }}
+          >
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-[#02032d] bg-opacity-90 z-0" />
+
+            {/* Content */}
+            <div className="relative z-10">
+              <h2 className="text-2xl font-bold md:text-5xl font-serif text-[#F4B24A] mb-4">Our Schools</h2>
+              <div className="w-16 h-px bg-[#F4B24A] mx-auto"></div>
+              <p className="text-md md:text-xl max-w-xl my-10">
+                With cutting-edge programs, state-of-the-art facilities, a focus on character-building, and
+                passionate educators, we create transformative educational experiences that shape futures
+                and inspire greatness.
+              </p>
+              <div className="w-full py-8 text-center">
+                <button
+                  className="bg-[#F4B24A] hover:bg-[#e68a00] text-white font-bold py-3 px-8 rounded-full transition-colors"
+                  onClick={() => navigate('/academics')}
+                >
+                  Explore Programs
+                  <span className="ml-3 transition-transform group-hover:translate-x-1 motion-reduce:transform-none">➔</span>
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Image Section */}
+          {/* Right: Image Section */}
           <div className="w-full md:w-1/2">
             <img
               src="/images/studentscelebrating.jpg"
