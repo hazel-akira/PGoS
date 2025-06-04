@@ -7,25 +7,25 @@ import 'swiper/css/autoplay';
 const features = [
   {
     title: "Aviation",
-    icon: "/images/aviation.png",
+    icon: "/images/aviationicon.png",
     description: "Soar to new heights with hands-on training and real-world exposure. Our aviation program equips students with the skills, confidence, and ambition to become the next generation of aviation leaders.",
     link: "https://www.pioneerschools.ac.ke/Leaders/Aviator/"
   },
   {
     title: "Maritime",
-    icon: "/images/marine.png",
+    icon: "/images/marineicon.jpg",
     description: "Chart your course to a future on the seas. The maritime program offers expert-led training and exploration that prepare students for dynamic careers in marine science and global trade.",
     link: "https://www.pioneergirlsschool.co.ke/Inspired-Path/Marine-Program/"
   },
   {
     title: "Foreign Languages",
-    icon: "/images/foreignlanguages.png",
+    icon: "/images/mandarinicon.jpg",
     description: "Unlock the world through language. Our immersive foreign language program broadens cultural horizons, builds communication skills, and prepares students to thrive in global environments and international careers.",
     link: "https://www.pioneerschools.ac.ke/Student-Life/Korea-Exchange-Program/"
   },
   {
     title: "AI Studies",
-    icon: "/images/ai.png",
+    icon: "/images/roboticsicon.png",
     description: "Discover the future through innovation. Our AI studies program empowers students to explore coding, machine learning, and data science—nurturing digital thinkers who are ready to shape tomorrow’s world.",
     link: "https://www.stpaulthomasacademy.co.ke/Study-Life/Coding-Life/"
   }
@@ -64,7 +64,7 @@ const UniquePrograms = () => {
       {/* Background */}
       {isMobile ? (
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center bg-fixed"
           style={{
             backgroundImage: 'url(/images/specialprogs.jpg)',
             opacity: 0.05,
@@ -73,7 +73,7 @@ const UniquePrograms = () => {
         />
       ) : (
         <video
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none bg-fixed"
           style={{ width: '100%', height: '100%', opacity: 0.05, zIndex: 0, objectFit: 'cover' }}
           src="/images/specialprogs.mp4"
           autoPlay
