@@ -98,7 +98,7 @@ const Curriculum: React.FC = () => {
         {/* Image Column (background) */}
         <div className="absolute inset-0 w-full h-full">
           <div
-            className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+            className="absolute inset-0 bg-cover bg-center bg-fixed transition-all duration-700"
             style={{ backgroundImage: `url(${schools[selected].image})` }}
           ></div>
           <div className="absolute inset-0 bg-black bg-opacity-30 z-0" />

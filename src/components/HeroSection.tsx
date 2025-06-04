@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
     <div className="absolute inset-0 z-0">
       {/* Background image */}
       <div
-        className="w-full h-full"
+        className="w-full h-full bg-fixed"
         style={{
           backgroundImage: 'url("/images/hero-bg.jpg")',
           backgroundSize: 'cover',

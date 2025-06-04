@@ -3,7 +3,7 @@ import React from "react";
 const History: React.FC = () => {
   return (
     <section>
-     <div className="relative w-full bg-[#02032d]">
+     <div className="relative w-full bg-[#02032d] bg-fixed">
         {/* Main content container */}
         <div className="flex flex-col md:flex-row pt-12 md:pt-0">
           {/* Text Section */}
