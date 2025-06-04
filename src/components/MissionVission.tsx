@@ -7,7 +7,7 @@ const MissionVission: React.FC = () => {
 
    
   return (
-    <section className="bg-[#f1f2fc] mx-auto md:h-screen md:py-16 py-10">
+    <section className="bg-[#f1f2fc] mx-auto md:h-screen md:py-16 py-10 bg-fixed">
        <div className=" overflow-hidden">
             
             <div className=" mx-auto px-4 text-center">
