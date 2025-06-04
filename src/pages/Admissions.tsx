@@ -26,7 +26,7 @@ const HeroAdm: React.FC = () => {
         <div className="absolute inset-0 bg-black bg-opacity-55 z-0"></div>
 
         {/* Main content */}
-        <div className="p-4 md:p-8 text-center rounded-lg max-w-2xl relative z-10 mb-10 md:mb-20">
+        <div className="p-4 md:p-8 lg:p-6 text-center rounded-lg max-w-2xl relative z-10 mb-10 md:mb-20">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 text-[#FFC300]">
             Discover Your Future at Pioneer Group Of Schools
           </h1>
@@ -49,8 +49,8 @@ const HeroAdm: React.FC = () => {
         </div>
 
         {/* Bottom Navigation Bar */}
-        <div className="relative z-10 w-full md:w-1/2 bg-gray-100 text-black py-3 px-4 md:px-8 rounded-t-2xl shadow-lg">
-          <nav className="container mx-auto flex flex-col md:flex-row justify-around items-center gap-4 md:gap-0">
+        <div className="relative z-10 w-full md:w-1/2 lg:w- bg-gray-100 text-black py-3 px-4 md:px-8 lg:px-6 rounded-t-2xl shadow-md">
+          <nav className="container mx-auto flex flex-col md:flex-row lg:flex-row justify-around items-center gap-4 md:gap-0 lg:gap-0">
             <a
               href="#enrolment"
               className="text-base md:text-lg font-semibold hover:text-orange-600 transition"

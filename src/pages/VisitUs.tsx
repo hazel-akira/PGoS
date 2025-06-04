@@ -1,15 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import Navigation from '@/components/Navigation';
-import HeroVisit from '@/components/HeroVisit';
+import HeroSection from '@/components/HeroVisit';
 import SchoolsCarousel from '@/components/SchoolsCarousel';
 import ContactForm from '@/components/contactForm';
 import { ContactIcon } from 'lucide-react';
 import ContactInfoSection from '@/components/ContactInfoSection';
+import VisitUsFormAndTour from '@/components/VisitUsFormAndTour';
 
-const VisitUs = () => {
+const schools = [
+  "Pioneer School",
+  "Pioneer Girls School",
+  "Pioneer Junior Academy",
+  "Pioneer Girls Junior Academy",
+  "St. Paul Thomas Academy",
+];
+
+const VisitUs: React.FC = () => {
   const tabNames = ['schools', 'map', 'contact'];
   const [activeTab, setActiveTab] = useState<'schools' | 'map' | 'contact' | 'faq'>(tabNames[0] as 'schools');
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [form, setForm] = useState({
+    school: "",
+    date: "",
+    time: "",
+    name: "",
+    email: "",
+    phone: "",
+  });
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -44,74 +61,26 @@ const VisitUs = () => {
     setIsAutoPlaying(true); // Resume on mouse leave
   };
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // For now, just clear the form
+    setForm({ school: "", date: "", time: "", name: "", email: "", phone: "" });
+    alert("Form submitted! (Demo only)");
+  };
+
   return (
-    <div className="min-h-screen bg-white text-#2C27C9">
-    
-    
-       
-      <Navigation />
-      <HeroVisit scrollToChat={() => {}} />
-      <hr className="border-t border-gray-300 mb-6 mx-96" />
-      
-         {/* Tabs */}
-      <div className="py-1" onMouseEnter={handleMouseEnterTabs} onMouseLeave={handleMouseLeaveTabs}>
-        <div className="container mx-auto px-4">
-        <div className="bg-[#0d0d4e] text-white py-1 px-6 
-  rounded-tl-x4 rounded-tr-xl rounded-bl-md rounded-br-md 
-  flex justify-center space-x-8 mx-auto w-fit my-8">
-            {tabNames.map((tab) => (
-             <span
-  key={tab}
-  onClick={() => handleTabClick(tab as 'schools' | 'map' | 'contact' | 'faq')}
-  className={`cursor-pointer font-medium px-4 py-2 
-    ${
-      activeTab === tab
-        ? 'border-b-2 border-[#ffbc04] text-[#ffbc04]'
-        : 'hover:text-[#ffbc04]'
-    } 
-    rounded-tl-xl rounded-tr-xl rounded-bl-sm rounded-br-sm
-  `}
->
-                {tab === 'schools' && 'Our Schools'}
-                {tab === 'map' && 'View on Map'}
-                {tab === 'contact' && 'Contact'}
-              
-              </span>
-            ))}
-          </div>
-        </div>
+    <div className="bg-[#f7f9fb] min-h-screen w-full">
+      <div className="w-full">
+        <HeroSection scrollToChat={() => {}} />
       </div>
-      {activeTab === 'schools' && <SchoolsCarousel />}
-      {activeTab === 'contact' &&  <ContactInfoSection />}
-     
- {activeTab === 'map' && (
-        <div className="container mx-auto px-4 py-12">
-          <iframe
-            className="w-full h-96 rounded-lg border-2 border-[#ffbc04]"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d..."
-            loading="lazy"
-            allowFullScreen
-          ></iframe>
-        </div>
-      )}
-
-      {activeTab === 'contact' && (
-        <div className="container mx-auto px-4 py-12 max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold mb-4">Thank you for your interest.</h2>
-          <p className="text-lg leading-relaxed mb-4">
-            We value your feedback, inquiries, and suggestions. Please reach out using the contact
-            info below.
-          </p>
-          <div className="space-y-2 text-white">
-            <p>Email: info@pioneerschools.ac.ke</p>
-            <p>Phone: +254 712 345 678</p>
-            <p>Address: Pioneer Campus, Nairobi, Kenya</p>
-          </div>
-        </div>
-      )}
-
-     
-     
+      <div className="py-6 px-2 md:px-8 lg:px-16 w-full">
+        <VisitUsFormAndTour />
+        <SchoolsCarousel />
+      </div>
     </div>
   );
 };

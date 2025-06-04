@@ -13,7 +13,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
     { name: 'Academic Programs', path: '#programs' },
     { name: 'Student Life', path: '#student-life' },
     { name: 'Admissions', path: '#admissions' },
-    { name: 'Campus Tour', path: '#campus-tour' },
+    { name: 'Campus Tour', path: 'https://www.youtube.com/watch?v=A7rrEq1t8Js&t=3s&pp=ygUWcGlvbmVlciBzY2hvb2wgbWFyYWd1YQ%3D%3D' },
   ];
 
   return (

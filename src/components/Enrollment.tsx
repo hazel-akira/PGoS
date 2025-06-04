@@ -9,11 +9,11 @@ const animations = [topAnimation, sideAnimation, sceneAnimation];
 
 // Array of randomized positions
 const animationSpots = [
-  { top: "10%", left: "5%" },
-  { top: "20%", right: "10%" },
-  { bottom: "15%", left: "15%" },
-  { bottom: "5%", right: "5%" },
-  { top: "35%", left: "50%" },
+  { top: "50%", left: "50%" },
+  { top: "30%", right: "30%" },
+  { bottom: "35%", left: "15%" },
+  { bottom: "15%", right: "5%" },
+  { top: "50%", left: "35%" },
 ];
 const steps = [
   {
@@ -48,7 +48,7 @@ const steps = [
     number: 5,
     title: "Admission",
     description: "Receive admission confirmation.",
-    color: "bg-green-600",
+    color: "bg-green-800",
     link: "https://example.com/admission",
   },
 ];
@@ -110,11 +110,11 @@ const EnrollmentProcess: React.FC = () => {
               {/* Connecting Lines - Only show on desktop */}
               {index < steps.length - 1 && (
                 <div
-                  className="hidden md:block absolute w-[120px] h-[2px] bg-orange-600"
+                  className="hidden   absolute w-[120px] h-[2px] bg-orange-600"
                   style={{
-                    top: index % 2 === 0 ? "28px" : "60px",
-                    left: "160px",
-                    transform: `rotate(${index % 2 === 0 ? "27deg" : "-25deg"})`,
+                    top: index % 2 === 0 ? "20px" : "60px",
+                    left: "120px",
+                    transform: `rotate(${index % 2 === 0 ? "23deg" : "-25deg"})`,
                     transformOrigin: "left center",
                   }}
                 />
@@ -123,14 +123,26 @@ const EnrollmentProcess: React.FC = () => {
               {/* Vertical Lines for Mobile */}
               {index < steps.length - 1 && (
                 <div
-                  className="md:hidden absolute w-[2px] h-16 bg-orange-600"
+                  className="md:hidden absolute w-[2px] h-12 bg-orange-600"
                   style={{
-                    top: "100%",
-                    left: "50%",
-                    transform: "translateX(-50%)",
+                    top: "97%",
+                    left: "50",
+                    transform: "translateX(-60%)",
                   }}
                 />
               )}
+               {/* Vertical Lines for ipad 
+             {index < steps.length - 1 && (
+              <div
+                className="lg:hidden absolute w-[120px] h-2 bg-orange-600"
+                style={{
+                  top: "100%",
+                  left: "50px",
+                  transform: "translateX(-60%)",
+                }}
+              />
+            )}*/}
+       
             </div>
           ))}
         </div>

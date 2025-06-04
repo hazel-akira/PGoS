@@ -114,7 +114,7 @@ const SchoolsCarousel = () => {
       {/* Curved Frame Effect - Basic implementation using borders and pseudo-elements */}
       <div className="container mx-auto px-4">
           <CloudBackground />
-        <div className="relative border border-[#c9a030be] rounded-[60px] p-8 md:p-12" style={{ boxShadow: "0 0 30px rgba(255, 188, 4, 0.5)" }}>
+        <div className="relative border bg-[#1b1b4e]  rounded-[60px] p-8 md:p-12" style={{ boxShadow: "0 0 30px rgba(255, 188, 4, 0.5)" }}>
           <Slider {...settings}>
             {schools.map((school, index) => (
               <div key={index} className="px-1">

@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -59,7 +58,7 @@ const ChatContainer: React.FC = () => {
   };
 
   return (
-    <div id="chatSection" className="flex flex-col h-[500px] md:h-[600px] w-full max-w-md bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200">
+    <div id="chatSection" className="flex flex-col h-[500px] md:h-[600px] w-full max-w-md bg-white rounded-xl shadow-xl  border border-gray-200">
       <div className="bg-indigo-600 p-4">
         <h2 className="text-white font-medium">PGOS School Assistant</h2>
         <p className="text-white/80 text-sm">Ask about admissions, programs, or schedules</p>

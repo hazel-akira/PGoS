@@ -10,10 +10,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const dropdownOptions = [
-    { name: 'Academic Programs', path: '#programs' },
+    { name: 'campus tour', path: '#programs' },
     { name: 'Student Life', path: '#student-life' },
-    { name: 'Admissions', path: '#admissions' },
-    { name: 'Campus Tour', path: '#campus-tour' },
   ];
 
   return (
@@ -50,7 +48,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="flex items-center gap-2 bg-[#02032d] hover:bg-white/10 text-white px-6 py-3 rounded-lg backdrop-blur-sm transition-colors z-10"
             >
-              Pioneer with us
+              campus tour
               <ChevronDown className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
             
