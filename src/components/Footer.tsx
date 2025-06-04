@@ -81,7 +81,7 @@ const Footer = () => {
 
       {/* Bottom Footer Row */}
       <div>
-      <div className="relative z-10 border-t border-gray-700 py-4 text-center text-sm text-gray-300 mt-10">
+      <div className="relative z-10 border-t border-gray-700 py-4 text-center text-sm text-gray-300 mt-10 max-w-7xl mx-auto">
         <div className="flex md:flex-row justify-center items-center space-x-2 md:space-y-0 md:space-x-2">
           <p>&copy; {currentYear}</p>
           <span>|</span>
