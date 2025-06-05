@@ -93,7 +93,7 @@ const UniquePrograms = () => {
                 Elite Learning Paths
               </h1>
               <div className="w-16 h-px bg-[#F4B24A] mb-8"></div>
-              <p className="text-[#18144b] text-md md:text-lg leading-relaxed font-serif sm:text-base">
+              <p className="text-[#18144b] text-lg md:text-xl leading-relaxed font-serif sm:text-base">
                 At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders. Our curriculum is designed to meet national standards while integrating innovation, digital skills, and real-world learning.
               </p>
             </div>
@@ -163,7 +163,7 @@ const UniquePrograms = () => {
                     <h3 className="text-xl font-bold text-[#f4b24a] text-center mb-4 break-words">
                       {feature.title}
                     </h3>
-                    <p className="text-[#0e013d] text-center text-sm leading-relaxed mb-6 break-words">
+                    <p className="text-[#0e013d] text-center text-md leading-relaxed mb-6 break-words">
                       {feature.description}
                     </p>
                     <div className="text-center">
