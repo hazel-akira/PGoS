@@ -10,8 +10,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const dropdownOptions = [
-    { name: 'campus tour', path: '#programs' },
-    { name: 'Student Life', path: '#student-life' },
+    { name: 'campus tour', path: '/visit-us' },
+    { name: 'Student Life', path: '/student-life' },
+    { name: 'Get directions', path: '/maps' },
   ];
 
   return (
@@ -46,7 +47,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
           <div className="relative inline-block">
             <button
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="flex items-center gap-2 bg-[#02032d] hover:bg-white/10 text-white px-6 py-3 rounded-lg backdrop-blur-sm transition-colors z-10"
+              className="flex items-center gap-2 bg-gradient-to-r from-[#02032d] to-[#F4b24a] hover:brightness-110 hover:scale-105 text-white font-semibold  px-6 py-3 rounded-lg backdrop-blur-sm transition-colors z-10"
             >
               campus tour
               <ChevronDown className={`transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
@@ -58,7 +59,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
                   <a
                     key={option.name}
                     href={option.path}
-                    className="block px-4 py-3 text-white-800 hover:bg-[#02032d] hover:text-[#FFFF8] transition-colors"
+                    className="block px-4 py-3 text-white-800 hover:bg-[#f4b24a]/80 hover:text-[#02032d] transition-colors"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     {option.name}

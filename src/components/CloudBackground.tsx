@@ -3,7 +3,7 @@ import React from 'react';
 
 const CloudBackground: React.FC = () => {
   return (
-    <div className="fixed top-0 left-0 w-full h-full -z-10">
+    <div className="fixed bg-blue-900 top-0 left-0 w-full h-full -z-10">
       <svg width="100%" height="100%">
         <defs>
           <pattern

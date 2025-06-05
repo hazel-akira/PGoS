@@ -8,6 +8,7 @@ import sceneAnimation from '../animations/books.json';
 const AdmRequirements: React.FC = () => {
   return (
     <div className="bg-[#D9D9D9] min-h-screen text-black px-8 py-16 flex justify-center items-start">
+      
       {/* Left Lottie Animation */}
       <div className="hidden lg:block w-15 mr-8 mt-12">
         <Lottie
@@ -20,7 +21,9 @@ const AdmRequirements: React.FC = () => {
 
   
       {/* Content Section */}
-      <div className="flex-1 max-w-2xl">
+      <div className="flex-1 max-w-2xl"> 
+      <hr className="border-t-4 border-gray-600 mb-6 mx-20" />
+
        
 
         <h2 className="text-3xl font-bold mb-2 text-center">
@@ -28,7 +31,7 @@ const AdmRequirements: React.FC = () => {
         </h2>
 
         <p className="mb-8 text-center max-w-xl">
-          Find the required documents for admission by level—Primary and Secondary. Make sure to review and prepare all items
+          Find the required documents for admission by level:-Primary and Secondary. Make sure to review and prepare all items
           before applying.
         </p>
       

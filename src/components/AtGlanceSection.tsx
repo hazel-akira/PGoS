@@ -69,7 +69,7 @@ const AtGlanceSection: React.FC = () => {
           ))}
         </div>
 
-        <button className="mt-20 bg-[#F4B24A] hover:bg-[#e68a00] text-white px-6 py-3 rounded  transition font-semibold rounded shadow-md transition-all text-md md:text-lg" style={{boxShadow: '2px 2px 0 #8884'}}
+        <button className="mt-20 bg-[#F4B24A] hover:bg-[#e68a00] text-white px-6 py-3 font-semibold rounded shadow-md transition-all text-md md:text-lg" style={{boxShadow: '2px 2px 0 #8884'}}
           onClick={() => navigate('/academics')}>
           More Facts
         </button>
