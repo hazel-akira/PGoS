@@ -1,21 +1,22 @@
 import React, { useState } from "react";
+
 import { ChevronDown, Award, Star } from "lucide-react";
 
 const schools = {
   "St.Paul's Thomas Academy": [
-    { year: '2022', description: "Top 5 National Level - Murang'a County", image: '/images/stpaulsdashboard.png' },
+    { year: '2024', description: "Top 5 National Level - Murang'a County", image: '/images/stpaulsdashboard.png', link: 'https://www.stpaulthomasacademy.co.ke/KCPE-Results/' },
   ],
   "Pioneer School": [
-    { year: '2024', description: 'Top 10 National Level - Nairobi County', image: '/images/highschooldashboard.png' },
+    { year: '2024', description: 'Top 5 National Level - Nairobi County', image: '/images/highschooldashboard.png', link: 'https://www.pioneerschools.ac.ke/KCSE-Past-Performance/' },
   ],
   "Pioneer Girl's School": [
-    { year: '2020', description: 'Top 15 National Level - Nairobi County', image: '/images/highschooldashboard.png' },
+    { year: '2020', description: 'Top 5 National Level - Nairobi County', image: '/images/highschooldashboard.png', link: 'https://www.pioneergirlsschool.co.ke/Be-Inspired/' },
   ],
-  "Pioneer Girls Junior School": [
-    { year: '2022', description: 'National Science Fair Finalist', image: '/images/juniorschooldashboard.png' },
+  "Pioneer Girls Junior Academy": [
+    { year: '2024', description: 'National Science Fair Finalist', image: '/images/juniorschooldashboard.png', link: 'https://www.pioneergirlsjunioracademy.co.ke/' },
   ],
-  "Pioneer Junior School": [
-    { year: '2023', description: 'National Music Champions', image: '/images/juniorschooldashboard.png' },
+  "Pioneer Junior Academy": [
+    { year: '2024', description: 'National Music Champions', image: '/images/juniorschooldashboard.png', link: 'https://www.pioneerjunioracademy.co.ke/' },
   ]
 };
 
@@ -52,7 +53,7 @@ const AcademicAchievements = () => {
             </h2>
             <span className="w-8 md:w-16 h-px bg-gradient-to-l from-transparent to-orange-300" />
           </div>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
             Celebrating excellence across our educational institutions
           </p>
         </div>
@@ -70,7 +71,7 @@ const AcademicAchievements = () => {
             </button>
             
             {isDropdownOpen && (
-              <div className="absolute top-full left-0 right-0 mt-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl overflow-hidden z-10">
+              <div className="absolute top-full left-0 right-0 mt-2 bg-slate-900/50 backdrop-blur-lg border border-white/20 rounded-xl overflow-hidden z-10">
                 {Object.keys(schools).map((school) => (
                   <button
                     key={school}
@@ -110,10 +111,13 @@ const AcademicAchievements = () => {
         </div>
 
         {/* Achievement Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {activeAchievements.map((item, index) => (
-            <div
+            <a
               key={index}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               {/* Image Container */}
@@ -155,7 +159,7 @@ const AcademicAchievements = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -163,19 +167,19 @@ const AcademicAchievements = () => {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6">
             <div className="text-3xl font-bold text-[#F4B24A] mb-2">5</div>
-            <div className="text-sm text-gray-300">Schools</div>
+            <div className="text-sm md:text-lg text-gray-300">Schools</div>
           </div>
           <div className="text-center bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6">
             <div className="text-3xl font-bold text-yellow-400 mb-2">10+</div>
-            <div className="text-sm text-gray-300"> Awards at Science Contests</div>
+            <div className="text-sm md:text-lg text-gray-300">Awards at Science Contests</div>
           </div>
           <div className="text-center bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6">
             <div className="text-3xl font-bold text-gray-300 mb-2">10+</div>
-            <div className="text-sm text-gray-300"> Awards at Maths Contests</div>
+            <div className="text-sm md:text-lg text-gray-300">Awards at Maths Contests</div>
           </div>
           <div className="text-center bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6">
             <div className="text-3xl font-bold text-amber-500 mb-2">5+ </div>
-            <div className="text-sm text-gray-300">Award at Computer Studies Contests</div>
+            <div className="text-sm md:text-lg text-gray-300">Award at Computer Studies Contests</div>
           </div>
         </div>
       </div>
