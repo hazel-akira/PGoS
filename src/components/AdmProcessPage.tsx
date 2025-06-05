@@ -26,7 +26,7 @@ const AdmProcessPage: React.FC = () => {
         <div className="max-w-6xl mx-auto bg-white rounded-xl shadow p-6 md:p-12 flex flex-col md:flex-row gap-8">
           {/* Main Content */}
           <div className="flex-1 min-w-0">
-            <h1 className="text-3xl font-bold text-[#0e013d] mb-2">Our Enrolment Process</h1>
+            <h1 className="text-3xl  font-bold text-[#0e013d] mb-2">Our Enrolment Process</h1>
             <p className="text-[#1a237e] mb-6">
               Pioneer Group of Schools welcomes, celebrates, and nurtures all who join our community. We are committed to providing a supportive environment where every child is seen, heard, and empowered to thrive. Our enrolment process is designed to be clear and supportive for every family.
             </p>
@@ -68,7 +68,7 @@ const AdmProcessPage: React.FC = () => {
                 Pioneer Group of Schools uses a simple online process for admissions and enrolment. Click below to create an account, start your application, and view the admissions checklist.
               </div>
               <a
-                href="https://enquireto.pioneergroupofschools.co.ke/SignIn?ReturnUrl=%2F"
+                href="https://enquireto.pioneergroupofschools.co.ke/Account/Login/Register?returnUrl=%2F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 px-8 py-3 bg-[#ffbc04] text-[#0e013d] font-bold rounded hover:bg-[#ffd966] transition"

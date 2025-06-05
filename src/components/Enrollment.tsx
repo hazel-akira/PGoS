@@ -13,7 +13,7 @@ const steps = [
     title: "Inquiry",
     description: "Begin your journey with us by reaching out through our inquiry platform or by calling the admissions office. Our friendly team is available to answer your questions, provide detailed information about our schools, and guide you through the admission process. This step ensures you're well-informed and confident as you move forward.",
     color: "bg-sky-300",
-    link: "https://enquireto.pioneergroupofschools.co.ke/SignIn?ReturnUrl=%2F",
+    link: "/adm-process",
     image: topAnimation,
   },
   {

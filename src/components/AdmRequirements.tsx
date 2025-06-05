@@ -59,14 +59,43 @@ const AdmRequirements: React.FC = () => {
         </p>
 
         {/* Download Forms List */}
-        <div className="bg-[#fbfbfc] p-6 rounded-lg">
-          <h2 className="font-bold mb-4 text-lg">📥 Download Forms:</h2>
-          <ul className="text-lg">
-            <li className="mb-3">🧾<span className="ml-2">Inquiry Form [Download]</span></li>
-            <li className="mb-3">📝<span className="ml-2">Admission Form [Download]</span></li>
-            <li>🩺<span className="ml-2">Medical Form [Download]</span></li>
-          </ul>
-        </div>
+        <div className="space-y-4">
+  <h3 className="text-xl font-bold mb-2">📥 Download Forms:</h3>
+  
+  <p className="flex items-center gap-2">
+    🧾 Inquiry Form 
+    <a 
+      href="/forms/~$plication form.docx" 
+      download 
+      className="text-blue-600 underline hover:text-blue-800"
+    >
+      [Download]
+    </a>
+  </p>
+
+  <p className="flex items-center gap-2">
+    📝 Admission Form 
+    <a 
+      href="/forms/admission-form.pdf" 
+      download 
+      className="text-blue-600 underline hover:text-blue-800"
+    >
+      [Download]
+    </a>
+  </p>
+
+  <p className="flex items-center gap-2">
+    🩺 Medical Form 
+    <a 
+      href="/forms/medical-form.pdf" 
+      download 
+      className="text-blue-600 underline hover:text-blue-800"
+    >
+      [Download]
+    </a>
+  </p>
+</div>
+
        
 
         {/* Bottom Line */}
