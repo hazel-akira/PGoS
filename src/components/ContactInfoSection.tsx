@@ -26,6 +26,7 @@ const emailList = [
 export default function ContactInfoSection() {
   return (
     <div className="w-full md:w-11/12 mx-auto p-6 md:p-10 bg-white rounded-t-2xl shadow-xl mt-10">
+       <hr className="border-t-2 border-gray-300 mb-6 mx-20" />
       <h1 className="font-black text-4xl text-blue-800 text-center p-5">Contact Us</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Address Card */}
@@ -42,6 +43,12 @@ export default function ContactInfoSection() {
               </li>
             ))}
           </ul>
+          <a 
+    href="/maps" // or use an external Google Maps link
+    className="inline-block px-4 py-2 my-10 bg-orange-600 left-9 text-white rounded-full shadow hover:bg-orange-700 transition-all duration-200 text-xl"
+  >
+    Get Directions
+  </a>
         </div>
 
         {/* Phone Card */}
