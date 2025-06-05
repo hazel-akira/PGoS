@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MenuProvider } from "./components/MenuContext.tsx";
 
-import ScrollToTop from "./components/ScrollTotop.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 import NotFound from "./pages/NotFound";
 import ChatIcon from "./components/ChatIcon";
 import Navigation2 from "./components/Navigation2";
