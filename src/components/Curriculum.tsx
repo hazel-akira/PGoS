@@ -4,25 +4,26 @@ const schools = [
   {
     title: 'Primary School',
     description:
-      'The primary school curriculum is designed to provide a comprehensive and engaging education for children aged 3-11. It focuses on developing essential skills, fostering creativity, and promoting critical thinking.',
+      'Designed for pupils aged 9–11, our primary school curriculum lays a strong academic foundation through a mix of play-based learning, literacy, numeracy, and discovery. It nurtures curiosity, character, and confidence in early learners.',
     image: '/images/primaryschool1.png',
     alt: 'primaryschool',
   },
   {
     title: 'Junior Secondary School',
     description:
-      'The junior secondary school curriculum is designed to provide a comprehensive and engaging education for children aged 11-14. It focuses on developing essential skills, fostering creativity, and promoting critical thinking.',
+      'For learners aged 11–14, our junior secondary program bridges foundational learning and specialization. It emphasizes deeper subject exploration, digital literacy, environmental awareness, and practical life skills as part of the CBC transition.',
     image: '/images/juniorsecondary.png',
     alt: 'juniorsecondary',
   },
   {
     title: 'Senior Secondary School',
     description:
-      'The senior secondary school curriculum is designed to provide a comprehensive and engaging education for children aged 14-18. It focuses on developing essential skills, fostering creativity, and promoting critical thinking.',
+      'Tailored for students aged 14–18, our senior secondary curriculum supports academic excellence and career readiness through pathways in STEM, humanities, and arts. We emphasize critical thinking, leadership, and university preparation.',
     image: '/images/seniorschool.png',
     alt: 'seniorschool',
   },
 ];
+
 
 const Curriculum: React.FC = () => {
   const [selected, setSelected] = useState(0);

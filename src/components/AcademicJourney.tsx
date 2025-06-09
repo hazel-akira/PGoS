@@ -122,7 +122,7 @@ const AcademicJourney = () => {
             </p>
           </div>
 
-          <button className="mt-4 mx-auto lg:mx-0 block px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#0E013d] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300"
+          <button className="mt-4 mx-auto lg:mx-0 block px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#010218E6] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300"
            onClick={() => navigate('/admissions')} >
             Explore Admissions
           </button>
