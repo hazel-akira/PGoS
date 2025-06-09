@@ -22,8 +22,8 @@ const AdmProcessPage: React.FC = () => {
       
         <HeroAdm />
       
-      <div className="bg-[#f7f9fb] min-h-screen py-10 px-2 md:px-0">
-        <div className="max-w-6xl mx-auto bg-white rounded-xl shadow p-6 md:p-12 flex flex-col md:flex-row gap-8">
+      <div className="bg-[#f7f9fb] dark:bg-gray-500 min-h-screen py-10 px-2 md:px-0">
+        <div className="max-w-6xl mx-auto bg-white dark:bg-gray-400 rounded-xl shadow p-6 md:p-12 flex flex-col md:flex-row gap-8">
           {/* Main Content */}
           <div className="flex-1 min-w-0">
             <h1 className="text-3xl  font-bold text-[#0e013d] mb-2">Our Enrolment Process</h1>
@@ -34,7 +34,7 @@ const AdmProcessPage: React.FC = () => {
             <hr className="my-6 border-t border-gray-300" />
 
             {/* Step 1 */}
-            <h2 className="text-xl font-bold text-[#d32f2f] mb-2 mt-8">Step 1: Application</h2>
+            <h2 className="text-xl font-bold dark:text-[#0e013d] mb-2 mt-8">Step 1: Application</h2>
             <div className="mb-4">
               <div className="font-semibold mb-1">Applying For...</div>
               <ul className="list-disc pl-6 space-y-1">

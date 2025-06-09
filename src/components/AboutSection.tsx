@@ -6,11 +6,11 @@ const AboutSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative bg-[#f2f2f2] py-4 md:py-12 overflow-x-hidden">
+    <section className="relative bg-[#f2f2f2] dark:bg-gray-900 py-4 md:py-12 overflow-x-hidden">
      <div className="mt-24 flex flex-col items-center text-center px-4">
         <hr className="border-t border-gray-300 mb-6 w-11/12 sm:w-3/4 md:w-1/2" />
         {/* Large Outlined Heading */}
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold font-serif tracking-wide text-[#0E013d] whitespace-nowrap">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold dark:text-[#848485] font-serif tracking-wide text-[#0E013d] whitespace-nowrap">
           Grow <span className="text-[#f4b24a]">&amp;</span> Thrive
         </h2>
       </div>
@@ -18,7 +18,7 @@ const AboutSection = () => {
       <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-0 relative z-10 pt-24 md:pt-40">
         {/* Text Block */}
         <div className="relative flex flex-col items-center w-full md:w-auto md:ml-28">
-          <div className="bg-white text-[#02032d] p-6 md:p-12 max-w-md w-full shadow-lg text-center">
+          <div className="bg-white dark:bg-gray-400 text-[#02032d] p-6 md:p-12 max-w-md w-full shadow-lg text-center">
             <h3 className="text-2xl md:text-4xl font-light mb-2">Excellence Rooted in </h3>
             <div className="text-[#F4B24A] text-2xl md:text-4xl font-normal leading-tight mb-4">
             Character and <br />Leadership

@@ -61,11 +61,11 @@ const VisitUs: React.FC = () => {
   };
 
   return (
-    <div className=" min-h-screen w-full">
+    <div className=" min-h-screen  w-full">
       <div className="w-full">
         <HeroSection scrollToChat={() => {}} />
       </div>
-      <div className="min-h-screen bg-[#f1f1f1] text-[#2C27C9]">
+      <div className="min-h-screen bg-[#f1f1f1] dark:bg-gray-800 text-[#2C27C9]">
         <hr className="border-t border-gray-300 mb-6 mx-96" />
         <div className="py-1" onMouseEnter={handleMouseEnterTabs} onMouseLeave={handleMouseLeaveTabs}>
           <div className="container mx-auto px-4">

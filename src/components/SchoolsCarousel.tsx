@@ -107,7 +107,7 @@ const SchoolsCarousel = () => {
         <div className="relative py-12 overflow-hidden" >
           <div className="container mx-auto px-4">
           <hr className="border-t border-gray-300 mb-6 mx-20" />
-            <h1 className='text-3xl md:text-5xl font-semibold font-serif text-[#02032d] text-center mb-20 tracking-wide'>Visit <span className='text-orange-400'>Our</span> Schools</h1>
+            <h1 className='text-3xl md:text-5xl font-semibold font-serif text-[#02032d] dark:text-[#a9a9ac] text-center mb-20 tracking-wide'>Visit <span className='text-orange-400'>Our</span> Schools</h1>
             <div className="relative border rounded-3xl bg-[#0c0c31ec] max-w-[1400px] mx-auto p-8 md:p-12">
 
               <div className="bg-white p-6 rounded-2xl shadow-md mb-8 text-center">

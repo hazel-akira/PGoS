@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const CallToAction = () => {
   return (
     <div>
-        <hr className="border-t border-gray-500 mb-2 mx-20 " />
-    <section className=" text-[#02032d] py-12 mt-5 px-6 rounded-2xl shadow-xl my-8">
+        <hr className="border-t border-orange-600 dark:border-orange-400 mb-2 mx-20" />
+    <section className="text-[#02032d] dark:text-white py-12 mt-5 px-6 rounded-2xl shadow-xl my-8">
         
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         
@@ -20,13 +20,13 @@ const CallToAction = () => {
           <h2 className="text-3xl md:text-4xl text-orange-400 font-bold mb-4">
             Schedule Your Visit Today
           </h2>
-          <p className="text-lg  md:text-xl mb-6">
+          <p className="text-lg md:text-xl mb-6 text-gray-700 dark:text-gray-300">
             Discover firsthand the vibrant learning environment and values that make our schools exceptional. We can't wait to welcome you!
           </p>
 
           {/* Scroll to form using anchor link */}
           <Link to="#visit-form">
-            <Button className="bg-[#02032d] text-orange-400 hover:bg-white transition font-semibold text-lg px-8 py-3 rounded-full">
+            <Button className="bg-[#02032d] dark:bg-white text-orange-400 hover:bg-white dark:hover:bg-[#02032d] hover:text-[#02032d] dark:hover:text-white transition font-semibold text-lg px-8 py-3 rounded-full">
               Schedule a Visit
             </Button>
           </Link>

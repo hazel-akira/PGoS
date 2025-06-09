@@ -47,7 +47,8 @@ const navLinks = [
     path: '/admissions',
     sublinks: [
       {name: 'Enrollment process', path: '/admissions/enrollment'},
-      {name: 'Admission Requirements', path: '/admissions/requirements'}
+      {name: 'Admission Requirements', path: '/admissions/requirements'},
+      {name:'Admission Process',path:'/adm-process'},
     ]
   },
   {

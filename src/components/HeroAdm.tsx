@@ -7,7 +7,7 @@ const HeroAdm: React.FC = () => {
   return (
     <>
       <section
-        className="relative bg-cover bg-center h-[50vh] text-white flex flex-col items-center justify-end"
+        className="relative w-full bg-cover bg-center h-[50vh] text-white flex flex-col items-center justify-end"
         style={{ backgroundImage: "url('/images/adm.png')" }}
       >
         {/* Background overlay */}
@@ -15,9 +15,9 @@ const HeroAdm: React.FC = () => {
 
         {/* Main content */}
         <div className="p-8 text-center rounded-lg max-w-2xl relative z-10 ">
-          <h1 className="text-4xl md:text-5xl font-bold mt-10 mb-4 text-[#FFC300]">
-            Discover Your Future at Pioneer Group Of Schools
-          </h1>
+        <h1 className="text-4xl hidden md:block font-bold mt-20 md:mt-20 mb-4 text-[#FFC300]">
+  Discover Your Future at Pioneer Group Of Schools
+</h1>
         </div>
 
         {/* Enrollment Box */}

@@ -14,7 +14,6 @@ const footerLinks = [
   {title: 'About', path: '/about'},
   {title: 'Academics', path: '/academics'},
   {title: 'Admissions', path: '/admissions'},
-  {title: 'Adm Process', path: '/adm-process'},
   {title: 'Contacts', path: '/contact'},
   {title: 'Visit', path: '/visit-us'}
   
@@ -64,7 +63,7 @@ const Footer = () => {
             <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><FiInstagram /></a>
             <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><RiTwitterXFill /></a>
             <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><FiLinkedin /></a>
-            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><FiYoutube /></a>
+            <a href="http://www.youtube.com/@pioneergroupofschools-keny981" className='hover:text-[#F4B24A] transition-colors duration-300'><FiYoutube /></a>
             <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><RiTiktokLine /></a>
           </div>
 
