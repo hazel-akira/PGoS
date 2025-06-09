@@ -60,7 +60,7 @@ const UniquePrograms = () => {
   }, [swiperInstance]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-32 px-4 bg-[#ECECFB] overflow-hidden">
+    <section className="relative min-h-screen flex items-center dark:bg-slate-900 justify-center py-32 px-4 bg-[#ECECFB] overflow-hidden">
       {/* Background */}
       {isMobile ? (
         <div
@@ -89,11 +89,11 @@ const UniquePrograms = () => {
           {/* Left Section */}
           <div className="md:w-full lg:w-1/2 lg:pr-8 max-w-2xl flex-1 md:pt-48">
             <div className="rounded-2xl px-16 justify-center items-center">
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#F4b24a] mb-6 font-serif">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl dark:text-orange-400 font-bold text-[#F4b24a] mb-6 font-serif">
                 Elite Learning Paths
               </h1>
-              <div className="w-16 h-px bg-[#F4B24A] mb-8"></div>
-              <p className="text-[#18144b] text-lg md:text-xl leading-relaxed font-serif sm:text-base">
+              <div className="w-16 h-px dark:bg-orange-400 bg-[#F4B24A] mb-8"></div>
+              <p className="text-[#18144b] text-lg dark:text-white md:text-xl leading-relaxed font-serif sm:text-base">
                 At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders. Our curriculum is designed to meet national standards while integrating innovation, digital skills, and real-world learning.
               </p>
             </div>
@@ -139,7 +139,7 @@ const UniquePrograms = () => {
                               href={feature.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="text-[#0e013d] hover:text-[#f4b24a] font-semibold border-b border-[#0e013d] hover:border-[#f4b24a] transition-colors duration-200 bg-transparent"
+                              className="text-[#0e013d] hover:text-[#f4b24a] font-semibold border-b dark:border-orange-400  dark:hover:border-[#f4b24a] hover:border-[#f4b24a] transition-colors duration-200 bg-transparent"
                             >
                               More
                             </a>
@@ -151,19 +151,19 @@ const UniquePrograms = () => {
                 </Swiper>
               </div>
             ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2  gap-8">
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className="bg-white w-full rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 border border-gray-100"
+                    className="bg-white dark:bg-[#02032d57] dark:border-gray-800  w-full rounded-2xl p-8 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 border border-gray-100"
                   >
                     <div className="flex justify-center mb-6">
                       <img src={feature.icon} alt={feature.title} className="w-16 h-16 rounded-full" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#f4b24a] text-center mb-4 break-words">
+                    <h3 className="text-xl font-bold dark:text-orange-400 text-[#f4b24a] text-center mb-4 break-words">
                       {feature.title}
                     </h3>
-                    <p className="text-[#0e013d] text-center text-md leading-relaxed mb-6 break-words">
+                    <p className="text-[#0e013d] dark:text-white text-center text-md leading-relaxed mb-6 break-words">
                       {feature.description}
                     </p>
                     <div className="text-center">
@@ -171,7 +171,7 @@ const UniquePrograms = () => {
                         href={feature.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#0e013d] hover:text-[#f4b24a] font-semibold border-b border-[#0e013d] hover:border-[#f4b24a] transition-colors duration-200 bg-transparent"
+                        className="text-[#0e013d] dark:text-orange-400 hover:text-[#f4b24a] font-semibold border-b border-[#0e013d] hover:border-[#f4b24a] transition-colors duration-200 bg-transparent"
                       >
                         More
                       </a>

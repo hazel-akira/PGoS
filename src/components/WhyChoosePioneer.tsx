@@ -131,8 +131,8 @@ const WhyChoosePioneer: React.FC = () => {
   const currentImages = allImageSets[currentSetIndex];
 
   return (
-    <section className="py-28 bg-[#f7f7f7] bg-fixed">
-      <hr className="border-t border-gray-300 mb-6 mx-24 md:mx-60" />
+    <section className="py-28 bg-[#f7f7f7] dark:bg-slate-900 bg-fixed">
+      <hr className="border-t dark:border-[#F4B24A] border-gray-300 mb-6 mx-24 md:mx-60" />
       <div className="text-center pb-10">
         <h2 className="text-xl md:text-4xl font-bold font-serif text-[#F4B24A] px-4">
           WHY CHOOSE OUR SCHOOLS
@@ -168,7 +168,7 @@ const WhyChoosePioneer: React.FC = () => {
                         />
                         <div className="mt-4 text-center">
                           <h3 className="text-xl font-bold font-serif text-[#f4b24a] leading-tight">{image.title}</h3>
-                          <p className="text-base font-normal text-[#0e013d] mt-1 text-left">
+                          <p className="text-base font-normal dark:text-white text-[#0e013d] mt-1 text-left">
                             {image.description}
                           </p>
                         </div>
@@ -220,7 +220,7 @@ const WhyChoosePioneer: React.FC = () => {
 
       </div>
       {/* add link to download prospectus */}
-      <div className='flex flex-col  justify-center mx-auto md:mt-48 mt-24 flex flex-col justify-center items-center'>
+      <div className='mx-auto md:mt-48 mt-24 flex flex-col justify-center items-center'>
        <button className="px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#0E013d] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300">Get Prospectus</button>
       </div>
      

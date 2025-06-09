@@ -61,7 +61,7 @@ const StudentsLifeSection: React.FC = () => {
 
   return (
     <section 
-      className="w-full bg-[#f2f2f2] py-32 px-2 md:px-0"
+      className="w-full bg-[#f2f2f2] dark:bg-slate-900  py-32 px-2 md:px-0"
       onMouseLeave={handleMouseLeave}
     >
       <div className="max-w-6xl mx-auto">
@@ -81,12 +81,12 @@ const StudentsLifeSection: React.FC = () => {
                     <span 
                       className={`w-5 h-5 rounded-full border-2 transition-all duration-300 ${
                         idx === selected 
-                          ? 'bg-[#F4B24A] border-[#F4B24A] scale-110' 
-                          : 'bg-[#02032d] border-[#02032d]'
+                          ? 'bg-[#F4B24A] dark:bg-orange-400 border-[#F4B24A]  dark:border-orange-400 scale-110' 
+                          : 'bg-[#02032d] dark:bg-[#F4B24A] border-[#02032d]'
                       }`}
                     ></span>
                     {idx !== schools.length - 1 && (
-                      <span className={`w-0.5 h-8 bg-[#02032d] transition-all duration-300 ${
+                      <span className={`w-0.5 h-8 bg-[#02032d] dark:bg-white transition-all duration-300 ${
                         idx === selected ? 'bg-[#F4B24A]' : ''
                       }`}></span>
                     )}
@@ -94,8 +94,8 @@ const StudentsLifeSection: React.FC = () => {
                   <span 
                     className={`text-lg font-medium transition-all duration-300 ${
                       idx === selected 
-                        ? 'text-[#F4B24A] scale-105' 
-                        : 'text-gray-900'
+                        ? 'text-[#F4B24A] dark:text-gray-200 scale-105' 
+                        : 'text-gray-900 dark:text-orange-400' 
                     }`}
                   >
                     {school.name}

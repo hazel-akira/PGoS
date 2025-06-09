@@ -22,19 +22,20 @@ const AdmProcessPage: React.FC = () => {
       
         <HeroAdm />
       
-      <div className="bg-[#f7f9fb] dark:bg-gray-500 min-h-screen py-10 px-2 md:px-0">
-        <div className="max-w-6xl mx-auto bg-white dark:bg-gray-400 rounded-xl shadow p-6 md:p-12 flex flex-col md:flex-row gap-8">
+      <div className="bg-[#f7f9fb]  dark:bg-gradient-to-br from-[#010218e6] via-slate-900 to-[#010218e6] min-h-screen py-10 px-2 md:px-0">
+        <div className="max-w-6xl mx-auto bg-white  dark:backdrop-blur-lg border dark:border-white/20
+  dark:bg-white/10   rounded-xl shadow p-6 md:p-12 flex flex-col md:flex-row gap-8">
           {/* Main Content */}
           <div className="flex-1 min-w-0">
-            <h1 className="text-3xl  font-bold text-[#0e013d] mb-2">Our Enrolment Process</h1>
-            <p className="text-[#1a237e] mb-6">
+            <h1 className="text-3xl  font-bold text-[#0e013d] dark:text-[#f4b24a] mb-2">Our Enrolment Process</h1>
+            <p className="text-[#1a237e] dark:text-white mb-6">
               Pioneer Group of Schools welcomes, celebrates, and nurtures all who join our community. We are committed to providing a supportive environment where every child is seen, heard, and empowered to thrive. Our enrolment process is designed to be clear and supportive for every family.
             </p>
            
             <hr className="my-6 border-t border-gray-300" />
 
             {/* Step 1 */}
-            <h2 className="text-xl font-bold dark:text-[#0e013d] mb-2 mt-8">Step 1: Application</h2>
+            <h2 className="text-xl font-bold dark:text-[#f4b24a] text-[#d32f2f] mb-2 mt-8">Step 1: Application</h2>
             <div className="mb-4">
               <div className="font-semibold mb-1">Applying For...</div>
               <ul className="list-disc pl-6 space-y-1">
@@ -45,25 +46,25 @@ const AdmProcessPage: React.FC = () => {
             </div>
 
             {/* Step 2 */}
-            <h2 className="text-xl font-bold text-[#d32f2f] mb-2 mt-8">Step 2: Acceptance and Enrolment</h2>
+            <h2 className="text-xl font-bold dark:text-[#f4b24a] text-[#d32f2f] mb-2 mt-8">Step 2: Acceptance and Enrolment</h2>
             <p className="mb-4">
               Once your application is reviewed by our admissions team, you may be invited for an interview or assessment. If offered admission, please confirm your enrolment by submitting your enrolment contract and tuition deposit by the date indicated on your acceptance letter.
             </p>
 
             {/* Helpful Info */}
             <div className="mt-8">
-              <div className="font-semibold mb-2">Helpful Information</div>
+              <div className="font-semibold mb-2 dark:text-[#f4b24a]">Helpful Information</div>
               <ul className="list-disc pl-6 space-y-1">
                 {helpfulLinks.map((item) => (
                   <li key={item.label}>
-                    <a href={item.href} className="text-blue-700 hover:underline">{item.label}</a>
+                    <a href={item.href} className="text-blue-700 dark:text-white hover:underline">{item.label}</a>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Call to Action */}
-            <div className=" bg-[#0e013d] text-white rounded-lg p-6 flex flex-col items-center">
+            <div className=" bg-[#0e013d] text-white  rounded-lg p-6 flex flex-col items-center">
               <div className="mb-2 text-center">
                 Pioneer Group of Schools uses a simple online process for admissions and enrolment. Click below to create an account, start your application, and view the admissions checklist.
               </div>

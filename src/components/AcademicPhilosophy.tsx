@@ -9,7 +9,7 @@ const AcademicPhilosophy = () => {
             <span className="w-8 md:w-24 h-px bg-orange-300"/>
         </div>
        
-        <p className='text-md md:text-lg text-justify md:text-center max-w-4xl py-8 text-[#0e013d] px-8'>
+        <p className='text-md md:text-lg text-justify md:text-center max-w-4xl py-8 dark:text-white text-[#0e013d] px-8'>
         At Pioneer Group of Schools, we believe education should ignite curiosity, develop critical thinking, and inspire learners to become leaders. Our curriculum is designed to meet national standards while integrating innovation, digital skills, and real-world learning.
         </p>
     </div>

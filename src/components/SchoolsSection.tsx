@@ -100,9 +100,9 @@ const SchoolsSection: React.FC = () => {
       </div>
 
       {/* Bottom Section - Light Background */}
-      <div className="bg-[#f2f2f2] md:pt-32">
+      <div className="bg-[#f2f2f2] dark:bg-slate-900 md:pt-32">
         {/* Extended Stats Strip */}
-        <div className="relative text-[#02032d] py-24 overflow-hidden">
+        <div className="relative text-[#02032d] dark:text-gray-200 py-24 overflow-hidden">
           {/* Animate this inner strip only */}
           <div className="animate-scrollX flex md:flex-row justify-around items-center gap-10 text-center px-4 w-max">
             <div className="flex flex-col items-center">
@@ -125,7 +125,7 @@ const SchoolsSection: React.FC = () => {
         </div>
 
         {/* Apply Now Button Section */}
-        <div className='flex flex-col justify-center mx-auto pb-12 flex flex-col justify-center items-center'>
+        <div className='mx-auto pb-12 flex flex-col justify-center items-center'>
           <button className="px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#0E013d] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300"
           onClick={() => navigate('/admissions')} >
             Apply Now

@@ -1,0 +1,26 @@
+  name: Deploy PGOS website
+ 
+  on:
+    push:
+      branches:
+        - main  # Trigger deployment on push to the main branch
+ 
+  jobs:
+    deploy:
+      runs-on: ubuntu-latest
+ 
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+ 
+        - name: Setup SSH key
+          uses: appleboy/ssh-action@v1
+          with:
+            host: ${{ secrets.VM_HOST }}
+            username: ${{ secrets.VM_USERNAME }}
+            key: ${{ secrets.VM_SSH_KEY }}
+            port: 22
+            script: |
+              cd PGOS_website
+              git pull origin main
+              

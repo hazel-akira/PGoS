@@ -18,7 +18,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <div className="bg-[#f1f2fc]">
+    <div className="bg-[#f1f2fc] dark:bg-slate-900 ">
       <div className="relative ">
         <HeroAbout />
         {/* about Navigation */}

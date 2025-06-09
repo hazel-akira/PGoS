@@ -6,10 +6,8 @@ import { Link } from 'react-router-dom';
 const CallToAction = () => {
   return (
     <div>
-        <hr className="border-t border-orange-600 dark:border-orange-400 mb-2 mx-20" />
-    <section className="text-[#02032d] dark:text-white py-12 mt-5 px-6 rounded-2xl shadow-xl my-8">
-        
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+       <section className="text-[#02032d] dark:text-white py-12 mt-5 px-6 rounded-2xl shadow-xl my-8">
+     
         
         {/* Animated Text */}
         <motion.div
@@ -45,7 +43,7 @@ const CallToAction = () => {
             className="rounded-xl shadow-lg w-[500px] h-[400px] object-cover"
           />
         </motion.div>
-      </div>
+      
     </section></div>
   );
 };
