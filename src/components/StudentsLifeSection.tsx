@@ -81,7 +81,7 @@ const StudentsLifeSection: React.FC = () => {
                     <span 
                       className={`w-5 h-5 rounded-full border-2 transition-all duration-300 ${
                         idx === selected 
-                          ? 'bg-[#F4B24A] dark:bg-orange-400 border-[#F4B24A]  dark:border-orange-400 scale-110' 
+                          ? 'bg-[#F4B24A] dark:bg-white border-[#F4B24A]  dark:border-white scale-110' 
                           : 'bg-[#02032d] dark:bg-[#F4B24A] border-[#02032d]'
                       }`}
                     ></span>
@@ -95,7 +95,7 @@ const StudentsLifeSection: React.FC = () => {
                     className={`text-lg font-medium transition-all duration-300 ${
                       idx === selected 
                         ? 'text-[#F4B24A] dark:text-gray-200 scale-105' 
-                        : 'text-gray-900 dark:text-orange-400' 
+                        : 'text-gray-900 dark:text-[#f4b24a]' 
                     }`}
                   >
                     {school.name}

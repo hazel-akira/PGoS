@@ -103,30 +103,114 @@ const SchoolsSection: React.FC = () => {
       <div className="bg-[#f2f2f2] dark:bg-slate-900 md:pt-32">
         {/* Extended Stats Strip */}
         <div className="relative text-[#02032d] dark:text-gray-200 py-24 overflow-hidden">
-          {/* Animate this inner strip only */}
-          <div className="animate-scrollX flex md:flex-row justify-around items-center gap-10 text-center px-4 w-max">
-            <div className="flex flex-col items-center">
-              <h3 className="text-4xl font-bold md:text-6xl mb-2">5+</h3>
-              <p className="text-base md:text-lg font-medium">Schools</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <h3 className="text-4xl font-bold md:text-6xl mb-2">50+</h3>
-              <p className="text-base md:text-lg font-medium">Dedicated Educators</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <h3 className="text-4xl font-bold md:text-6xl mb-2">25+</h3>
-              <p className="text-base md:text-lg font-medium">Years of Excellence</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <h3 className="text-4xl font-bold md:text-6xl mb-2">10K+</h3>
-              <p className="text-base md:text-lg font-medium">Happy Students and Alumni</p>
+          <style>
+            {`
+              @keyframes scrollX {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-33.33%); }
+              }
+              .scroll-container {
+                animation: scrollX 25s linear infinite;
+                width: max-content;
+                will-change: transform;
+                display: flex;
+                gap: 2.5rem;
+                padding: 0 2.5rem
+              }
+              .scroll-container:hover {
+                animation-play-state: paused;
+              }
+              .stats-wrapper {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+                -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+              }
+              .stats-wrapper::before,
+              .stats-wrapper::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 100px;
+                height: 100%;
+                z-index: 2;
+                pointer-events: none;
+              }
+              .stats-wrapper::before {
+                left: 0;
+                background: linear-gradient(to right, #f2f2f2, transparent);
+              }
+              .stats-wrapper::after {
+                right: 0;
+                background: linear-gradient(to left, #f2f2f2, transparent);
+              }
+              
+              /* Dark mode styles triggered by a 'dark' class on a parent element */
+              .dark .stats-wrapper::before {
+                background: linear-gradient(to right, #010218, transparent);
+              }
+              .dark .stats-wrapper::after {
+                background: linear-gradient(to left, #010218, transparent);
+              }
+            `}
+          </style>
+          <div className="stats-wrapper">
+            <div className="scroll-container">
+              {[...Array(2)].map((_, i) => (
+                <React.Fragment key={i}>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-bold md:text-6xl mb-2">5+</h3>
+                    <p className="text-base md:text-lg font-medium">Schools</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-bold md:text-6xl mb-2">50+</h3>
+                    <p className="text-base md:text-lg font-medium">Dedicated Educators</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-bold md:text-6xl mb-2">25+</h3>
+                    <p className="text-base md:text-lg font-medium">Years of Excellence</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-bold md:text-6xl mb-2">10K+</h3>
+                    <p className="text-base md:text-lg font-medium">Happy Students and Alumni</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-bold md:text-6xl mb-2">24/7</h3>
+                    <p className="text-base md:text-lg font-medium">Digital Learning Access</p>
+                  </div>
+                  
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-bold md:text-6xl mb-2">95%</h3>
+                    <p className="text-base md:text-lg font-medium">Student Satisfaction Rate</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-bold md:text-6xl mb-2">20+</h3>
+                    <p className="text-base md:text-lg font-medium">Community Partnership</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-bold md:text-6xl mb-2">8:1</h3>
+                    <p className="text-base md:text-lg font-medium">Student Teacher Ratio</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-bold md:text-6xl mb-2">200+</h3>
+                    <p className="text-base md:text-lg font-medium">Global University Placements</p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-bold md:text-6xl mb-2">1st</h3>
+                    <p className="text-base md:text-lg font-medium">In Local Education Impact Rankings</p>
+                  </div>
+            
+                </React.Fragment>
+              ))}
             </div>
           </div>
         </div>
 
+
         {/* Apply Now Button Section */}
         <div className='mx-auto pb-12 flex flex-col justify-center items-center'>
-          <button className="px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#0E013d] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300"
+          <button className="px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#0E013d] to-[#F4B24A] dark:bg-gradient-to-r from-[#010218] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300"
           onClick={() => navigate('/admissions')} >
             Apply Now
           </button>

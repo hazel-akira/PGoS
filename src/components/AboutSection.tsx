@@ -15,10 +15,10 @@ const AboutSection = () => {
         </h2>
       </div>
       
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-0 relative z-10 pt-24 md:pt-40">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-0 relative z-10 pt-24 md:pt-40 px-6 md:px-4">
         {/* Text Block */}
-        <div className="relative flex flex-col items-center w-full md:w-auto md:ml-28">
-          <div className="bg-white text-[#02032d] p-6 md:p-12 max-w-md w-full shadow-lg text-center dark:bg-gray-200">
+        <div className="relative flex flex-col items-center md:w-auto md:ml-28 w-full max-w-md mx-auto md:mx-0">
+          <div className="bg-white text-[#02032d] p-6 md:p-12 w-full shadow-lg text-center dark:bg-gray-200">
             <h3 className="text-2xl md:text-4xl font-light mb-2">Excellence Rooted in </h3>
             <div className="text-[#F4B24A] text-2xl md:text-4xl font-normal leading-tight mb-4">
             Character and <br />Leadership
@@ -36,9 +36,9 @@ const AboutSection = () => {
         </div>
        
         {/* Image Block */}
-        <div className="flex-1 flex justify-center md:justify-start relative w-full max-w-xl md:mr-15 mt-8 md:mt-0">
+        <div  className="flex-1 flex justify-center md:justify-start relative w-full max-w-xl md:mr-15 mt-8 md:mt-0">
           {/* Accent border */}
-          <div className="absolute -top-2 -right-2 w-full h-full p-1 rounded-lg bg-gradient-to-br from-[#0E013d] to-[#F4B24A] z-0"></div>
+          <div  className="absolute -top-2 -right-2 w-full h-full p-1 rounded-lg bg-gradient-to-br from-[#0E013d] to-[#F4B24A] z-0"></div>
           <img
             src="/images/aboutsection2.jpg"
             alt="aboutpgos"

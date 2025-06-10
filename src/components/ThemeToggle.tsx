@@ -10,7 +10,7 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       className="text-white hover:text-[#f4b24a] shadow-lg bg-gradient-to-r from-[#f4b24a] to-[#02032d] rounded-md 
-                 h-8 w-8 sm:h-10 sm:w-10 p-1 sm:p-2"
+                 h-6 w-8 sm:h-8 sm:w-10 p-1"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       <Sun className="h-[0.9rem] w-[0.9rem] sm:h-[1.2rem] sm:w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

@@ -58,6 +58,7 @@ const App = () => {
             <Toaster />
             <Sonner />
             <BrowserRouter>
+              <ScrollToTop/>
               <Navigation2 />
               <Routes>
                 {/* home page routes */}

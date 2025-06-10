@@ -59,10 +59,10 @@ const Footer = () => {
 
           {/* Social Icons */}
           <div className="flex space-x-4 mt-10 text">
-            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><FiFacebook /></a>
-            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><FiInstagram /></a>
-            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><RiTwitterXFill /></a>
-            <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><FiLinkedin /></a>
+            <a href="https://www.facebook.com/share/1YBShHtFze/" className='hover:text-[#F4B24A] transition-colors duration-300'><FiFacebook /></a>
+            <a href="https://www.instagram.com/pioneerschools?igsh=MWMyNjY4bDlrcXRnYw==" className='hover:text-[#F4B24A] transition-colors duration-300'><FiInstagram /></a>
+            <a href="https://x.com/PGSKenya?t=nZ52fjyo1UZgiiv2eUoQnA&s=09" className='hover:text-[#F4B24A] transition-colors duration-300'><RiTwitterXFill /></a>
+            <a href="https://www.linkedin.com/company/pioneer-group-of-schools/" className='hover:text-[#F4B24A] transition-colors duration-300'><FiLinkedin /></a>
             <a href="http://www.youtube.com/@pioneergroupofschools-keny981" className='hover:text-[#F4B24A] transition-colors duration-300'><FiYoutube /></a>
             <a href="#" className='hover:text-[#F4B24A] transition-colors duration-300'><RiTiktokLine /></a>
           </div>
