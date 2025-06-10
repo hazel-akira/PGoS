@@ -25,6 +25,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
 
   const navigate = useNavigate();
 
+  // const [events, setEvents] = useState(false);
+
+  // useEffect(() => {
+  //   const fetchEvents = async () => {
+  //     const res = await fetch('http://localhost:3001/api/events');
+  //     const data = await res.json();
+  //     setEvents(data);
+  //   };
+  //   fetchEvents();
+  // }, []);
+
   return (
     <div className="relative min-h-[700px] md:min-h-[800px] text-white pt-32 pb-20 md:pt-40 md:pb-28">
     {/* Background wrapper */}
@@ -97,6 +108,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ scrollToChat }) => {
             </div>
           </div>
         </div>
+         
       </div>
     </div>
   );

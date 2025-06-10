@@ -35,7 +35,7 @@ const Navigation2: React.FC = () => {
 
       {/*Desktop nav items */}
       <div className="hidden md:flex items-center space-x-4">
-        <div className=" text-white text-lg hover:text-[#f4b24a] hover:underline font-semi-bold text-sm px-4 py-2 flex items-center shadow-lg bg-gradient-to-r from-[#f4b24a] to-[#02032d] rounded-md" onClick={() => navigate('/')}>
+        <div className=" text-white md:text-md hover:text-[#f4b24a] hover:underline font-semi-bold text-sm px-4 py-2 flex items-center shadow-lg bg-gradient-to-r from-[#f4b24a] to-[#02032d] rounded-md" onClick={() => navigate('/')}>
             HOME
         </div>
         <button className="bg-[#F4B24A] hover:bg-white/30 text-[#02032d] hover:text-orange-400 font-semi-bold px-4  py-2 rounded-md text-sm flex items-center" onClick={() => navigate('/contact')}>
@@ -45,12 +45,12 @@ const Navigation2: React.FC = () => {
          JOIN US
         </button>
         {/* Hamburger button */}
-        <button className="flex items-center px-4 text-lg hover:text-[#f4b24a] text-white py-1 gap-2 shadow-lg bg-gradient-to-r from-[#f4b24a] to-[#02032d] rounded-md" onClick={openMenu}>
+        <button className="flex items-center px-4 md:text-md text-sm hover:text-[#f4b24a] text-white py-1 gap-2 shadow-lg bg-gradient-to-r from-[#f4b24a] to-[#02032d] rounded-md" onClick={openMenu}>
         MENU <Menu /> 
         </button>
       </div>
       {/* mobile only  */}
-      <button className=" text-white flex md:hidden items-center px-4 py-1 text-lg text-white hover:text-[#f4b24a] gap-2 shadow-lg bg-gradient-to-r from-[#f4b24a] to-[#02032d] rounded-md " onClick={openMenu}>
+      <button className=" text-white flex md:hidden items-center px-4 py-1 md:text-md hover:text-[#f4b24a] gap-2 shadow-lg bg-gradient-to-r from-[#f4b24a] to-[#02032d] rounded-md " onClick={openMenu}>
         <Menu/>
       </button>
 
