@@ -220,9 +220,9 @@ const WhyChoosePioneer: React.FC = () => {
 
       </div>
       {/* add link to download prospectus */}
-      <div className='mx-auto md:mt-48 mt-24 flex flex-col justify-center items-center'>
+{/*       <div className='mx-auto md:mt-48 mt-24 flex flex-col justify-center items-center'>
        <button className="px-6 md:px-10 py-4 md:py-5 text-lg md:text-xl font-bold font-serif rounded-r-full bg-gradient-to-r from-[#0E013d] to-[#F4B24A] text-white shadow-lg hover:scale-105 transition-transform duration-300">Get Prospectus</button>
-      </div>
+      </div> */}
      
     </section>
   );
