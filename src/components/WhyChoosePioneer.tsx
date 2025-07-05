@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 const allImageSets = [
   [
     {
@@ -129,6 +131,7 @@ const WhyChoosePioneer: React.FC = () => {
   }, [isMobile, currentSetIndex, currentMobileImageIndex]);
 
   const currentImages = allImageSets[currentSetIndex];
+  const navigate = useNavigate();
 
   return (
     <section className="py-28 bg-[#f7f7f7] dark:bg-slate-900 bg-fixed">
