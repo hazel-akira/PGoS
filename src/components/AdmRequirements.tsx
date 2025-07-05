@@ -51,7 +51,7 @@ const AdmRequirements: React.FC = () => {
         />
       </div>*/}
         <p className="mb-8 text-center max-w-xl text-gray-600 dark:text-gray-300">
-        <span className='text-orange-600'>Download </span>  the Admission and Medical Forms below. Fill them out and
+        <span className='text-orange-600'>Download </span>  the Forms below. Fill them out and
           submit either online or at the school office.
         </p>
 
@@ -65,7 +65,7 @@ const AdmRequirements: React.FC = () => {
     {/* Left Column */}
     <div className="space-y-4 pr-4">
       <p className="flex items-center gap-2">
-        🧾 Application Form 
+        🧾Pioneer school
         <a 
           href="/forms/application-form.docx" 
           download 
@@ -76,7 +76,7 @@ const AdmRequirements: React.FC = () => {
       </p>
 
       <p className="flex items-center gap-2">
-        🩺 Medical Record Form 
+        🩺 Pioneer Girls High School
         <a 
           href="/forms/medical-form.pdf" 
           download 
@@ -87,7 +87,7 @@ const AdmRequirements: React.FC = () => {
       </p>
 
       <p className="flex items-center gap-2">
-        📝 Fee Commitment Form
+        📝St Pauls Thomas Academy
         <a 
           href="/forms/fee-commitment-form.pdf" 
           download 
@@ -104,7 +104,7 @@ const AdmRequirements: React.FC = () => {
     {/* Right Column */}
     <div className="space-y-4 pl-4">
       <p className="flex items-center gap-2">
-        🚌 Pick-Up and Drop-Off Form
+        🚌 Pioneer Junior Academy
         <a 
           href="/forms/pickup-dropoff-form.pdf" 
           download 
@@ -115,7 +115,7 @@ const AdmRequirements: React.FC = () => {
       </p>
 
       <p className="flex items-center gap-2">
-        🖊️ Declaration Form
+        🖊️ Pioneer Girls Junior Academy
         <a 
           href="/forms/declaration-form.pdf" 
           download 
@@ -125,16 +125,6 @@ const AdmRequirements: React.FC = () => {
         </a>
       </p>
 
-      <p className="flex items-center gap-2">
-        🧾 Consent Form
-        <a 
-          href="/forms/consent-form.pdf" 
-          download 
-          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-        >
-          [Download]
-        </a>
-      </p>
       <p className="flex items-center gap-2">
         🧾 Brochures
         <a 
