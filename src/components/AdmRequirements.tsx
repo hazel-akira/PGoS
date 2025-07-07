@@ -49,20 +49,20 @@ const AdmRequirements: React.FC = () => {
           loop
           style={{ width: '100%', height: 'auto' }}
         />
-      </div>*/}
+      </div>
         <p className="mb-8 text-center max-w-xl text-gray-600 dark:text-gray-300">
         <span className='text-orange-600'>Download </span>  the Forms below. Fill them out and
           submit either online or at the school office.
         </p>
 
        {/* Download Forms List */}
-{/* Download Forms List */}
+{/* Download Forms List 
 <div className="text-gray-700 rounded px-5 py-5 bg-[#efeff0] dark:text-black-200">
   <h3 className="text-xl font-bold  mb-6">📥 Download Forms:</h3>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
 
-    {/* Left Column */}
+    {/* Left Column 
     <div className="space-y-4 pr-4">
       <p className="flex items-center gap-2">
         🧾Pioneer school
@@ -98,10 +98,10 @@ const AdmRequirements: React.FC = () => {
       </p>
     </div>
 
-    {/* Vertical Divider */}
+    {/* Vertical Divider 
     <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-gray-300 dark:bg-gray-600 transform -translate-x-1/2"></div>
 
-    {/* Right Column */}
+    {/* Right Column 
     <div className="space-y-4 pl-4">
       <p className="flex items-center gap-2">
         🚌 Pioneer Junior Academy
@@ -143,7 +143,7 @@ const AdmRequirements: React.FC = () => {
 
        
 
-        {/* Bottom Line */}
+        {/* Bottom Line 
         <div className="w-50 h-2 bg-orange-600 dark:bg-orange-400 mt-8  mx-auto"></div>
       </div>
   {/* top Lottie Animation
