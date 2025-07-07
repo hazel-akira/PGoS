@@ -160,8 +160,8 @@ const AdmRequirements: React.FC = () => {
           animationData={sideAnimation}
           loop
           style={{ width: '100%', height: 'auto' }}
-        />
-      </div> */}
+        /> */}
+      </div>
     </div>
   );
 };
