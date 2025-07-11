@@ -15,6 +15,7 @@ import Navigation2 from "./components/Navigation2";
 import Footer from "./components/Footer";
 import ContactPage from "./pages/ContactPage";
 import VisitUsPage from "./pages/VisitUs";
+import ProspectusPage from "./pages/ProspectusPage";
 
 import About from "./pages/About";
 import MissionVission from "./components/MissionVission.tsx";
@@ -98,7 +99,10 @@ const App = () => {
                 {/* Adm Process */}
                 <Route path="/adm-process" element={<AdmProcessPage />} />
 
+                {/* Prospectus Page */}
+                <Route path="/prospectus" element={<ProspectusPage />} />
 
+          
                 {/* 404 */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
